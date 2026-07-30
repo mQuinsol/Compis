@@ -1,0 +1,187 @@
+/* Botón flotante */
+.whatsapp-float {
+    position: fixed;
+    right: calc((100vw - min(calc(100vw - 32px), 430px)) / 2 + 1rem);
+    bottom: 2.5rem;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 2.5px solid #25D366;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    z-index: 9999;
+    cursor: pointer;
+    text-decoration: none;
+    transform: none;
+}
+
+.whatsapp-float i {
+    color: #25D366;
+    font-size: 30px;
+    line-height: 1;
+}
+
+/* Chatbox */
+.wa-chatbox {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(92vw, 360px);
+    max-width: calc(100vw - 2rem);
+    background: var(--lightblue, #eef6ff);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,.12);
+    z-index: 10000;
+    display: none;
+    font-family: var(--font-base);
+}
+
+/* Header */
+.wa-header {
+    background: var(--green-dark, #3D6F37);
+    color: #fff;
+    padding: .75rem 1rem;
+    font-family: var(--font-title);
+    font-size: .88rem;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-text-stroke: 0;
+}
+
+/* Body */
+.wa-body {
+    padding: .75rem;
+    background: var(--lightblue, #eef6ff);
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+/* Tarjeta blanca interior */
+.bot-menu {
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 14px;
+    padding: .9rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.bot-title {
+    font-size: .82rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.bot-item {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+textarea#waMessage {
+    width: 100%;
+    height: 75px;
+    padding: .6rem .75rem;
+    border: 1.5px solid #dde8f0;
+    border-radius: 10px;
+    font-family: var(--font-base);
+    font-size: .82rem;
+    resize: none;
+    box-sizing: border-box;
+    background: #f8fafc;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+textarea#waMessage:focus {
+    border-color: var(--green-dark);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(61,111,55,.12);
+}
+
+.bot-item button {
+    background: var(--green-dark, #3D6F37);
+    color: #fff;
+    border: none;
+    padding: .55rem 1.2rem;
+    font-size: .82rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    align-self: flex-end;
+    font-family: var(--font-base);
+    transition: background .2s, transform .1s;
+}
+
+.bot-item button:hover { background: #2e5a2b; }
+.bot-item button:active { transform: scale(0.96); }
+
+/* Teléfono */
+.bot-contacto-telefono {
+    border-top: 1px solid #eef0f3;
+    padding-top: .6rem;
+    text-align: center;
+}
+
+.bot-contacto-telefono p {
+    font-size: .75rem;
+    color: #888;
+    margin: 0 0 .3rem;
+}
+
+.bot-btn-call {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    color: var(--green-dark, #3D6F37);
+    font-size: .82rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.bot-btn-call:hover { text-decoration: underline; }
+
+.wa-tooltip {
+    position: fixed;
+    bottom: 5.5rem;
+    right: max(1rem, env(safe-area-inset-right));
+    background: #fff;
+    color: var(--text-dark);
+    font-family: var(--font-base);
+    font-size: .78rem;
+    font-weight: 600;
+    padding: .4rem .75rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity .3s ease, transform .3s ease;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.wa-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 18px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    transform: rotate(45deg);
+    box-shadow: 2px 2px 4px rgba(0,0,0,.06);
+}
+
+.wa-tooltip.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

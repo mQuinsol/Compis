@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Campamentos - Compis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/campamentos.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <div class="app-device">
+
+    <!-- WhatsApp flotante -->
+    <a class="whatsapp-float" id="waToggle">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="wa-chatbox" id="waChat">
+        <div class="wa-header">⭐ ¡Hola! ¿En qué podemos ayudarte? ⭐</div>
+        <div class="wa-body">
+            <div class="bot-menu">
+                <div class="bot-title">Déjanos tu mensaje y te responderemos en la mayor brevedad posible. Gracias 🥰</div>
+                <div class="bot-item">
+                    <textarea id="waMessage" placeholder="Hola, me gustaría saber más sobre..."></textarea>
+                    <button id="waSend">Enviar</button>
+                </div>
+                <div class="bot-contacto-telefono">
+                    <p>¿Prefieres hablar directamente?</p>
+                    <a href="tel:+34986066863" class="bot-btn-call">
+                        <i class="fas fa-phone-alt"></i> Llamar ahora: 986 06 68 63
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="site-header">
+        <div class="announcement-bar">
+            🎉 Campamento de Verano del 22/06 al 4/09 🎉
+        </div>
+        <nav class="navbar">
+            <div class="navbar__actions">
+                <a href="../index.html" class="navbar__brand">
+                    <img src="../assets/images/logo/logo.webp" alt="Compis">
+                </a>
+                <div class="navbar__socials-wrapper">
+                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+                <button class="navbar__toggle" aria-label="Abrir menú" aria-controls="mobile-drawer" aria-expanded="false" type="button">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="navbar__overlay"></div>
+            <div class="navbar__drawer" id="mobile-drawer">
+                <ul class="drawer__menu">
+                    <li class="item-campamentos">
+                        <a href="campamentos.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-campground"></i></span>
+                            <span class="drawer__label">Campamentos</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-cumpleanios">
+                        <a href="cumples.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-cake-candles"></i></span>
+                            <span class="drawer__label">Cumpleaños</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-jugar">
+                        <a href="acceso-por-horas.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-puzzle-piece"></i></span>
+                            <span class="drawer__label">Acceso por horas</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-fiestas">
+                        <a href="fiestas-y-eventos.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-champagne-glasses"></i></span>
+                            <span class="drawer__label">Fiestas y Eventos</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-excursiones">
+                        <a href="excursiones.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-bus"></i></span>
+                            <span class="drawer__label">Excursiones</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+
+                    <li class="item-nosotras">
+                        <a href="nosotras.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-heart"></i></span>
+                            <span class="drawer__label">Nosotras</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ===== HERO: CAMPAMENTOS ===== -->
+    <section class="camp-hero">
+
+        <!-- Galería del hero -->
+        <div class="camp-hero__gallery">
+
+            <div class="camp-hero__carousel-wrap">
+                <div class="camp-hero__track">
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/img1.webp" alt=""></div>
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/img2.webp" alt=""></div>
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/img3.webp" alt=""></div>
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/img4.webp" alt=""></div>
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/img5.webp" alt=""></div>
+                </div>
+
+                <div class="camp-hero__text">
+                    <h1 class="camp-hero__title">Campamentos</h1>
+                    <p class="camp-hero__subtitle">Actividades divertidas, seguras<br>y adaptadas a cada edad.</p>
+                </div>
+            </div>
+
+            <div class="camp-hero__dots"></div>
+
+        </div>
+
+        <!-- 4 iconos de confianza -->
+        <div class="camp-trust">
+            <div class="camp-trust__item">
+                <i class="fa-solid fa-user-shield"></i>
+                <span>Monitores<br>cualificados</span>
+            </div>
+            <div class="camp-trust__item">
+                <i class="fa-solid fa-children"></i>
+                <span>Grupos<br>reducidos</span>
+            </div>
+            <div class="camp-trust__item">
+                <i class="fa-solid fa-shield-heart"></i>
+                <span>Entorno seguro<br>y cuidado</span>
+            </div>
+            <div class="camp-trust__item">
+                <i class="fa-regular fa-clock"></i>
+                <span>Horarios<br>flexibles</span>
+            </div>
+        </div>
+
+        <!-- Acordeón campamentos -->
+        <div class="camp-accordion__header">
+            <h2 class="camp-accordion__title">Elige tu campamento</h2>
+        </div>
+        <p class="camp-accordion__schedule">
+            <span class="camp-accordion__hour">🕒</span> De 09:00 a 14:00
+        </p>
+
+        <div class="camp-accordion">
+
+            <!-- Verano -->
+            <div class="camp-accordion__item" data-camp="verano">
+                <button class="camp-accordion__trigger" aria-expanded="false">
+                    <span class="camp-accordion__icon">☀️</span>
+                    <span class="camp-accordion__name">Verano</span>
+                    <i class="fa-solid fa-chevron-down camp-accordion__arrow"></i>
+                </button>
+                <div class="camp-accordion__body">
+                    <div class="camp-accordion__content-row">
+                        <div class="camp-accordion__img-wrap">
+                            <img src="../assets/images/camp/accordion/verano-min.webp" alt="Campamento de Verano" class="camp-accordion__img">
+                        </div>
+                        <ul class="camp-accordion__list">
+                            <li><i class="fa-solid fa-check"></i> Juegos al aire libre</li>
+                            <li><i class="fa-solid fa-check"></i> Parque y playa</li>
+                            <li><i class="fa-solid fa-check"></i> Excursiones</li>
+                            <li><i class="fa-solid fa-check"></i> Talleres creativos</li>
+                            <li><i class="fa-solid fa-check"></i> Deportes y más</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carnaval -->
+            <div class="camp-accordion__item" data-camp="carnaval">
+                <button class="camp-accordion__trigger" aria-expanded="false">
+                    <span class="camp-accordion__icon">🎭</span>
+                    <span class="camp-accordion__name">Carnaval</span>
+                    <i class="fa-solid fa-chevron-down camp-accordion__arrow"></i>
+                </button>
+                <div class="camp-accordion__body">
+                    <div class="camp-accordion__content-row">
+                        <div class="camp-accordion__img-wrap">
+                            <img src="../assets/images/camp/accordion/carnaval-min.webp" alt="Campamento de Carnaval" class="camp-accordion__img">
+                        </div>
+                        <ul class="camp-accordion__list">
+                            <li><i class="fa-solid fa-check"></i> Manualidades</li>
+                            <li><i class="fa-solid fa-check"></i> Repostería</li>
+                            <li><i class="fa-solid fa-check"></i> Teatro y bailes</li>
+                            <li><i class="fa-solid fa-check"></i> Cine y juegos</li>
+                            <li><i class="fa-solid fa-check"></i> ¡Y mucha diversión!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semana Santa -->
+            <div class="camp-accordion__item" data-camp="semana-santa">
+                <button class="camp-accordion__trigger" aria-expanded="false">
+                    <span class="camp-accordion__icon">🐣</span>
+                    <span class="camp-accordion__name">Semana Santa</span>
+                    <i class="fa-solid fa-chevron-down camp-accordion__arrow"></i>
+                </button>
+                <div class="camp-accordion__body">
+                    <div class="camp-accordion__content-row">
+                        <div class="camp-accordion__img-wrap">
+                            <img src="../assets/images/camp/accordion/ssanta.webp" alt="Campamento de Semana Santa" class="camp-accordion__img">
+                        </div>
+                        <ul class="camp-accordion__list">
+                            <li><i class="fa-solid fa-check"></i> Talleres y juegos</li>
+                            <li><i class="fa-solid fa-check"></i> Repostería</li>
+                            <li><i class="fa-solid fa-check"></i> Teatro y experimentos</li>
+                            <li><i class="fa-solid fa-check"></i> Cine y manualidades</li>
+                            <li><i class="fa-solid fa-check"></i> ¡Y mucha diversión!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navidad -->
+            <div class="camp-accordion__item" data-camp="navidad">
+                <button class="camp-accordion__trigger" aria-expanded="false">
+                    <span class="camp-accordion__icon">🎄</span>
+                    <span class="camp-accordion__name">Navidad</span>
+                    <i class="fa-solid fa-chevron-down camp-accordion__arrow"></i>
+                </button>
+                <div class="camp-accordion__body">
+                    <div class="camp-accordion__content-row">
+                        <div class="camp-accordion__img-wrap">
+                            <img src="../assets/images/camp/accordion/navidad.webp" alt="Campamento de Navidad" class="camp-accordion__img">
+                        </div>
+                        <ul class="camp-accordion__list">
+                            <li><i class="fa-solid fa-check"></i> Talleres temáticos</li>
+                            <li><i class="fa-solid fa-check"></i> Manualidades y repostería</li>
+                            <li><i class="fa-solid fa-check"></i> Cine y teatro</li>
+                            <li><i class="fa-solid fa-check"></i> Cuentacuentos</li>
+                            <li><i class="fa-solid fa-check"></i> ¡Y mucha diversión!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox PDF -->
+    <div class="pdf-lightbox" id="pdfLightbox" aria-hidden="true">
+        <button class="pdf-lightbox__close" id="pdfClose" aria-label="Cerrar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <img class="pdf-lightbox__img" id="pdfImg" src="" alt="Programa del campamento">
+    </div>
+
+    <!-- Separador -->
+    <div class="wave-divider wave--camp-to-dsc" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,20 C400,70 1040,0 1440,30 L1440,60 L0,60 Z" fill="#ede8ff"/>
+        </svg>
+    </div>
+
+    <!-- ===== SECCIÓN: DÍAS SIN COLE ===== -->
+    <section class="dsc">
+
+        <div class="dsc__text">
+            <h2 class="dsc__title">Días sin cole</h2>
+            <p class="dsc__subtitle">Talleres y actividades para aprender jugando.</p>
+        </div>
+
+        <!-- Iconos actividades -->
+        <div class="dsc__icons">
+            <div class="dsc__icon-item">
+                <i class="fa-solid fa-palette"></i>
+                <span>Talleres<br>creativos</span>
+            </div>
+            <div class="dsc__icon-item">
+                <i class="fa-solid fa-puzzle-piece"></i>
+                <span>Juegos<br>cooperativos</span>
+            </div>
+            <div class="dsc__icon-item">
+                <i class="fa-solid fa-utensils"></i>
+                <span>Cocina<br>divertida</span>
+            </div>
+            <div class="dsc__icon-item">
+                <i class="fa-solid fa-star"></i>
+                <span>¡Y mucho<br>más!</span>
+            </div>
+        </div>
+
+        <div class="dsc__carousel">
+            <button class="dsc__carousel-btn dsc__carousel-btn--prev" aria-label="Anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="dsc__carousel-track-wrap">
+                <div class="dsc__carousel-track" id="dscTrack">
+                    <div class="dsc__carousel-slide">
+                        <img src="../assets/images/camp/carousel/img1.webp" alt="Días sin cole - actividad 1">
+                    </div>
+                    <div class="dsc__carousel-slide">
+                        <img src="../assets/images/camp/carousel/img2.webp" alt="Días sin cole - actividad 2">
+                    </div>
+                    <div class="dsc__carousel-slide">
+                        <img src="../assets/images/camp/carousel/img3.webp" alt="Días sin cole - actividad 3">
+                    </div>
+                    <div class="dsc__carousel-slide">
+                        <img src="../assets/images/camp/carousel/img4.webp" alt="Días sin cole - actividad 4">
+                    </div>
+                    <div class="dsc__carousel-slide">
+                        <img src="../assets/images/camp/carousel/img5.webp" alt="Días sin cole - actividad 5">
+                    </div>
+                    <div class="dsc__carousel-slide">
+                        <img src="../assets/images/camp/carousel/img6.webp" alt="Días sin cole - actividad 6">
+                    </div>
+                    <div class="dsc__carousel-slide">
+                        <img src="../assets/images/camp/carousel/img7.webp" alt="Días sin cole - actividad 7">
+                    </div>
+                    <div class="dsc__carousel-slide">
+                        <img src="../assets/images/camp/carousel/img8.webp" alt="Días sin cole - actividad 8">
+                    </div>
+                    <div class="dsc__carousel-slide">
+                        <img src="../assets/images/camp/carousel/img9.webp" alt="Días sin cole - actividad 9">
+                    </div>
+                    <div class="dsc__carousel-slide">
+                        <img src="../assets/images/camp/carousel/img10.webp" alt="Días sin cole - actividad 10">
+                    </div>
+                    <div class="dsc__carousel-slide">
+                        <img src="../assets/images/camp/carousel/img11.webp" alt="Días sin cole - actividad 11">
+                    </div>
+                    <div class="dsc__carousel-slide">
+                        <img src="../assets/images/camp/carousel/img12.webp" alt="Días sin cole - actividad 12">
+                    </div>
+                </div>
+            </div>
+            <button class="dsc__carousel-btn dsc__carousel-btn--next" aria-label="Siguiente">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <div class="dsc__carousel-dots" id="dscDots"></div>
+        </div>
+        
+        <div class="pdf-lightbox" id="pdfLightbox" aria-hidden="true">
+            <button class="pdf-lightbox__close" id="pdfClose" aria-label="Cerrar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button class="pdf-lightbox__prev" id="pdfPrev" aria-label="Anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <img class="pdf-lightbox__img" id="pdfImg" src="" alt="">
+            <button class="pdf-lightbox__next" id="pdfNext" aria-label="Siguiente">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- CTA visita -->
+        <!-- <a href="https://wa.me/34613293273" target="_blank" rel="noopener noreferrer" class="dsc__cta">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="dsc__cta-text">
+                <span class="dsc__cta-title">¿Nos visitas?</span>
+                <span class="dsc__cta-sub">Ven a conocernos.</span>
+            </div>
+            <span class="dsc__cta-arrow">Contacto</span>
+        </a> -->
+
+        <!-- Cierre de sección -->
+        <p class="dsc__closing">Donde los niños se lo pasan bien<br>y las familias confían.</p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-compis">
+        <div class="footer-compis__container">
+
+            <div class="footer-compis__hours-accordion">
+                <div class="footer-compis__hours-item">
+                    <button class="footer-compis__hours-toggle" data-hours-toggle aria-expanded="false" aria-controls="hoursEscolar">
+                        <span>Escolar</span>
+                        <i class="fa-solid fa-chevron-down footer-compis__hours-caret"></i>
+                    </button>
+                    <div class="footer-compis__hours-panel" id="hoursEscolar">
+                        <div class="footer-compis__hours-row">
+                            <span>Martes a Domingo</span>
+                            <span>16:30 a 20:30h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-compis__hours-item">
+                    <button class="footer-compis__hours-toggle" data-hours-toggle aria-expanded="false" aria-controls="hoursVacacional">
+                        <span>Vacacional</span>
+                        <i class="fa-solid fa-chevron-down footer-compis__hours-caret"></i>
+                    </button>
+                    <div class="footer-compis__hours-panel" id="hoursVacacional">
+                        <div class="footer-compis__hours-row">
+                            <span>Lunes</span>
+                            <span>9:00 a 14:00h</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Martes a Viernes</span>
+                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Sábados</span>
+                            <span>17:00 a 01:00h</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Domingos</span>
+                            <span>17:00 a 21:00h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-compis__bottom-grid">
+
+                <div class="footer-compis__location">
+                    <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link" title="Ver en Google Maps">
+                        <div class="footer-compis__map-avatar">
+                            <img src="../assets/images/footer/image.webp" alt="Mapa Compis Sanxenxo">
+                        </div>
+                    </a>
+                    <div class="footer-compis__address">
+                        <p class="footer-compis__street">Paseo Playa de Silgar</p>
+                        <p class="footer-compis__street">nº 66, Bajo · Sanxenxo</p>
+                        <p class="footer-compis__city"><span>A pie de playa</span></p>
+                    </div>
+                </div>
+
+                <div class="footer-compis__contact-groups">
+                    <div class="footer-compis__group">
+                        <span class="footer-compis__group-label">Contacto</span>
+                        <div class="footer-compis__group-icons">
+                            <a href="tel:986066863" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+                            <span class="footer-compis__group-sep">·</span>
+                            <a href="https://wa.me/34613293273" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <span class="footer-compis__vdivider"></span>
+
+                    <div class="footer-compis__group">
+                        <span class="footer-compis__group-label">Síguenos</span>
+                        <div class="footer-compis__group-icons">
+                            <a href="https://www.instagram.com/ludotecacompis/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <span class="footer-compis__group-sep">·</span>
+                            <a href="https://www.facebook.com/people/Compis-Ludoteca/100081051092342/" target="_blank" rel="noopener noreferrer" class="footer-compis__social--facebook" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- LEGALES & COPYRIGHT -->
+            <div class="footer-compis__bottom">
+                <nav class="footer-compis__legal">
+                    <a href="/legal.html#privacidad">Política de privacidad</a> ·
+                    <a href="/legal.html#aviso-legal">Aviso legal</a>
+                </nav>
+                <p class="footer-compis__copy">&copy; <span id="footerYear">2026</span> Ludoteca Compis.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/campamentos-main.js"></script>
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+</body>
+</html>

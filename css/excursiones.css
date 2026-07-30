@@ -1,0 +1,357 @@
+/* ----- HERO EXCURSIONES ----- */
+.exc-hero {
+    position: relative;
+    aspect-ratio: 394 / 330;
+    height: auto;
+    min-height: 0;
+    background-image:
+        url('../assets/images/excursiones/hero.webp');
+    background-size: cover;
+    background-position: center;
+    padding: 5.75rem 1.4rem 2rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 0 0 var(--radius-card) var(--radius-card);
+    display: flex;
+    align-items: center;
+}
+
+.exc-hero__title {
+    font-family: var(--font-accent);
+    color: #4A9FD8;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    -webkit-text-stroke: 6px #ffffff;
+    paint-order: stroke fill;
+
+    filter:
+        drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+.exc-hero__subtitle {
+    font-family: var(--font-base);
+    color: #fff;
+    font-size: .95rem;
+    font-weight: 600;
+    text-align: center;
+    margin: .5rem 0 0;
+    text-shadow: 0 2px 6px rgba(0,0,0,.4);
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ----- SECCIÓN CARACTERÍSTICAS ----- */
+.exc-features {
+    background: var(--lightblue);
+    padding: 2rem 1.4rem;
+    box-sizing: border-box;
+}
+
+/* Tarjeta principal */
+.exc-features__main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #fff;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-card);
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.exc-features__main-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--lightblue);
+    color: #7b68c8;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.exc-features__main-text {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.exc-features__main-title {
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: 1rem;
+    color: #5c4a9e;
+}
+
+.exc-features__main-desc {
+    font-family: var(--font-base);
+    font-size: .82rem;
+    color: #666;
+    line-height: 1.4;
+    margin: 0;
+    margin-right: .9rem;
+}
+
+/* Fila de iconos secundarios */
+.exc-features__row {
+    display: flex;
+    justify-content: space-around;
+    gap: .5rem;
+}
+
+.exc-features__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    text-align: center;
+    flex: 1;
+}
+
+.exc-features__item-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    background: #fff;
+    color: #7b68c8;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-card);
+    flex-shrink: 0;
+}
+
+.exc-features__item-label {
+    font-family: var(--font-base);
+    font-weight: 600;
+    font-size: .72rem;
+    color: #555;
+    line-height: 1.3;
+}
+
+/* ----- SEPARADOR WAVE ----- */
+.wave--hero-to-experiences {
+    background: var(--lightblue);
+}
+
+/* ----- NUESTRAS EXPERIENCIAS ----- */
+.exc-experiences {
+    background: #ede8ff;
+    padding: 2rem 1.4rem 2.5rem;
+    box-sizing: border-box;
+}
+
+.exc-experiences__title {
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight:700;
+    text-align: center;
+    letter-spacing: .1rem;
+    margin: 0 auto 1.5rem;
+    gap: .5rem;
+    display:flex;
+    width: fit-content;
+    justify-content: center;
+    align-items:center;
+    gap:.5rem;
+    padding:.45rem 1.4rem;
+    background:#ffffff90;
+    backdrop-filter:blur(4px);
+    border:1.5px solid #d8d1ff;
+    border-radius:999px;
+    color:#6b59c7;
+    font-weight:700;
+    box-shadow:
+        0 4px 10px rgba(109,92,207,.12);
+}
+
+.exc-experiences__title i {
+    font-size: .75rem;
+}
+
+.exc-experiences__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .75rem;
+}
+
+.exc-experiences__card {
+    background: #fff;
+    border-radius: calc(var(--card-radius) - 4px);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    padding-bottom: .6rem;
+    text-align: center;
+}
+
+.exc-experiences__card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.exc-experiences__name {
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: .7rem;
+    color: var(--green-dark);
+    display: block;
+    padding: 0 .4rem;
+    margin-bottom: .3rem;
+}
+
+.exc-experiences__desc {
+    font-family: var(--font-base);
+    font-size: .62rem;
+    color: #666;
+    line-height: 1.3;
+    padding: 0 .4rem;
+    margin: 0;
+}
+
+/* ----- BANDA SEPARADORA ----- */
+.exc__band {
+    background: linear-gradient(135deg, #ffdbe6 0%, #fff1bf 35%, #e2f5d8 65%, #eadbff 100%);
+    height: 6px;
+    border-radius: 999px;
+    margin: 2rem .5rem 2rem;
+    opacity: .7;
+}
+
+/* ----- SECCIÓN PRECIOS ----- */
+.exc-pricing__title {
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem 1.4rem;
+    background: #ffffff90;
+    backdrop-filter: blur(4px);
+    border: 1.5px solid #d8d1ff;
+    border-radius: 999px;
+    color: #6b59c7;
+    box-shadow: 0 4px 10px rgba(109,92,207,.12);
+}
+
+.exc-pricing__title i {
+    font-size: .85rem;
+}
+
+.exc-pricing__list {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.exc-pricing__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .85rem;
+    background: #fff;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-card);
+    padding: .9rem 1.1rem;
+}
+
+.exc-pricing__item--highlight {
+    border: 2px solid #7b68c8;
+}
+
+.exc-pricing__badge {
+    position: absolute;
+    top: -10px;
+    left: 1.1rem;
+    background: #7b68c8;
+    color: #fff;
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: .62rem;
+    padding: .2rem .6rem;
+    border-radius: 20px;
+}
+
+.exc-pricing__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    background: var(--lightblue);
+    color: #7b68c8;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.exc-pricing__text {
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+    flex: 1;
+}
+
+.exc-pricing__name {
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: .85rem;
+    color: #5c4a9e;
+}
+
+.exc-pricing__sub {
+    font-family: var(--font-base);
+    font-size: .72rem;
+    color: #888;
+}
+
+.exc-pricing__price {
+    font-family: var(--font-accent);
+    font-size: 1.15rem;
+    color: #7b68c8;
+    flex-shrink: 0;
+}
+
+/* ----- CTA INFERIOR ----- */
+.exc-cta {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    background: #7b68c8;
+    color: #fff;
+    padding: .9rem 1.4rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.exc-cta i {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.exc-cta p {
+    font-family: var(--font-base);
+    font-size: .78rem;
+    margin: 0;
+}

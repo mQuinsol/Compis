@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Excursiones - Compis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/excursiones.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <div class="app-device">
+
+    <!-- WhatsApp flotante -->
+    <a class="whatsapp-float" id="waToggle">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="wa-chatbox" id="waChat">
+        <div class="wa-header">⭐ ¡Hola! ¿En qué podemos ayudarte? ⭐</div>
+        <div class="wa-body">
+            <div class="bot-menu">
+                <div class="bot-title">Déjanos tu mensaje y te responderemos en la mayor brevedad posible. Gracias 🥰</div>
+                <div class="bot-item">
+                    <textarea id="waMessage" placeholder="Hola, me gustaría saber más sobre..."></textarea>
+                    <button id="waSend">Enviar</button>
+                </div>
+                <div class="bot-contacto-telefono">
+                    <p>¿Prefieres hablar directamente?</p>
+                    <a href="tel:+34986066863" class="bot-btn-call">
+                        <i class="fas fa-phone-alt"></i> Llamar ahora: 986 06 68 63
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="site-header">
+        <div class="announcement-bar">
+            🎉 Campamento de Verano del 22/06 al 4/09 🎉
+        </div>
+        <nav class="navbar">
+            <div class="navbar__actions">
+                <a href="../index.html" class="navbar__brand">
+                    <img src="../assets/images/logo/logo.webp" alt="Compis">
+                </a>
+                <div class="navbar__socials-wrapper">
+                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+                <button class="navbar__toggle" aria-label="Abrir menú" aria-controls="mobile-drawer" aria-expanded="false" type="button">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="navbar__overlay"></div>
+            <div class="navbar__drawer" id="mobile-drawer">
+                <ul class="drawer__menu">
+                    <li class="item-campamentos">
+                        <a href="campamentos.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-campground"></i></span>
+                            <span class="drawer__label">Campamentos</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-cumpleanios">
+                        <a href="cumples.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-cake-candles"></i></span>
+                            <span class="drawer__label">Cumpleaños</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-jugar">
+                        <a href="acceso-por-horas.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-puzzle-piece"></i></span>
+                            <span class="drawer__label">Acceso por horas</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-fiestas">
+                        <a href="fiestas-y-eventos.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-champagne-glasses"></i></span>
+                            <span class="drawer__label">Fiestas y Eventos</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-excursiones">
+                        <a href="excursiones.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-bus"></i></span>
+                            <span class="drawer__label">Excursiones</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-nosotras">
+                        <a href="nosotras.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-heart"></i></span>
+                            <span class="drawer__label">Nosotras</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ===== HERO: EXCURSIONES ===== -->
+    <section class="exc-hero">
+        <h1 class="exc-hero__title">
+            Excursiones
+        </h1>
+
+        <p class="exc-hero__subtitle">
+            ¿Buscas una salida segura,<br> divertida y diferente?
+        </p>
+    </section>
+
+    <!-- ===== CARACTERÍSTICAS ===== -->
+    <section class="exc-features">
+
+        <!-- Tarjeta principal -->
+        <div class="exc-features__main">
+            <span class="exc-features__main-icon"><i class="fa-solid fa-handshake"></i></span>
+            <div class="exc-features__main-text">
+                <span class="exc-features__main-title">Colaboración Escolar</span>
+                <p class="exc-features__main-desc">Diseñamos experiencias únicas para campamentos, ANPAs y colegios, ofreciendo una forma diferente, segura y divertida de disfrutar de las salidas escolares y actividades complementarias.</p>
+            </div>
+        </div>
+
+        <!-- Iconos secundarios -->
+        <div class="exc-features__row">
+            <div class="exc-features__item">
+                <span class="exc-features__item-icon"><i class="fa-solid fa-person-running"></i></span>
+                <span class="exc-features__item-label">Jornada Activa</span>
+            </div>
+            <div class="exc-features__item">
+                <span class="exc-features__item-icon"><i class="fa-solid fa-shield-heart"></i></span>
+                <span class="exc-features__item-label">Entorno Seguro</span>
+            </div>
+            <div class="exc-features__item">
+                <span class="exc-features__item-icon"><i class="fa-solid fa-people-group"></i></span>
+                <span class="exc-features__item-label">Convivencia y Juego</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Separador -->
+    <div class="wave-divider wave--hero-to-experiences" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,20 C400,70 1040,0 1440,30 L1440,60 L0,60 Z" fill="#ede8ff"/>
+        </svg>
+    </div>
+
+    <!-- ===== EXPERIENCIAS Y PRECIOS ===== -->
+    <section class="exc-experiences">
+        <h2 class="exc-experiences__title">
+            Nuestras experiencias
+        </h2>
+        <div class="exc-experiences__grid">
+            <div class="exc-experiences__card">
+                <img src="../assets/images/excursiones/img1.webp" alt="Instalaciones y juego">
+                <span class="exc-experiences__name">Instalaciones</span>
+                <p class="exc-experiences__desc">Editar</p>
+            </div>
+            <div class="exc-experiences__card">
+                <img src="../assets/images/excursiones/img2.webp" alt="Actividad dirigida">
+                <span class="exc-experiences__name">Actividad dirigida</span>
+                <p class="exc-experiences__desc">Editar</p>
+            </div>
+            <div class="exc-experiences__card">
+                <img src="../assets/images/excursiones/img3.webp" alt="Opciones y precios">
+                <span class="exc-experiences__name">Juegos</span>
+                <p class="exc-experiences__desc">Editar</p>
+            </div>
+        </div>
+
+        <div class="exc__band"></div>
+
+        <h2 class="exc-pricing__title">
+            Precios
+        </h2>
+        <div class="exc-pricing__list">
+            <div class="exc-pricing__item">
+                <span class="exc-pricing__icon"><i class="fa-solid fa-child-reaching"></i></span>
+                <div class="exc-pricing__text">
+                    <span class="exc-pricing__name">1 hora de juego libre</span>
+                    <span class="exc-pricing__sub">Por niño/a</span>
+                </div>
+                <span class="exc-pricing__price">5 €</span>
+            </div>
+
+            <div class="exc-pricing__item">
+                <span class="exc-pricing__icon"><i class="fa-solid fa-puzzle-piece"></i></span>
+                <div class="exc-pricing__text">
+                    <span class="exc-pricing__name">2h (juego + actividad)</span>
+                    <span class="exc-pricing__sub">Por niño/a</span>
+                </div>
+                <span class="exc-pricing__price">10 €</span>
+            </div>
+
+            <div class="exc-pricing__item exc-pricing__item--highlight">
+                <span class="exc-pricing__badge">Más completa</span>
+                <span class="exc-pricing__icon"><i class="fa-solid fa-mug-saucer"></i></span>
+                <div class="exc-pricing__text">
+                    <span class="exc-pricing__name">3h (juego + actividad + merienda)</span>
+                    <span class="exc-pricing__sub">Por niño/a</span>
+                </div>
+                <span class="exc-pricing__price">14 €</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA INFERIOR ===== -->
+    <div class="exc-cta">
+        <p>La diversión puede continuar en<br> la <strong>playa de Silgar</strong> o el <strong>parque Vicaño</strong> (a 400m).</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-compis">
+        <div class="footer-compis__container">
+
+            <div class="footer-compis__hours-accordion">
+                <div class="footer-compis__hours-item">
+                    <button class="footer-compis__hours-toggle" data-hours-toggle aria-expanded="false" aria-controls="hoursEscolar">
+                        <span>Escolar</span>
+                        <i class="fa-solid fa-chevron-down footer-compis__hours-caret"></i>
+                    </button>
+                    <div class="footer-compis__hours-panel" id="hoursEscolar">
+                        <div class="footer-compis__hours-row">
+                            <span>Martes a Domingo</span>
+                            <span>16:30 a 20:30h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-compis__hours-item">
+                    <button class="footer-compis__hours-toggle" data-hours-toggle aria-expanded="false" aria-controls="hoursVacacional">
+                        <span>Vacacional</span>
+                        <i class="fa-solid fa-chevron-down footer-compis__hours-caret"></i>
+                    </button>
+                    <div class="footer-compis__hours-panel" id="hoursVacacional">
+                        <div class="footer-compis__hours-row">
+                            <span>Lunes</span>
+                            <span>9:00 a 14:00h</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Martes a Viernes</span>
+                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Sábados</span>
+                            <span>17:00 a 01:00h</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Domingos</span>
+                            <span>17:00 a 21:00h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-compis__bottom-grid">
+
+                <div class="footer-compis__location">
+                    <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link" title="Ver en Google Maps">
+                        <div class="footer-compis__map-avatar">
+                            <img src="../assets/images/footer/image.webp" alt="Mapa Compis Sanxenxo">
+                        </div>
+                    </a>
+                    <div class="footer-compis__address">
+                        <p class="footer-compis__street">Paseo Playa de Silgar</p>
+                        <p class="footer-compis__street">nº 66, Bajo · Sanxenxo</p>
+                        <p class="footer-compis__city"><span>A pie de playa</span></p>
+                    </div>
+                </div>
+
+                <div class="footer-compis__contact-groups">
+                    <div class="footer-compis__group">
+                        <span class="footer-compis__group-label">Contacto</span>
+                        <div class="footer-compis__group-icons">
+                            <a href="tel:986066863" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+                            <span class="footer-compis__group-sep">·</span>
+                            <a href="https://wa.me/34613293273" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <span class="footer-compis__vdivider"></span>
+
+                    <div class="footer-compis__group">
+                        <span class="footer-compis__group-label">Síguenos</span>
+                        <div class="footer-compis__group-icons">
+                            <a href="https://www.instagram.com/ludotecacompis/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <span class="footer-compis__group-sep">·</span>
+                            <a href="https://www.facebook.com/people/Compis-Ludoteca/100081051092342/" target="_blank" rel="noopener noreferrer" class="footer-compis__social--facebook" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- LEGALES & COPYRIGHT -->
+            <div class="footer-compis__bottom">
+                <nav class="footer-compis__legal">
+                    <a href="/legal.html#privacidad">Política de privacidad</a> ·
+                    <a href="/legal.html#aviso-legal">Aviso legal</a>
+                </nav>
+                <p class="footer-compis__copy">&copy; <span id="footerYear">2026</span> Ludoteca Compis.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/excursiones-main.js"></script>
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cumpleaños - Compis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/cumples.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <div class="app-device">
+
+    <!-- WhatsApp flotante -->
+    <a class="whatsapp-float" id="waToggle">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="wa-chatbox" id="waChat">
+        <div class="wa-header">⭐ ¡Hola! ¿En qué podemos ayudarte? ⭐</div>
+        <div class="wa-body">
+            <div class="bot-menu">
+                <div class="bot-title">Déjanos tu mensaje y te responderemos en la mayor brevedad posible. Gracias 🥰</div>
+                <div class="bot-item">
+                    <textarea id="waMessage" placeholder="Hola, me gustaría saber más sobre..."></textarea>
+                    <button id="waSend">Enviar</button>
+                </div>
+                <div class="bot-contacto-telefono">
+                    <p>¿Prefieres hablar directamente?</p>
+                    <a href="tel:+34986066863" class="bot-btn-call">
+                        <i class="fas fa-phone-alt"></i> Llamar ahora: 986 06 68 63
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="site-header">
+        <div class="announcement-bar">
+            🎉 Campamento de Verano del 22/06 al 4/09 🎉
+        </div>
+        <nav class="navbar">
+            <div class="navbar__actions">
+                <a href="../index.html" class="navbar__brand">
+                    <img src="../assets/images/logo/logo.webp" alt="Compis">
+                </a>
+                <div class="navbar__socials-wrapper">
+                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+                <button class="navbar__toggle" aria-label="Abrir menú" aria-controls="mobile-drawer" aria-expanded="false" type="button">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="navbar__overlay"></div>
+            <div class="navbar__drawer" id="mobile-drawer">
+                <ul class="drawer__menu">
+                    <li class="item-campamentos">
+                        <a href="campamentos.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-campground"></i></span>
+                            <span class="drawer__label">Campamentos</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-cumpleanios">
+                        <a href="cumples.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-cake-candles"></i></span>
+                            <span class="drawer__label">Cumpleaños</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-jugar">
+                        <a href="acceso-por-horas.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-puzzle-piece"></i></span>
+                            <span class="drawer__label">Acceso por horas</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-fiestas">
+                        <a href="fiestas-y-eventos.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-champagne-glasses"></i></span>
+                            <span class="drawer__label">Fiestas y Eventos</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-excursiones">
+                        <a href="excursiones.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-bus"></i></span>
+                            <span class="drawer__label">Excursiones</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-nosotras">
+                        <a href="nosotras.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-heart"></i></span>
+                            <span class="drawer__label">Nosotras</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="cumples-hero">
+        <div class="cumples-hero__text">
+            <h1>Celebra un cumpleaños inolvidable</h1>
+            <p>Diversión segura para todas las edades</p>
+            <div class="cumples-hero__ctas">
+                <a href="https://wa.me/34613293273?text=Hola%2C%20quiero%20reservar%20un%20cumplea%C3%B1os" 
+                    class="btn btn--green" 
+                    target="_blank" 
+                    rel="noopener">
+                    🎂 Reservar
+                </a>
+                <button type="button" class="btn btn--outline" id="cumplesPdfBtn" data-pdf="../assets/docs/cumples-info.pdf">
+                    📄 Info_pdf
+                </button>
+            </div>
+        </div>
+        <div class="cumples-hero__img">
+            <img src="../assets/images/cumples/cumples-hero.webp" alt="Fiesta de cumpleaños">
+        </div>
+    </section>
+
+    <div class="wave-divider wave--cumples-hero" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,20 C400,70 1040,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
+        </svg>
+    </div>
+
+    <!-- ===== TARIFAS ===== -->
+    <section class="cumples-tarifas" id="tarifas">
+        <h2 class="section-title">✨ Tarifas</h2>
+        <div class="cumples-tarifas__grid">
+
+            <div class="tarifa-card tarifa-card--diurno">
+                <div class="tarifa-card__header">
+                    <span class="tarifa-card__icon">☀️</span>
+                    <h3>Diurno</h3>
+                    <p class="tarifa-card__sub">mín. 10 niños</p>
+                </div>
+                <ul class="tarifa-card__list">
+                    <li><span>2 horas</span><span>10€ / niño</span></li>
+                    <li><span>3 horas + 1 actividad</span><span>14€ / niño</span></li>
+                    <li><span>4 horas + 2 actividades</span><span>18€ / niño</span></li>
+                </ul>
+            </div>
+
+            <div class="tarifa-card tarifa-card--nocturno">
+                <div class="tarifa-card__header">
+                    <span class="tarifa-card__icon">🌙</span>
+                    <h3>Nocturno</h3>
+                    <p class="tarifa-card__sub">mín. 6 niños</p>
+                </div>
+                <ul class="tarifa-card__list">
+                    <li><span>3 horas + 1 actividad</span><span>20€ / niño</span></li>
+                    <li><span>Fiesta Pijama (12h a 10h)</span><span>40€ / niño</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="wave-divider wave--cumples-tarifas" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,20 C400,70 1040,0 1440,30 L1440,60 L0,60 Z" fill="#f9f5ff"/>
+        </svg>
+    </div>
+
+    <!-- ===== EXTRAS ===== -->
+    <section class="cumples-extras" id="extras">
+        <h2 class="section-title">🎈 Extras</h2>
+        <div class="cumples-extras__grid">
+            <div class="extra-card">
+                <img src="../assets/images/cumples/decoracion.webp" alt="Decoración">
+                <p class="extra-card__name">Decoración</p>
+                <p class="extra-card__price">50€</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/oblea.webp" alt="Oblea">
+                <p class="extra-card__name">Oblea</p>
+                <p class="extra-card__price">10€</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/pinata.webp" alt="Pinata">
+                <p class="extra-card__name">Piñata</p>
+                <p class="extra-card__price">50€</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/animacion.webp" alt="Animación">
+                <p class="extra-card__name">Animación</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/payaso.webp" alt="Payaso / Maga">
+                <p class="extra-card__name">Payaso / Maga</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/pintacaras.webp" alt="Pintacaras">
+                <p class="extra-card__name">Pintacaras</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/chuches.webp" alt="Chuches">
+                <p class="extra-card__name">Cono Chuches</p>
+                <p class="extra-card__price">2€/unidad</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/misterybox.webp" alt="Caja Sorpresa">
+                <p class="extra-card__name">Caja Sorpresa</p>
+                <p class="extra-card__price">8€/unidad</p>
+            </div>
+            <div class="extra-card">
+                <img src="../assets/images/cumples/invitacion.webp" alt="Invitación">
+                <p class="extra-card__name">Invitación</p>
+                <p class="extra-card__price">5€/unidad</p>
+            </div>
+        </div>
+        <p class="cumples-extras__nota">Contrataciones externas: Precio sujeto a disponibilidad</p>
+    </section>
+
+    <div class="wave-divider wave--cumples-extras" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,20 C400,70 1040,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
+        </svg>
+    </div>
+
+    <!-- ===== MENÚS ===== -->
+    <section class="cumples-menus" id="menus">
+        <h2 class="section-title">🍽️ Menús</h2>
+        <div class="cumples-menus__accordion">
+            <div class="menu-item">
+                <button class="menu-item__header" aria-expanded="false">
+                    <span>Merienda</span>
+                    <span class="menu-item__arrow">▾</span>
+                </button>
+                <div class="menu-item__body">
+                    <div class="menu-container">
+                        <!-- Menú Básico -->
+                        <div class="menu-card">
+                            <div class="menu-header">
+                                <span class="menu-title">Cumpleaños Diurno</span><br>
+                                <br>
+                                <span class="menu-title">Menú Básico</span>
+                                <span class="menu-badge free">Incluido</span>
+                            </div>
+                                <div class="menu-items">
+                                <span>🍫 Bocadillo Nocilla</span>
+                                <span>🍿 3 Snacks</span>
+                            </div>
+                        </div>
+
+                        <!-- Menú + Pizza -->
+                        <div class="menu-card">
+                            <div class="menu-header">
+                                <span class="menu-title">Menú + Pizza</span>
+                                <span class="menu-price">+2€ / niño</span>
+                            </div>
+                            <div class="menu-items">
+                                <span>🍫 Bocadillo Nocilla</span>
+                                <span>🍿 3 Snacks</span>
+                                <span>🍕 Minipizzas</span>
+                            </div>
+                        </div>
+
+                        <!-- Menú Saludable -->
+                        <div class="menu-card healthy">
+                            <div class="menu-header">
+                                <span class="menu-title">Menú Saludable 🌿</span>
+                                <span class="menu-price">+3€ / niño</span>
+                            </div>
+                            <div class="menu-items">
+                                <span>🍎 Fruta fresca</span>
+                                <span>🥛 Yogur bebible</span>
+                                <span>🥪 Bocadillo Jamón/Queso</span>
+                                <span>🍿 1 Snack</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <button class="menu-item__header" aria-expanded="false">
+                    <span>Cena</span>
+                    <span class="menu-item__arrow">▾</span>
+                </button>
+                <div class="menu-item__body">
+                    <div class="menu-card healthy">
+                            <div class="menu-header">
+                                <span class="menu-title">Cumpleaños Nocturno</span>
+                            </div>
+                            <div class="menu-items">
+                                <span>🍕 Pizzas / Minipizzas</span><br>
+                                <span>🌭 Perritos Calientes</span><br>
+                                <span>🍔 Hamburguesas</span><br>
+                                <span>🍗 Nuggets con Patatas o Arroz</span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <button class="menu-item__header" aria-expanded="false">
+                    <span>Tartas</span>
+                    <span class="menu-item__arrow">▾</span>
+                </button>
+                <div class="menu-item__body">
+                    <p>🎂 Tarta de la abuela</p>
+                    <p>🎂 Tarta de tres chocolates</p>
+                    <p>🎂 Tarta de fresas o frutas con nata</p>
+                </div>
+            </div>
+            <div class="alergias-note">
+                <p>Todas las opciones son adaptables en casos de alergias o intolerancias</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="wave-divider wave--cumples-menus" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,20 C400,70 1040,0 1440,30 L1440,60 L0,60 Z" fill="#f9f5ff"/>
+        </svg>
+    </div>
+    
+    <!-- ===== INFORMACIÓN ===== -->
+    <section class="cumples-info" id="informacion">
+        <h2 class="section-title">ℹ️ Información</h2>
+        <div class="cumples-info__grid">
+            <div class="info-card">
+                <img src="../assets/images/cumples/zone.webp" alt="Instalaciones">
+                <div class="info-card__text">
+                    <h4>Instalaciones seguras</h4>
+                    <p>Espacios amplios, limpios y adaptados para que los niños jueguen con total seguridad y tranquilidad.</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-card__text">
+                    <h4>Comodidad para todas las familias</h4>
+                    <p>Zona para adultos, podéis traer algo de picoteo si os apetece, además contamos con servicio de bebidas y un ambiente para toda la ocasión para que disfrutes.</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-card__text">
+                    <h4>Puntualidad y organización</h4>
+                    <p>Te recomendamos llegar con 15 minutos de antelación para preparar todo y comenzar puntualmente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESERVAR =====
+    <section class="cumples-reservar" id="reservar">
+        <h2 class="section-title">🎂 Reserva tu cumpleaños</h2>
+        <p>Contacta con nosotros para disponibilidad y más información.</p>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="footer-compis">
+        <div class="footer-compis__container">
+
+            <div class="footer-compis__hours-accordion">
+                <div class="footer-compis__hours-item">
+                    <button class="footer-compis__hours-toggle" data-hours-toggle aria-expanded="false" aria-controls="hoursEscolar">
+                        <span>Escolar</span>
+                        <i class="fa-solid fa-chevron-down footer-compis__hours-caret"></i>
+                    </button>
+                    <div class="footer-compis__hours-panel" id="hoursEscolar">
+                        <div class="footer-compis__hours-row">
+                            <span>Martes a Domingo</span>
+                            <span>16:30 a 20:30h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-compis__hours-item">
+                    <button class="footer-compis__hours-toggle" data-hours-toggle aria-expanded="false" aria-controls="hoursVacacional">
+                        <span>Vacacional</span>
+                        <i class="fa-solid fa-chevron-down footer-compis__hours-caret"></i>
+                    </button>
+                    <div class="footer-compis__hours-panel" id="hoursVacacional">
+                        <div class="footer-compis__hours-row">
+                            <span>Lunes</span>
+                            <span>9:00 a 14:00h</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Martes a Viernes</span>
+                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Sábados</span>
+                            <span>17:00 a 01:00h</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Domingos</span>
+                            <span>17:00 a 21:00h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-compis__bottom-grid">
+
+                <div class="footer-compis__location">
+                    <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link" title="Ver en Google Maps">
+                        <div class="footer-compis__map-avatar">
+                            <img src="../assets/images/footer/image.webp" alt="Mapa Compis Sanxenxo">
+                        </div>
+                    </a>
+                    <div class="footer-compis__address">
+                        <p class="footer-compis__street">Paseo Playa de Silgar</p>
+                        <p class="footer-compis__street">nº 66, Bajo · Sanxenxo</p>
+                        <p class="footer-compis__city"><span>A pie de playa</span></p>
+                    </div>
+                </div>
+
+                <div class="footer-compis__contact-groups">
+                    <div class="footer-compis__group">
+                        <span class="footer-compis__group-label">Contacto</span>
+                        <div class="footer-compis__group-icons">
+                            <a href="tel:986066863" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+                            <span class="footer-compis__group-sep">·</span>
+                            <a href="https://wa.me/34613293273" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <span class="footer-compis__vdivider"></span>
+
+                    <div class="footer-compis__group">
+                        <span class="footer-compis__group-label">Síguenos</span>
+                        <div class="footer-compis__group-icons">
+                            <a href="https://www.instagram.com/ludotecacompis/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <span class="footer-compis__group-sep">·</span>
+                            <a href="https://www.facebook.com/people/Compis-Ludoteca/100081051092342/" target="_blank" rel="noopener noreferrer" class="footer-compis__social--facebook" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- LEGALES & COPYRIGHT -->
+            <div class="footer-compis__bottom">
+                <nav class="footer-compis__legal">
+                    <a href="/legal.html#privacidad">Política de privacidad</a> ·
+                    <a href="/legal.html#aviso-legal">Aviso legal</a>
+                </nav>
+                <p class="footer-compis__copy">&copy; <span id="footerYear">2026</span> Ludoteca Compis.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/cumples-main.js"></script>
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <!-- Modal PDF -->
+        </div>
+    </div>
+        </div>
+    </div>
+    <div class="cumples-pdf-modal" id="cumplesPdfModal" aria-hidden="true">
+        <div class="cumples-pdf-modal__box">
+            <div class="cumples-pdf-modal__bar">
+                <span class="cumples-pdf-modal__title">Cumpleaños en Compis</span>
+                <button class="cumples-pdf-modal__close" id="cumplesPdfClose" aria-label="Cerrar">✕</button>
+            </div>
+            <iframe id="cumplesPdfFrame" src="" title="Información en PDF"></iframe>
+        </div>
+    </div>
+</body>
+</html>

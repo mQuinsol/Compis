@@ -1,0 +1,36 @@
+:root {
+
+  background: var(--text-dark);
+  font-family: var(--font-title);
+
+  --green-primary: #76b475;
+  --green-dark: #3D6F37;
+
+  --lightblue: #ecf7ff;
+
+  --yellow-primary: #F5C84C;
+
+  --background: #F4FAFD;
+
+  --text-dark: #333333;
+  --text-light: #FFFFFF;
+
+  --font-body: 'Sunborn', sans-serif;
+  --font-base: 'Nunito', sans-serif;
+  --font-accent: 'Chewy', cursive;
+
+  --shadow-card: 0 8px 25px rgba(0,0,0,.08);
+
+  --radius-card: 24px;
+
+  --container-width: 1200px;
+
+  --mobile-width:390px;
+
+  --section-padding:4rem;
+
+  --card-radius:24px;
+
+  --navbar-height:92px;
+
+}

@@ -1,0 +1,293 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 16px;
+    right: 16px;
+    max-width: 430px;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+.announcement-bar {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    background: #f5f0e8;
+    color: var(--text-dark);
+    text-align: center;
+    font-weight: 700;
+    font-size: .85rem;
+    padding: 2px 16px;
+    box-sizing: border-box;
+}
+
+.navbar{
+    position: relative;
+    transition: none;
+
+    margin: 12px 12px;
+    width: auto;
+
+    background: rgba(250,248,255,.92);
+    backdrop-filter: blur(12px);
+
+    border-radius: 24px;
+    border:2px solid rgba(167,214,93,.15);
+
+    padding: .55rem 1rem;
+
+    box-shadow: 0 4px 16px rgba(0,0,0,.08);
+    z-index: 100;
+}
+
+.navbar__actions{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+
+.navbar__brand{
+    position:relative;
+    margin-right:auto;
+    align-items:center;
+
+    padding: .4rem .8rem;
+    border-radius: 16px;
+
+    background:#f5f5f5;
+    box-shadow: 0 4px 14px 0 rgba(111, 143, 111, 0.12), 
+                0 1px 3px 0 rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(8px);
+
+}
+
+.navbar__brand::after{
+    content:'';
+
+    position:absolute;
+
+    top:50%;
+    right:-14px;
+
+    transform:translateY(-50%);
+
+    width:1px;
+    height:24px;
+
+    background:rgba(0,0,0,.05);
+}
+
+.navbar__brand img{
+    height:38px;
+    width:auto;
+
+    display:block;
+
+    filter:none;
+    mix-blend-mode: multiply;
+}
+
+.navbar__socials-wrapper{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:.4rem .7rem;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.6);
+
+    backdrop-filter:blur(8px);
+
+    box-shadow: 0 4px 14px 0 rgba(111, 143, 111, 0.12), 
+                0 1px 3px 0 rgba(0, 0, 0, 0.04);
+}
+
+.navbar__socials {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.navbar__socials i {
+  font-size: 24px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15)); 
+  transition: 0.2s ease;
+}
+
+.navbar__socials a:hover i {
+  transform: scale(1.1);
+}
+
+.fa-whatsapp {
+  background: radial-gradient(circle at 30% 30%, #a3f5be 0%, #25D366 45%, #128C7E 90%);
+  -webkit-background-clip: text; 
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.navbar__toggle{
+    width:42px;
+    height:42px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:4px;
+    background:#f5f5f5;
+    border-radius:14px;
+    border:none;
+    cursor:pointer;
+    transition:transform .2s ease, background .2s ease;
+}
+.navbar__toggle span{
+    width:18px;
+    height:2px;
+    background:#6f6f6f;
+    border-radius:999px;
+    transition:transform .25s ease, opacity .25s ease;
+}
+.navbar__toggle.active span:nth-child(1){
+    transform:translateY(6px) rotate(45deg);
+}
+.navbar__toggle.active span:nth-child(2){
+    opacity:0;
+}
+.navbar__toggle.active span:nth-child(3){
+    transform:translateY(-6px) rotate(-45deg);
+}
+.navbar__toggle:focus-visible{
+    outline: 2px solid rgba(167,214,93,.6); /* o el color que prefieras */
+    outline-offset: 2px;
+}
+.navbar__toggle:focus:not(:focus-visible){
+    outline: none;
+}
+.navbar__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.25);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .3s ease, visibility .3s ease;
+    z-index: 200;
+}
+.navbar__overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+.navbar__drawer{
+    position:absolute;
+    top: calc(100% + 12px);
+    right:0;
+    width:min(260px, 76vw);
+    max-height:calc(100dvh - 110px);
+    padding:.75rem;
+    display:flex;
+    flex-direction:column;
+    background:rgba(250,248,255,.92);
+    border-radius:24px 24px 24px 24px;
+    box-shadow: 0 12px 32px rgba(0,0,0,.12);
+    overflow:hidden;
+    z-index:300;
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    clip-path:inset(0 0 100% 0);
+    transition:
+        opacity .22s ease,
+        clip-path .32s cubic-bezier(.4,0,.2,1),
+        visibility .32s ease;
+}
+.navbar__drawer.active{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    clip-path:inset(0 0 0% 0);
+}
+body.menu-open{
+    overflow:hidden;
+}
+.drawer__menu{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap:.5rem;
+}
+.drawer__menu li{
+    display:block;
+    margin:0;
+    padding:0;
+    border-radius:14px;
+    overflow:hidden;
+}
+.drawer__card{
+    display:grid;
+    grid-template-columns:36px 1fr 10px;
+    align-items:center;
+    gap:.65rem;
+    width:100%;
+    min-height:50px;
+    padding:.5rem .7rem;
+    box-sizing:border-box;
+    background:#fff;
+    border:1px solid rgba(0,0,0,.04);
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,.045);
+    color:#353535;
+    text-decoration:none;
+    position:relative;
+    z-index:1;
+}
+
+.drawer__card:hover{
+    transform:translateY(-1px);
+    opacity:1;
+    transform:translateX(0);
+    box-shadow:0 6px 14px rgba(0,0,0,.06);
+}
+
+.drawer__icon{
+    width:36px;
+    height:36px;
+    display:grid;
+    place-items:center;
+    border-radius:11px;
+    font-size:.9rem;
+    color:#4a4a4a;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.45);
+}
+
+.drawer__label{
+    font-size:.92rem;
+    font-weight:700;
+    line-height:1.1;
+}
+
+.drawer__arrow{
+    color:#aaaaaa;
+    font-size:.75rem;
+}
+
+.item-campamentos .drawer__icon{ background:#fff1bf; }
+.item-cumpleanios .drawer__icon{ background:#ffdbe6; }
+.item-fiestas .drawer__icon{ background:#eadbff; }
+.item-excursiones .drawer__icon{ background:#dff1ff; }
+.item-jugar .drawer__icon{ background:#e2f5d8; }
+.item-nosotras .drawer__icon{ background:#ffe5d6; }

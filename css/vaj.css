@@ -1,0 +1,339 @@
+/* =============================================
+   VAJ — Ven a jugar
+   Mobile first
+============================================= */
+
+/* =============================================
+   HERO
+============================================= */
+.vaj-hero {
+    position: relative;
+    aspect-ratio: 394 / 330;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 0 0 var(--radius-card) var(--radius-card);
+}
+
+.vaj-hero__bg {
+    position: absolute;
+    inset: 0;
+}
+
+.vaj-hero__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.vaj-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.02) 0%,
+        rgba(0,0,0,.05) 40%,
+        rgba(0,0,0,.35) 100%
+    );
+}
+
+.vaj-hero__content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    align-items: center;
+}
+
+.vaj-hero__title {
+    font-family: var(--font-accent);
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #6FAE7F; /* verde menta claro */
+    line-height: 1.1;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.5px;
+
+    -webkit-text-stroke: 6px #ffffff;
+    paint-order: stroke fill;
+
+    filter:
+        drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+.vaj-hero__subtitle {
+    font-family: var(--font-base);
+    font-size: 1rem;
+    color: var(--text-light);
+    font-weight: 500;
+    opacity: .92;
+    text-align: center;
+}
+
+/* ----- SEPARADOR WAVE ----- */
+.wave--trust-to-pricing {
+    background: #ecf7ff;
+}
+
+/* ----- FEATURES ----- */
+.vaj-features {
+    padding: 2.5rem 1.25rem 2rem;
+    text-align: center;
+}
+
+.vaj-features__title {
+    font-family: var(--font-accent);
+    font-size: 1.25rem;
+    color: var(--green-dark);
+    line-height: 1.35;
+    margin-bottom: 2rem;
+}
+
+.vaj-features__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vaj-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+}
+
+.vaj-feature__icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #f0f9e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--green-dark);
+    margin-bottom: .25rem;
+}
+
+.vaj-feature__name {
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: .85rem;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.vaj-feature__desc {
+    font-family: var(--font-base);
+    font-size: .78rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* =============================================
+   TARIFAS
+============================================= */
+.vaj-tarifas {
+    background-color: #fdf3da;
+    padding: 60px 20px;
+}
+
+.vaj-tarifas__title {
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight:700;
+    text-align: center;
+    letter-spacing: .1rem;
+    margin: 0 auto 1.5rem;
+    gap: .5rem;
+    display:flex;
+    width: fit-content;
+    justify-content: center;
+    align-items:center;
+    gap:.5rem;
+    padding:.45rem 1.4rem;
+    background:#ffffff90;
+    backdrop-filter:blur(4px);
+    border:1.5px solid #d8d1ff;
+    border-radius:999px;
+    color:var(--green-dark);
+    font-weight:700;
+    box-shadow:
+        0 4px 10px rgba(109,92,207,.12);
+}
+
+.vaj-tarifas__title i {
+    color: var(--yellow-primary);
+    font-size: 1.4rem;
+    -webkit-text-stroke: 0;
+}
+
+.vaj-tarifas__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.vaj-tarifas__img-wrap {
+    width: 100%;
+    max-width: 220px;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+}
+
+.vaj-tarifas__img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* =============================================
+   CÓMO FUNCIONA
+============================================= */
+.vaj-como {
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+}
+
+.vaj-como__title {
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight:700;
+    text-align: center;
+    letter-spacing: .1rem;
+    margin: 0 auto .5rem;
+    gap: .5rem;
+    display:flex;
+    width: fit-content;
+    justify-content: center;
+    align-items:center;
+    gap:.5rem;
+    padding:.45rem 1.4rem;
+    background:#ffffff90;
+    backdrop-filter:blur(4px);
+    border:1.5px solid #d8d1ff;
+    border-radius:999px;
+    color:var(--green-dark);
+    font-weight:700;
+    box-shadow:
+        0 4px 10px rgba(109,92,207,.12);
+}
+
+.vaj-como__title i {
+    color: var(--yellow-primary);
+    font-size: 1rem;
+}
+
+.vaj-como__steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vaj-paso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    max-width: 220px;
+}
+
+.vaj-paso--arrow {
+    color: var(--green-primary);
+    font-size: 1.2rem;
+    transform: rotate(90deg);
+    max-width: unset;
+}
+
+.vaj-paso__num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--green-dark);
+    color: #fff;
+    font-family: var(--font-accent);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.vaj-paso__num--2 {
+    background: var(--yellow-primary);
+    color: var(--text-dark);
+}
+
+.vaj-paso__num--3 {
+    background: var(--green-primary);
+}
+
+.vaj-paso__name {
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: .92rem;
+    color: var(--text-dark);
+}
+
+.vaj-paso__desc {
+    font-family: var(--font-base);
+    font-size: .8rem;
+    color: #666;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* =============================================
+   GALERÍA
+============================================= */
+.vaj-galeria {
+    padding: 0 0 2rem;
+}
+
+.vaj-galeria__list {
+    display: flex;
+    gap: .5rem;
+    list-style: none;
+    padding: 0 1.25rem;
+    margin: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.vaj-galeria__list::-webkit-scrollbar {
+    display: none;
+}
+
+.vaj-galeria__item {
+    flex: 0 0 calc(33.333% - .35rem);
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+}
+
+.vaj-galeria__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

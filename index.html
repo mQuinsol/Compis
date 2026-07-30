@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Compis - Diversión sin límites</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+    <div class="app-shell">
+        <div class="app-device">
+    <!--
+    <div class="cookie-banner" id="cookieBanner">
+        <p class="cookie-banner__text">
+            Esta web solo usa cookies técnicas necesarias para su funcionamiento. 
+            <a href="/cookies.html">Más información</a>
+        </p>
+        <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Entendido</button>
+    </div>
+    -->
+
+    <a class="whatsapp-float" id="waToggle">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="wa-chatbox" id="waChat">
+
+        <div class="wa-header">
+            ⭐ ¡Hola! ¿En qué podemos ayudarte? ⭐
+        </div>
+
+        <div class="wa-body">
+            <div class="bot-menu">
+                <div class="bot-title">Déjanos tu mensaje y te responderemos en la mayor brevedad posible. Gracias 🥰</div>
+                <div class="bot-item">
+                    <textarea id="waMessage" placeholder="Hola, me gustaría saber más sobre..."></textarea>
+                    <button id="waSend">Enviar</button>
+                </div>
+                <div class="bot-contacto-telefono">
+                    <p>¿Prefieres hablar directamente?</p>
+                    <a href="tel:+34986066863" class="bot-btn-call">
+                        <i class="fas fa-phone-alt"></i> Llamar ahora: 986 06 68 63
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="site-header">
+        <div class="announcement-bar">
+            🎉 Campamento de Verano del 22/06 al 4/09 🎉
+        </div>
+        <nav class="navbar">
+            
+            <div class="navbar__actions">
+
+                <a href="./index.html" class="navbar__brand">
+                    <img src="./assets/images/logo/logo.webp" alt="Compis">
+                </a>
+
+                <div class="navbar__socials-wrapper">
+
+                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" 
+                    class="navbar__socials"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <!--href="https://wa.me/34XXXXXXXXX?text=Hola%2C%20me%20gustaría%20más%20información"-->
+                    <a href="https://wa.me/34613293273" 
+                    class="navbar__socials" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                
+                </div>
+
+                <button class="navbar__toggle" aria-label="Abrir menú" aria-controls="mobile-drawer" aria-expanded="false" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+            <div class="navbar__overlay"></div>
+
+            <div class="navbar__drawer" id="mobile-drawer">
+                <ul class="drawer__menu">
+                    <li class="item-campamentos">
+                        <a href="/pages/campamentos.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-campground"></i></span>
+                            <span class="drawer__label">Campamentos</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+
+                    <li class="item-cumpleanios">
+                        <a href="/pages/cumples.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-cake-candles"></i></span>
+                            <span class="drawer__label">Cumpleaños</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+
+                    <li class="item-jugar">
+                        <a href="/pages/acceso-por-horas.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-puzzle-piece"></i></span>
+                            <span class="drawer__label">Acceso por horas</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+
+                    <li class="item-fiestas">
+                        <a href="/pages/fiestas-y-eventos.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-champagne-glasses"></i></span>
+                            <span class="drawer__label">Fiestas y Eventos</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+
+                    <li class="item-excursiones">
+                        <a href="/pages/excursiones.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-bus"></i></span>
+                            <span class="drawer__label">Excursiones</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+
+                    <li class="item-nosotras">
+                        <a href="/pages/nosotras.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-heart"></i></span>
+                            <span class="drawer__label">Nosotras</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+        
+    <header class="hero">
+        <div class="hero-content">
+            <div class="navbar__brand">
+                <img src="./assets/images/logo/logo_hero.webp" alt="Compis">
+            </div>
+            <h1 class="capsule-text">
+                Diversión sin límites para ellos.
+            </h1>
+            <p class="hero-subtitle">Tranquilidad total para ti.</p>
+            <div class="hero-actions">
+                <a href="#" class="hero-btn hero-btn--primary">Reservar eventos</a>
+                <a href="#" class="hero-btn hero-btn--outline">Tour virtual</a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero-brand">
+        <img src="./assets/images/logo/logo_hero.webp" alt="Compis">
+    </section>
+
+    <div class="wave-divider wave--brand-to-services" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,0 C360,60 1080,0 1440,40 L1440,60 L0,60 Z" fill="#ecf7ff"/>
+        </svg>
+    </div>
+
+    <section class="services" id="servicios">
+        <div class="services__container">
+            <h2 class="services__title">¿Qué hacemos?</h2>
+
+            <div class="services__accordion">
+
+                <article class="service-card item-jugar">
+                    <button class="service-card__header" aria-expanded="false">
+                        <div class="service-card__pill">
+                            <img src="./assets/icons/icon1.webp" alt="" class="service-card__icon">
+                            <span>Juego por horas</span>
+                        </div>
+                        <span class="service-card__preview">Acceso libre a todas las zonas de</span>
+                        <span class="service-card__toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-card__body">
+                        <p class="service-card__text">Acceso libre a todas las zonas de juego. A partir de 3 años podéis dejarlos solos, siempre supervisados.</p>
+                    </div>
+                </article>
+
+                <article class="service-card item-campamentos">
+                    <button class="service-card__header" aria-expanded="false">
+                        <div class="service-card__pill">
+                            <img src="./assets/icons/icon2.webp" alt="" class="service-card__icon">
+                            <span>Campamentos</span>
+                        </div>
+                        <span class="service-card__preview">Durante vacaciones organizamos talleres</span>
+                        <span class="service-card__toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-card__body">
+                        <p class="service-card__text">Durante vacaciones organizamos actividades, talleres y excursiones para conciliar y mantener a los peques activos.</p>
+                    </div>
+                </article>
+
+                <article class="service-card item-cumpleanios">
+                    <button class="service-card__header" aria-expanded="false">
+                        <div class="service-card__pill">
+                            <img src="./assets/icons/icon3.webp" alt="" class="service-card__icon">
+                            <span>Cumpleaños</span>
+                        </div>
+                        <span class="service-card__preview">Celebramos cumpleaños con </span>
+                        <span class="service-card__toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-card__body">
+                        <p class="service-card__text">Celebramos cumpleaños con actividades a elegir para que vivan un día inolvidable.</p>
+                    </div>
+                </article>
+
+                <article class="service-card item-fiestas">
+                    <button class="service-card__header" aria-expanded="false">
+                        <div class="service-card__pill">
+                            <img src="./assets/icons/icon4.webp" alt="" class="service-card__icon">
+                            <span>Eventos</span>
+                        </div>
+                        <span class="service-card__preview">Organizamos fiestas temáticas, con gincanas</span>
+                        <span class="service-card__toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="service-card__body">
+                        <p class="service-card__text">Organizamos fiestas temáticas, con gincanas y juegos para una gran experiencia en eventos particulares.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <div class="services__band"></div>
+
+        <div class="services__gallery">
+
+            <div class="services__track">
+                <div class="services__slide"><img src="./assets/images/services/ppal3.webp" alt=""></div>
+                <div class="services__slide"><img src="./assets/images/services/ppal4.webp" alt=""></div>
+                <div class="services__slide"><img src="./assets/images/services/ppal5.webp" alt=""></div>
+                <div class="services__slide"><img src="./assets/images/services/ppal1.webp" alt=""></div>
+                <div class="services__slide"><img src="./assets/images/services/ppal2.webp" alt=""></div>
+                <div class="services__slide"><img src="./assets/images/services/img6.webp" alt=""></div>
+                <div class="services__slide"><img src="./assets/images/services/img7.webp" alt=""></div>
+                <div class="services__slide"><img src="./assets/images/services/img8.webp" alt=""></div>
+                <div class="services__slide"><img src="./assets/images/services/img9.webp" alt=""></div>
+                <div class="services__slide"><img src="./assets/images/services/img10.webp" alt=""></div>
+                <div class="services__slide"><img src="./assets/images/services/img11.webp" alt=""></div>
+                <div class="services__slide"><img src="./assets/images/services/img12.webp" alt=""></div>
+                <div class="services__slide"><img src="./assets/images/services/img13.webp" alt=""></div>
+            </div>
+
+            <div class="services__dots"></div>
+
+        </div>
+
+
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox__close">✕</button>
+            <button class="lightbox__prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <img class="lightbox__img" src="" alt="">
+            <button class="lightbox__next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <div class="wave-divider wave--services-to-reviews" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,20 C400,70 1040,0 1440,30 L1440,60 L0,60 Z" fill="#ede8ff"/>
+        </svg>
+    </div>
+
+    <section class="reviews" id="opiniones">
+        <div class="reviews__container">
+
+            <h2 class="reviews__title">Opiniones que nos inspiran</h2>
+            <p class="reviews__subtitle">Lo que dicen las familias de Compis</p>
+
+            <div class="reviews__list">
+
+                <article class="review-card">
+                    <div class="review-card__header">
+                        <span class="review-card__avatar" style="background:#ffdbe6; color:#9c2a4a">A</span>
+                        <div>
+                            <p class="review-card__name">Alicia Balboa Chan</p>
+                            <span class="review-card__stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="review-card__text">Lugar maravilloso. Luci y Rebe cuidan a los peques como si fueran sus mamás.</p>
+                    <a href="https://www.google.com/maps/contrib/114363072396762369445/reviews?hl=es-ES" target="_blank" rel="noopener noreferrer" class="review-card__link">Ver reseña →</a>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-card__header">
+                        <span class="review-card__avatar" style="background:#e2f5d8; color:#3D6F37">J</span>
+                        <div>
+                            <p class="review-card__name">Javi Blanco</p>
+                            <span class="review-card__stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="review-card__text">Recomendable, espacio amplio, limpio y con muy buena atención a los niños.</p>
+                    <a href="https://www.google.com/maps/contrib/106111300092748320623/reviews?hl=es-ES" target="_blank" rel="noopener noreferrer" class="review-card__link">Ver reseña →</a>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-card__header">
+                        <span class="review-card__avatar" style="background:#fff1bf; color:#7a5c00">D</span>
+                        <div>
+                            <p class="review-card__name">Diego Espiñeira</p>
+                            <span class="review-card__stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="review-card__text">Rebeca y Luci siempre atentas. Espacioso y con muchas alternativas según los peques.</p>
+                    <a href="https://www.google.com/maps/contrib/113749603504253659653/reviews?hl=es-ES" target="_blank" rel="noopener noreferrer" class="review-card__link">Ver reseña →</a>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-card__header">
+                        <span class="review-card__avatar" style="background:#eadbff; color:#5b2d8e">Y</span>
+                        <div>
+                            <p class="review-card__name">Yésica Figueiro Torres</p>
+                            <span class="review-card__stars">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="review-card__text">Muuuuy limpio y acogedor. Las chicas transmiten un ambiente pacífico y tranquilo. Lo recomiendo.</p>
+                    <a href="https://www.google.com/maps/contrib/104759829146544983973/reviews?hl=es-ES" target="_blank" rel="noopener noreferrer" class="review-card__link">Ver reseña →</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-compis">
+        <div class="footer-compis__container">
+
+            <div class="footer-compis__hours-accordion">
+                <div class="footer-compis__hours-item">
+                    <button class="footer-compis__hours-toggle" data-hours-toggle aria-expanded="false" aria-controls="hoursEscolar">
+                        <span>Escolar</span>
+                        <i class="fa-solid fa-chevron-down footer-compis__hours-caret"></i>
+                    </button>
+                    <div class="footer-compis__hours-panel" id="hoursEscolar">
+                        <div class="footer-compis__hours-row">
+                            <span>Martes a Domingo</span>
+                            <span>16:30 a 20:30h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-compis__hours-item">
+                    <button class="footer-compis__hours-toggle" data-hours-toggle aria-expanded="false" aria-controls="hoursVacacional">
+                        <span>Vacacional</span>
+                        <i class="fa-solid fa-chevron-down footer-compis__hours-caret"></i>
+                    </button>
+                    <div class="footer-compis__hours-panel" id="hoursVacacional">
+                        <div class="footer-compis__hours-row">
+                            <span>Lunes</span>
+                            <span>9:00 a 14:00h</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Martes a Viernes</span>
+                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Sábados</span>
+                            <span>17:00 a 01:00h</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Domingos</span>
+                            <span>17:00 a 21:00h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-compis__bottom-grid">
+
+                <div class="footer-compis__location">
+                    <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link" title="Ver en Google Maps">
+                        <div class="footer-compis__map-avatar">
+                            <img src="../assets/images/footer/image.webp" alt="Mapa Compis Sanxenxo">
+                        </div>
+                    </a>
+                    <div class="footer-compis__address">
+                        <p class="footer-compis__street">Paseo Playa de Silgar</p>
+                        <p class="footer-compis__street">nº 66, Bajo · Sanxenxo</p>
+                        <p class="footer-compis__city"><span>A pie de playa</span></p>
+                    </div>
+                </div>
+
+                <div class="footer-compis__contact-groups">
+                    <div class="footer-compis__group">
+                        <span class="footer-compis__group-label">Contacto</span>
+                        <div class="footer-compis__group-icons">
+                            <a href="tel:986066863" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+                            <span class="footer-compis__group-sep">·</span>
+                            <a href="https://wa.me/34613293273" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <span class="footer-compis__vdivider"></span>
+
+                    <div class="footer-compis__group">
+                        <span class="footer-compis__group-label">Síguenos</span>
+                        <div class="footer-compis__group-icons">
+                            <a href="https://www.instagram.com/ludotecacompis/?hl=es" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <span class="footer-compis__group-sep">·</span>
+                            <a href="https://www.facebook.com/people/Compis-Ludoteca/100081051092342/" target="_blank" rel="noopener noreferrer" class="footer-compis__social--facebook" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- LEGALES & COPYRIGHT -->
+            <div class="footer-compis__bottom">
+                <nav class="footer-compis__legal">
+                    <a href="/legal.html#privacidad">Política de privacidad</a> ·
+                    <a href="/legal.html#aviso-legal">Aviso legal</a>
+                </nav>
+                <p class="footer-compis__copy">&copy; <span id="footerYear">2026</span> Ludoteca Compis.</p>
+            </div>
+        </div>
+    </footer>
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <script type="module" src="./js/main.js"></script>
+        </div>
+    </div>
+</body>
+</html>

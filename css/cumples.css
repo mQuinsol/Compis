@@ -1,0 +1,545 @@
+/* HERO */
+.cumples-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 9rem 1rem 2rem;
+    background: var(--lightblue);
+    position: relative;
+    overflow: hidden;
+}
+
+.cumples-hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 2;
+}
+
+.cumples-hero__text h1 {
+    font-family: var(--font-title);
+    color: var(--green-dark);
+    font-size: 2rem;
+    line-height: 1.2;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cumples-hero__text p {
+    font-family: var(--font-base);
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.cumples-hero__ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.cumples-hero__ctas .btn {
+    text-align: center;
+    justify-content: center;
+}
+
+.btn--green {
+    background: #a8d5a2;
+    color: var(--green-dark);
+}
+
+.cumples-hero__img {
+    height: 100%;
+    position: relative;
+}
+
+.cumples-hero__img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -1px;
+    background: linear-gradient(to right, var(--lightblue) 0%, transparent 45%);
+    z-index: 1;
+    border-radius: 1rem;
+    pointer-events: none;
+}
+
+.cumples-hero__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    filter: brightness(0.85);
+}
+
+.cumples-pdf-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    box-sizing: border-box;
+}
+
+.cumples-pdf-modal.is-open {
+    display: flex;
+}
+
+.cumples-pdf-modal__box {
+    background: #fff;
+    border-radius: 0.75rem;
+    width: 100%;
+    max-width: 700px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.cumples-pdf-modal__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.cumples-pdf-modal__title {
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    color: var(--green-dark);
+}
+
+.cumples-pdf-modal__close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #666;
+    line-height: 1;
+}
+
+.cumples-pdf-modal__box iframe {
+    flex: 1;
+    width: 100%;
+    border: none;
+}
+
+/* SECCIÓN GENÉRICA */
+.section-title {
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight:700;
+    text-align: center;
+    letter-spacing: .1rem;
+    margin: 0 auto 1.5rem;
+    gap: .5rem;
+    display:flex;
+    width: fit-content;
+    justify-content: center;
+    align-items:center;
+    gap:.5rem;
+    padding:.45rem 1.4rem;
+    background:#ffffff90;
+    backdrop-filter:blur(4px);
+    border:1.5px solid #d8d1ff;
+    border-radius:999px;
+    color:var(--green-dark);
+    font-weight:700;
+    box-shadow:
+        0 4px 10px rgba(109,92,207,.12);
+}
+
+.wave-divider {
+    line-height: 0;
+    overflow: hidden;
+}
+
+.wave-divider svg {
+    display: block;
+    width: 100%;
+}
+
+css/* Hero (lightblue) → Tarifas (blanco) */
+.wave--cumples-hero {
+    background: var(--lightblue);
+}
+
+/* Tarifas (blanco) → Extras (lila) */
+.wave--cumples-tarifas {
+    background: #ffffff;
+}
+
+/* Extras (lila) → Menús (blanco) */
+.wave--cumples-extras {
+    background: #f9f5ff;
+}
+
+/* Menús (blanco) → Información (lila) */
+.wave--cumples-menus {
+    background: #ffffff;
+}
+
+/* TARIFAS */
+.cumples-tarifas {
+    padding: 1rem 1.25rem;
+    background: #fff;
+}
+
+.cumples-tarifas__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.tarifa-card {
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.tarifa-card--diurno {
+    background: #fffbe6;
+    border: 2px solid var(--yellow-primary);
+}
+
+.tarifa-card--nocturno {
+    background: #eef2ff;
+    border: 2px solid #a5b4fc;
+}
+
+.tarifa-card__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tarifa-card__icon {
+    font-size: 1.5rem;
+}
+
+.tarifa-card__header h3 {
+    font-family: 'Chewy', cursive;
+    font-size: 1.3rem;
+    color: var(--green-dark);
+    margin: 0;
+}
+
+.tarifa-card__sub {
+    font-size: 0.8rem;
+    color: #888;
+    margin-left: auto;
+}
+
+.tarifa-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tarifa-card__list li {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: 0.4rem;
+}
+
+/* EXTRAS */
+.cumples-extras {
+    padding: 1rem 1.25rem;
+    background: var(--bg-light, #f9f5ff);
+}
+
+.cumples-extras__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.extra-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    text-align: center;
+    padding-bottom: 0.75rem;
+}
+
+.extra-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.extra-card__name {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin: 0.4rem 0 0.1rem;
+}
+
+.extra-card__price {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.cumples-extras__nota {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    color: var(--green-dark);
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* MENÚS */
+.cumples-menus {
+    padding: 1rem 1.25rem;
+    background: #fff;
+}
+
+.cumples-menus__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.menu-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.menu-item__header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.75rem;
+    border: none;
+    cursor: pointer;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    text-align: center;
+}
+
+.menu-item__arrow {
+    position: absolute;
+    right: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+}
+
+.menu-item.is-open .menu-item__arrow {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.menu-item__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    padding: 0 1.25rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    color: #444;
+}
+
+.menu-item.is-open .menu-item__body {
+    max-height: 400px;
+    padding: 0.75rem 1.25rem 1rem;
+}
+
+/* --- Merienda: tono coral --- */
+.menu-item:nth-child(1) .menu-item__header {
+    background: #ffd9df;
+    color: #a83a55;
+}
+
+.menu-item:nth-child(1) .menu-item__body {
+    background: #fff2f4;
+}
+
+.menu-item:nth-child(1) .menu-title {
+    font-weight: 700;
+    color: #a83a55;
+}
+
+/* --- Cena: tono azul --- */
+.menu-item:nth-child(2) .menu-item__header {
+    background: #d7ecff;
+    color: #1f6fa8;
+}
+
+.menu-item:nth-child(2) .menu-item__body {
+    background: #f0f8ff;
+}
+
+.menu-item:nth-child(2) .menu-title {
+    font-weight: 700;
+    color: #1f6fa8;
+}
+
+/* --- Tartas: tono lila --- */
+.menu-item:nth-child(3) .menu-item__header {
+    background: #e4dbff;
+    color: #6b4fb0;
+}
+
+.menu-item:nth-child(3) .menu-item__body {
+    background: #f5f1ff;
+}
+
+.menu-item:nth-child(3) .menu-item__body p {
+    font-weight: 700;
+    color: #6b4fb0;
+    margin: 0.4rem 0;
+}
+
+.alergias-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #eaf3de;
+    border-radius: 0.75rem;
+    padding: 0.9rem 1.25rem;
+    margin-top: 1rem;
+}
+
+.alergias-note::before {
+    content: "\f06a";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: var(--green-dark);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.alergias-note p {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--green-dark);
+    line-height: 1.4;
+}
+
+/* INFORMACIÓN */
+.cumples-info {
+    padding: 3rem 1.25rem;
+    background: var(--bg-light, #f9f5ff);
+}
+
+.cumples-info__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.info-card__text {
+    padding: 1rem 1.25rem;
+}
+
+.info-card__text h4 {
+    font-family: 'Chewy', cursive;
+    font-size: 1.1rem;
+    color: var(--green-dark);
+    margin-bottom: 0.4rem;
+}
+
+.info-card__text p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.875rem;
+    color: #555;
+}
+
+/* RESERVAR */
+.cumples-reservar {
+    padding: 2rem 1.4rem;
+    background: var(--lightblue);
+    text-align: center;
+}
+
+.cumples-reservar .section-title {
+    font-family: var(--font-title);
+    color: var(--green-dark);
+    font-size: 1.6rem;
+    margin: 0 0 .6rem;
+}
+
+.cumples-reservar p {
+    font-family: var(--font-base);
+    color: #4a4a4a;
+    font-size: .92rem;
+    line-height: 1.45;
+    margin: 0 0 1.5rem;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* BOTONES */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn:hover { opacity: 0.85; }
+
+.btn--green {
+    background: var(--green-dark);
+    color: #fff;
+}
+
+.btn--outline {
+    background: transparent;
+    border: 2px solid var(--green-dark);
+    color: var(--green-dark);
+}

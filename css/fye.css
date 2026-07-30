@@ -1,0 +1,258 @@
+/* ----- FIESTAS Y EVENTOS ----- */
+.fye-hero {
+    position: relative;
+    min-height: 330px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 0 0 var(--radius-card) var(--radius-card);
+}
+
+.fye-hero__bg {
+    position: absolute;
+    inset: 0;
+}
+
+.fye-hero__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.fye-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.10) 0%,
+        rgba(0,0,0,.60) 100%
+    );
+}
+
+.fye-hero__content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.fye-hero__title {
+    font-family: var(--font-accent);
+    font-size: 2.4rem;
+    color: #B89FE8;
+    line-height: 1.05;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.5px;
+
+    -webkit-text-stroke: 6px #ffffff;
+    paint-order: stroke fill;
+
+    filter:
+        drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))
+        drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+.fye-hero__subtitle {
+    font-family: var(--font-base);
+    font-size: .95rem;
+    color: var(--text-light);
+    font-weight: 500;
+    opacity: .92;
+}
+
+/* ----- ACORDEÓN FYE ----- */
+.fye-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.fye-accordion-section {
+    padding: 1.2rem 1.4rem 2rem;
+    box-sizing: border-box;
+}
+
+.fye-accordion__item {
+    background: #fff;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.fye-accordion__trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.fye-accordion__icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.fye-accordion__icon--tematica { color: #c084fc; }
+.fye-accordion__icon--nocturna { color: #4f46e5; }
+.fye-accordion__icon--pijama   { color: #f59e0b; }
+.fye-accordion__icon--pijamars { color: var(--green-dark); }
+
+.fye-accordion__headtext {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.fye-accordion__name {
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--green-dark);
+}
+
+.fye-accordion__sub {
+    font-family: var(--font-base);
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.fye-accordion__arrow {
+    color: var(--green-dark);
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.fye-accordion__trigger[aria-expanded="true"] .fye-accordion__arrow {
+    transform: rotate(180deg);
+}
+
+/* Colores por tipo, igual que camp-accordion por campamento */
+.fye-accordion__item[data-tipo="tematica"] .fye-accordion__trigger {
+    background: linear-gradient(90deg, #f5f0ff);
+}
+.fye-accordion__item[data-tipo="nocturna"] .fye-accordion__trigger {
+    background: linear-gradient(90deg, #eef0ff);
+}
+.fye-accordion__item[data-tipo="pijama"] .fye-accordion__trigger {
+    background: linear-gradient(90deg, #fff9e6);
+}
+.fye-accordion__item[data-tipo="monitor"] .fye-accordion__trigger {
+    background: linear-gradient(90deg, #f0fff4);
+}
+
+.fye-accordion__body {
+    display: none;
+    padding: 0 1rem 1rem;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.fye-accordion__body.is-open {
+    display: flex;
+    flex-direction: column;
+}
+
+.fye-accordion__content-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    padding-top: .5rem;
+}
+
+.fye-accordion__carousel {
+    flex: 0 0 45%;
+    height: 120px;
+    border-radius: calc(var(--card-radius) - 4px);
+    overflow: hidden;
+    align-self: center;
+}
+
+.fye-accordion__carousel .fye-carousel__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.fye-carousel__track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.fye-carousel__slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.fye-accordion__desc {
+    flex: 1;
+    font-family: var(--font-base);
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* =============================================
+   CTA PRESUPUESTO
+============================================= */
+.fye-cta {
+    padding: 2rem 1.25rem 2.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+}
+
+.fye-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0.2rem;
+    background: var(--background);
+}
+.fye-logo img {
+    width: min(250px, 80%);
+    height: auto;
+    display: block;
+}
+
+.fye-cta__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: #F0C443;
+    color: var(--text-dark);
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: .95rem;
+    padding: .75rem 1.75rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(37,211,102,.3);
+    transition: opacity .2s;
+}
+
+.fye-cta__btn:hover {
+    opacity: .88;
+}
+
+.fye-cta__sub {
+    font-family: var(--font-base);
+    font-size: .68rem;
+    color: #888;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}

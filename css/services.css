@@ -1,0 +1,311 @@
+.services {
+    background: var(--lightblue);
+    padding: 2rem 1.4rem;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.services__container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.services__title {
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight:700;
+    text-align: center;
+    letter-spacing: .1rem;
+    margin: 0 auto 1.5rem;
+    gap: .5rem;
+    display:flex;
+    width: fit-content;
+    justify-content: center;
+    align-items:center;
+    gap:.5rem;
+    padding:.45rem 1.4rem;
+    background:#ffffff90;
+    backdrop-filter:blur(4px);
+    border:1.5px solid #d8d1ff;
+    border-radius:999px;
+    color:var(--green-dark);
+    font-weight:700;
+    box-shadow:
+        0 4px 10px rgba(109,92,207,.12);
+}
+
+.services__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+/* Tarjeta */
+.service-card {
+    background: #fff;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Cabecera – siempre visible */
+.service-card__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .85rem 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.service-card__pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    padding: .35rem .8rem .35rem .35rem;
+    border-radius: 999px;
+    font-family: var(--font-title);
+    font-size: .9rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.service-card__icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.service-card__preview {
+    font-family: var(--font-base);
+    font-size: .8rem;
+    color: var(--text-dark);
+    flex: 1;
+    line-height: 1.4;
+    opacity: .75;
+}
+
+.service-card__toggle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #999;
+    flex-shrink: 0;
+    margin-left: auto;
+    transition: transform .25s ease, color .25s ease;
+    line-height: 1;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Cuerpo – colapsado por defecto */
+.service-card__body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease, padding .3s ease;
+    padding: 0 1rem;
+}
+
+.service-card__text {
+    font-family: var(--font-base);
+    font-size: .88rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+    margin: 0 0 1rem;
+}
+
+/* Estado abierto */
+.service-card.is-open .service-card__body {
+    max-height: 200px;
+    padding: 0 1rem .85rem;
+}
+
+.service-card.is-open .service-card__toggle {
+    transform: rotate(45deg);
+    color: #666;
+}
+
+.service-card.is-open .service-card__preview {
+    display: none; /* oculta el resumen cuando está expandido */
+}
+
+/* Colores de píldora */
+.item-jugar       .service-card__pill { background: #e2f5d8; color: #3D6F37; }
+.item-campamentos .service-card__pill { background: #fff1bf; color: #7a5c00; }
+.item-cumpleanios .service-card__pill { background: #ffdbe6; color: #9c2a4a; }
+.item-fiestas     .service-card__pill { background: #eadbff; color: #5b2d8e; }
+
+/* Banda separadora */
+.services__band {
+    background: linear-gradient(135deg, #ffdbe6 0%, #fff1bf 35%, #e2f5d8 65%, #eadbff 100%);
+    height: 6px;
+    border-radius: 999px;
+    margin: 2rem .5rem 1.5rem;
+    opacity: .7;
+}
+
+.services__gallery {
+    padding: 0 0 1.5rem;
+    box-sizing: border-box;
+}
+
+.services__track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: .75rem;
+    padding: .5rem 1.4rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    box-sizing: border-box;
+}
+
+.services__track::-webkit-scrollbar {
+    display: none;
+}
+
+.services__slide {
+    flex: 0 0 72vw;
+    max-width: 280px;
+    scroll-snap-align: center;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    transition: transform .2s ease;
+}
+
+.services__slide:active {
+    transform: scale(0.97);
+}
+
+.services__slide img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dots */
+.services__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    padding-top: .75rem;
+}
+
+.services__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ccc;
+    transition: background .2s ease, transform .2s ease;
+    cursor: pointer;
+}
+
+.services__dot.active {
+    background: var(--green-dark, #3D6F37);
+    transform: scale(1.3);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .25s ease, visibility .25s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox__img {
+    max-width: 92vw;
+    max-height: 85vh;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+.lightbox__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255,255,255,.15);
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox__prev,
+.lightbox__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,.15);
+    border: none;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.lightbox__prev { left: 1rem; }
+.lightbox__next { right: 1rem; }
+
+/* Flechas */
+.services__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    backdrop-filter: blur(10px);
+}
+
+.services__arrow i {
+    font-size: 20px;
+    color: #5a8a5a;
+}
+
+.services__arrow--left  { left: 12px; }
+.services__arrow--right { right: 12px; }
