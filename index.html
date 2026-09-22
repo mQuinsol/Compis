@@ -11,18 +11,23 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBCR3F98"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="app-shell">
         <div class="app-device">
-    <!--
-    <div class="cookie-banner" id="cookieBanner">
-        <p class="cookie-banner__text">
-            Esta web solo usa cookies técnicas necesarias para su funcionamiento. 
-            <a href="/cookies.html">Más información</a>
-        </p>
-        <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Entendido</button>
-    </div>
-    -->
-
+            <div class="cookie-banner" id="cookieBanner">
+                <p class="cookie-banner__text">
+                    Usamos cookies para el funcionamiento de la web y, con tu consentimiento, para analizar su uso con Google Analytics.
+                    <a href="/legal.html#cookies">Más información</a>
+                </p>
+                <div class="cookie-banner__actions">
+                    <button class="cookie-banner__btn cookie-banner__btn--reject" id="cookieReject">Rechazar</button>
+                    <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Aceptar</button>
+                </div>
+        </div>
     <a class="whatsapp-float" id="waToggle">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -53,7 +58,7 @@
 
     <div class="site-header">
         <div class="announcement-bar">
-            🎉 Campamento de Verano del 22/06 al 4/09 🎉
+            <a href=""></a>
         </div>
         <nav class="navbar">
             
@@ -91,65 +96,63 @@
             </div>
 
             <div class="navbar__overlay"></div>
+                <div class="navbar__drawer" id="mobile-drawer">
+                    <ul class="drawer__menu">
+                        <li class="item-campamentos">
+                            <a href="/pages/campamentos.html" class="drawer__card">
+                                <span class="drawer__icon"><i class="fa-solid fa-campground"></i></span>
+                                <span class="drawer__label">Campamentos</span>
+                                <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                            </a>
+                        </li>
 
-            <div class="navbar__drawer" id="mobile-drawer">
-                <ul class="drawer__menu">
-                    <li class="item-campamentos">
-                        <a href="/pages/campamentos.html" class="drawer__card">
-                            <span class="drawer__icon"><i class="fa-solid fa-campground"></i></span>
-                            <span class="drawer__label">Campamentos</span>
-                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
-                        </a>
-                    </li>
+                        <li class="item-cumpleanios">
+                            <a href="/pages/cumples.html" class="drawer__card">
+                                <span class="drawer__icon"><i class="fa-solid fa-cake-candles"></i></span>
+                                <span class="drawer__label">Cumpleaños</span>
+                                <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                            </a>
+                        </li>
 
-                    <li class="item-cumpleanios">
-                        <a href="/pages/cumples.html" class="drawer__card">
-                            <span class="drawer__icon"><i class="fa-solid fa-cake-candles"></i></span>
-                            <span class="drawer__label">Cumpleaños</span>
-                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
-                        </a>
-                    </li>
+                        <li class="item-jugar">
+                            <a href="/pages/acceso-por-horas.html" class="drawer__card">
+                                <span class="drawer__icon"><i class="fa-solid fa-puzzle-piece"></i></span>
+                                <span class="drawer__label">Acceso por horas</span>
+                                <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                            </a>
+                        </li>
 
-                    <li class="item-jugar">
-                        <a href="/pages/acceso-por-horas.html" class="drawer__card">
-                            <span class="drawer__icon"><i class="fa-solid fa-puzzle-piece"></i></span>
-                            <span class="drawer__label">Acceso por horas</span>
-                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
-                        </a>
-                    </li>
+                        <li class="item-fiestas">
+                            <a href="/pages/fiestas-y-eventos.html" class="drawer__card">
+                                <span class="drawer__icon"><i class="fa-solid fa-champagne-glasses"></i></span>
+                                <span class="drawer__label">Fiestas y Eventos</span>
+                                <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                            </a>
+                        </li>
 
-                    <li class="item-fiestas">
-                        <a href="/pages/fiestas-y-eventos.html" class="drawer__card">
-                            <span class="drawer__icon"><i class="fa-solid fa-champagne-glasses"></i></span>
-                            <span class="drawer__label">Fiestas y Eventos</span>
-                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
-                        </a>
-                    </li>
+                        <li class="item-excursiones">
+                            <a href="/pages/excursiones.html" class="drawer__card">
+                                <span class="drawer__icon"><i class="fa-solid fa-bus"></i></span>
+                                <span class="drawer__label">Excursiones</span>
+                                <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                            </a>
+                        </li>
 
-                    <li class="item-excursiones">
-                        <a href="/pages/excursiones.html" class="drawer__card">
-                            <span class="drawer__icon"><i class="fa-solid fa-bus"></i></span>
-                            <span class="drawer__label">Excursiones</span>
-                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
-                        </a>
-                    </li>
-
-                    <li class="item-nosotras">
-                        <a href="/pages/nosotras.html" class="drawer__card">
-                            <span class="drawer__icon"><i class="fa-solid fa-heart"></i></span>
-                            <span class="drawer__label">Nosotras</span>
-                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                        <li class="item-nosotras">
+                            <a href="/pages/nosotras.html" class="drawer__card">
+                                <span class="drawer__icon"><i class="fa-solid fa-heart"></i></span>
+                                <span class="drawer__label">Nosotras</span>
+                                <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
         </nav>
     </div>
 
-        
     <header class="hero">
         <div class="hero-content">
-            <div class="navbar__brand">
+            <div class="navbar__brand hidden">
                 <img src="./assets/images/logo/logo_hero.webp" alt="Compis">
             </div>
             <h1 class="capsule-text">
@@ -157,10 +160,17 @@
             </h1>
             <p class="hero-subtitle">Tranquilidad total para ti.</p>
             <div class="hero-actions">
-                <a href="#" class="hero-btn hero-btn--primary">Reservar eventos</a>
-                <a href="#" class="hero-btn hero-btn--outline">Tour virtual</a>
+                <a href="#" class="hero-btn hero-btn--primary">Reservar evento</a>
+                <a href="#" class="hero-btn hero-btn--outline" id="tourVirtualBtn">Tour virtual</a>
             </div>
-        </div>
+            <div class="tour-modal" id="tourModal">
+                <div class="tour-modal__backdrop" id="tourModalBackdrop"></div>
+                    <div class="tour-modal__content">
+                        <button class="tour-modal__close" id="tourModalClose" aria-label="Cerrar vídeo">&times;</button>
+                        <div class="tour-modal__video" id="tourModalVideo"></div>
+                    </div>
+                </div>
+            </div>
     </header>
     
     <section class="hero-brand">
@@ -178,60 +188,51 @@
             <h2 class="services__title">¿Qué hacemos?</h2>
 
             <div class="services__accordion">
-
-                <article class="service-card item-jugar">
-                    <button class="service-card__header" aria-expanded="false">
+                <article class="service-card item-jugar is-open">
+                    <button class="service-card__header" aria-expanded="false" onclick="window.location.href='/pages/acceso-por-horas.html'">
                         <div class="service-card__pill">
-                            <img src="./assets/icons/icon1.webp" alt="" class="service-card__icon">
-                            <span>Juego por horas</span>
+                            <i class="fa-solid fa-puzzle-piece" class="service-card__icon"></i>
+                            <span>Acceso por horas</span>
                         </div>
-                        <span class="service-card__preview">Acceso libre a todas las zonas de</span>
-                        <span class="service-card__toggle" aria-hidden="true">+</span>
                     </button>
                     <div class="service-card__body">
-                        <p class="service-card__text">Acceso libre a todas las zonas de juego. A partir de 3 años podéis dejarlos solos, siempre supervisados.</p>
+                        <p class="service-card__text">Entrada libre a todas las zonas de juego desde el primer año de edad. <br>A partir de los 3 años, podéis dejarlos bajo nuestro cuidado el tiempo que necesitéis.</p>
                     </div>
                 </article>
 
-                <article class="service-card item-campamentos">
-                    <button class="service-card__header" aria-expanded="false">
+                <article class="service-card item-campamentos is-open">
+                    <button class="service-card__header" aria-expanded="false" onclick="window.location.href='/pages/campamentos.html'">
                         <div class="service-card__pill">
-                            <img src="./assets/icons/icon2.webp" alt="" class="service-card__icon">
+                            <i class="fa-solid fa-sun" class="service-card__icon"></i>
                             <span>Campamentos</span>
                         </div>
-                        <span class="service-card__preview">Durante vacaciones organizamos talleres</span>
-                        <span class="service-card__toggle" aria-hidden="true">+</span>
                     </button>
                     <div class="service-card__body">
-                        <p class="service-card__text">Durante vacaciones organizamos actividades, talleres y excursiones para conciliar y mantener a los peques activos.</p>
+                        <p class="service-card__text">Durante vacaciones y días no lectivos organizamos actividades, talleres y salidas para favorecer la conciliación y mantener a los peques activos.</p>
                     </div>
                 </article>
 
-                <article class="service-card item-cumpleanios">
-                    <button class="service-card__header" aria-expanded="false">
+                <article class="service-card item-cumpleanios is-open">
+                    <button class="service-card__header" aria-expanded="false" onclick="window.location.href='/pages/cumples.html'">
                         <div class="service-card__pill">
-                            <img src="./assets/icons/icon3.webp" alt="" class="service-card__icon">
+                            <i class="fa-solid fa-cake-candles" class="service-card__icon"></i>
                             <span>Cumpleaños</span>
                         </div>
-                        <span class="service-card__preview">Celebramos cumpleaños con </span>
-                        <span class="service-card__toggle" aria-hidden="true">+</span>
                     </button>
                     <div class="service-card__body">
-                        <p class="service-card__text">Celebramos cumpleaños con actividades a elegir para que vivan un día inolvidable.</p>
+                        <p class="service-card__text">Organizamos cumpleaños a medida para que vivan un día inolvidable.</p>
                     </div>
                 </article>
 
-                <article class="service-card item-fiestas">
-                    <button class="service-card__header" aria-expanded="false">
+                <article class="service-card item-fiestas is-open">
+                    <button class="service-card__header" aria-expanded="false" onclick="window.location.href='/pages/fiestas-y-eventos.html'">
                         <div class="service-card__pill">
-                            <img src="./assets/icons/icon4.webp" alt="" class="service-card__icon">
+                            <i class="fa-solid fa-wand-magic-sparkles" class="service-card__icon"></i>
                             <span>Eventos</span>
                         </div>
-                        <span class="service-card__preview">Organizamos fiestas temáticas, con gincanas</span>
-                        <span class="service-card__toggle" aria-hidden="true">+</span>
                     </button>
                     <div class="service-card__body">
-                        <p class="service-card__text">Organizamos fiestas temáticas, con gincanas y juegos para una gran experiencia en eventos particulares.</p>
+                        <p class="service-card__text">Realizamos fiestas diurnas y nocturnas, con gincanas, caracterización y mucha diversión.</p>
                     </div>
                 </article>
 
@@ -239,27 +240,25 @@
         </div>
 
         <div class="services__band"></div>
+            <div class="services__gallery">
 
-        <div class="services__gallery">
-
-            <div class="services__track">
-                <div class="services__slide"><img src="./assets/images/services/ppal3.webp" alt=""></div>
-                <div class="services__slide"><img src="./assets/images/services/ppal4.webp" alt=""></div>
-                <div class="services__slide"><img src="./assets/images/services/ppal5.webp" alt=""></div>
-                <div class="services__slide"><img src="./assets/images/services/ppal1.webp" alt=""></div>
-                <div class="services__slide"><img src="./assets/images/services/ppal2.webp" alt=""></div>
-                <div class="services__slide"><img src="./assets/images/services/img6.webp" alt=""></div>
-                <div class="services__slide"><img src="./assets/images/services/img7.webp" alt=""></div>
-                <div class="services__slide"><img src="./assets/images/services/img8.webp" alt=""></div>
-                <div class="services__slide"><img src="./assets/images/services/img9.webp" alt=""></div>
-                <div class="services__slide"><img src="./assets/images/services/img10.webp" alt=""></div>
-                <div class="services__slide"><img src="./assets/images/services/img11.webp" alt=""></div>
-                <div class="services__slide"><img src="./assets/images/services/img12.webp" alt=""></div>
-                <div class="services__slide"><img src="./assets/images/services/img13.webp" alt=""></div>
-            </div>
-
+                <div class="services__track">
+                    <div class="services__slide"><img src="./assets/images/services/ppal1a.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/ppal3.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/ppal4.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/ppal5.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/ppal1.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/ppal2.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/img6.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/img7.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/img8.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/img9.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/img10.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/img11.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/img12.webp" alt=""></div>
+                    <div class="services__slide"><img src="./assets/images/services/img13.webp" alt=""></div>
+                </div>
             <div class="services__dots"></div>
-
         </div>
 
 
@@ -343,20 +342,21 @@
             <div class="footer-compis__hours-accordion">
                 <div class="footer-compis__hours-item">
                     <button class="footer-compis__hours-toggle" data-hours-toggle aria-expanded="false" aria-controls="hoursEscolar">
-                        <span>Escolar</span>
+                        <span>Horario Escolar</span>
                         <i class="fa-solid fa-chevron-down footer-compis__hours-caret"></i>
                     </button>
                     <div class="footer-compis__hours-panel" id="hoursEscolar">
                         <div class="footer-compis__hours-row">
                             <span>Martes a Domingo</span>
                             <span>16:30 a 20:30h</span>
+                            <span>(A consultar)</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="footer-compis__hours-item">
                     <button class="footer-compis__hours-toggle" data-hours-toggle aria-expanded="false" aria-controls="hoursVacacional">
-                        <span>Vacacional</span>
+                        <span>Horario Vacacional</span>
                         <i class="fa-solid fa-chevron-down footer-compis__hours-caret"></i>
                     </button>
                     <div class="footer-compis__hours-panel" id="hoursVacacional">
@@ -423,6 +423,7 @@
             <div class="footer-compis__bottom">
                 <nav class="footer-compis__legal">
                     <a href="/legal.html#privacidad">Política de privacidad</a> ·
+                    <a href="/legal.html#cookies">Cookies</a> ·
                     <a href="/legal.html#aviso-legal">Aviso legal</a>
                 </nav>
                 <p class="footer-compis__copy">&copy; <span id="footerYear">2026</span> Ludoteca Compis.</p>

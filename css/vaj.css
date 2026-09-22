@@ -83,6 +83,10 @@
     background: #ecf7ff;
 }
 
+.wave--hero-to-experiences {
+    background: #fdf3da;
+}
+
 /* ----- FEATURES ----- */
 .vaj-features {
     padding: 2.5rem 1.25rem 2rem;
@@ -147,7 +151,7 @@
 ============================================= */
 .vaj-tarifas {
     background-color: #fdf3da;
-    padding: 60px 20px;
+    padding: 15px 20px;
 }
 
 .vaj-tarifas__title {
@@ -183,14 +187,13 @@
 
 .vaj-tarifas__grid {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+    justify-content: center;
+    padding: 20px;
 }
 
 .vaj-tarifas__img-wrap {
     width: 100%;
-    max-width: 220px;
+    max-width: 420px;
     border-radius: var(--radius-card);
     overflow: hidden;
     box-shadow: var(--shadow-card);
@@ -214,25 +217,21 @@
     font-family: var(--font-title);
     text-align: center;
     font-size: 1.2rem;
-    font-weight:700;
-    text-align: center;
+    font-weight: 700;
     letter-spacing: .1rem;
-    margin: 0 auto .5rem;
-    gap: .5rem;
-    display:flex;
+    margin: 0 auto .8rem;
+    display: flex;
     width: fit-content;
     justify-content: center;
-    align-items:center;
-    gap:.5rem;
-    padding:.45rem 1.4rem;
-    background:#ffffff90;
-    backdrop-filter:blur(4px);
-    border:1.5px solid #d8d1ff;
-    border-radius:999px;
-    color:var(--green-dark);
-    font-weight:700;
-    box-shadow:
-        0 4px 10px rgba(109,92,207,.12);
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem 1.4rem;
+    background: #ffffff90;
+    backdrop-filter: blur(4px);
+    border: 1.5px solid #d8d1ff;
+    border-radius: 999px;
+    color: var(--green-dark);
+    box-shadow: 0 4px 10px rgba(109,92,207,.12);
 }
 
 .vaj-como__title i {

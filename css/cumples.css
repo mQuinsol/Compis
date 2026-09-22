@@ -261,6 +261,34 @@ css/* Hero (lightblue) → Tarifas (blanco) */
     padding-bottom: 0.4rem;
 }
 
+.tarifa-galeria__list, .tarifa-galeria-night__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.tarifa-galeria-night__list {
+    justify-content: center;
+}
+
+.tarifa-galeria__item, .tarifa-galeria-night__item {
+    flex: 0 0 101px;
+    width: 101px;
+}
+
+.tarifa-galeria__item img, .tarifa-galeria-night__item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--radius-card, 24px);
+    box-shadow: var(--shadow-card);
+}
+
 /* EXTRAS */
 .cumples-extras {
     padding: 1rem 1.25rem;
@@ -297,18 +325,74 @@ css/* Hero (lightblue) → Tarifas (blanco) */
     margin: 0.4rem 0 0.1rem;
 }
 
-.extra-card__price {
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.85rem;
-    color: #555;
-}
-
 .cumples-extras__nota {
     font-family: 'Nunito', sans-serif;
     font-size: 0.8rem;
     color: var(--green-dark);
     text-align: center;
     margin-top: 0.5rem;
+}
+/* VIP */
+
+.cumples-extravip__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.section-title-vip {
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight:700;
+    text-align: center;
+    letter-spacing: .1rem;
+    margin: 1rem auto 1.5rem;
+    gap: .5rem;
+    display:flex;
+    width: fit-content;
+    justify-content: center;
+    align-items:center;
+    gap:.5rem;
+    padding:.45rem 1.4rem;
+    background:#ffffff90;
+    backdrop-filter:blur(4px);
+    border:1.5px solid #d8d1ff;
+    border-radius:999px;
+    color:var(--green-dark);
+    font-weight:700;
+    box-shadow:
+        0 4px 10px rgba(109,92,207,.12);
+}
+
+.extravip-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    text-align: center;
+    padding-bottom: 0.75rem;
+}
+
+.extravip-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.extravip-card__name {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin: 0.4rem 0 0.1rem;
+}
+
+.extravip-card__price {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.75rem;
+    color: #555;
 }
 
 /* MENÚS */

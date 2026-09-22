@@ -497,12 +497,20 @@
 
 .dsc__carousel-track {
     display: flex;
-    transition: transform 0.35s ease;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.dsc__carousel-track::-webkit-scrollbar {
+    display: none;
 }
 
 .dsc__carousel-slide {
     flex: 0 0 100%;
     width: 100%;
+    scroll-snap-align: center;
 }
 
 .dsc__carousel-slide img {
@@ -512,28 +520,6 @@
     display: block;
     border-radius: var(--card-radius);
 }
-
-.dsc__carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: var(--shadow-card);
-    z-index: 2;
-    color: var(--green-dark);
-    font-size: 0.8rem;
-}
-
-.dsc__carousel-btn--prev { left: 0.4rem; }
-.dsc__carousel-btn--next { right: 0.4rem; }
 
 .dsc__carousel-dots {
     display: flex;
@@ -565,5 +551,5 @@
     text-align: center;
     font-size: 0.95rem;
     line-height: 1.5;
-    margin: 0;
+    margin: 0
 }

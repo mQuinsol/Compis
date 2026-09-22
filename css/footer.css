@@ -153,7 +153,7 @@
 .footer-compis__hours-toggle::before {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
-    content: "\f017";
+    /*content: "\f017";*/
     font-size: .85rem;
     opacity: .8;
 }

@@ -6,30 +6,17 @@ import { initReview } from './review.js';
 import { initServices } from './services.js';
 import { initFooterHours } from './footer.js';
 import { initBackToTop } from './back-to-top.js';
+import {initTourVirtual} from './tourVirtual.js';
+import { initAnalytics } from './analytics.js';
+import { initCookieBanner } from './cookie-banner.js';
 initNavbar();
 initAssistant();
 initContact();
 initGallery();
 initReview();
+initTourVirtual();
 initFooterHours();
 initServices();
 initBackToTop();
-
-const banner = document.getElementById('cookieBanner');
-const accept = document.getElementById('cookieAccept');
-const reject = document.getElementById('cookieReject');
-
-// if (!localStorage.getItem('cookieConsent')) {
-//     banner.classList.remove('hidden');
-// }
-
-// accept.addEventListener('click', () => {
-//     localStorage.setItem('cookieConsent', 'accepted');
-//     banner.classList.add('hidden');
-// });
-
-// reject.addEventListener('click', () => {
-//     localStorage.setItem('cookieConsent', 'rejected');
-//     banner.classList.add('hidden');
-// });
-
+initAnalytics();
+initCookieBanner();

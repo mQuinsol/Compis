@@ -170,45 +170,51 @@ export function initCampamentos() {
     const slides = track.querySelectorAll('.dsc__carousel-slide');
     if (slides.length <= 1) return;
 
-    let current = 0;
-
-    // Dots
+    // --- Dots ---
     slides.forEach((_, i) => {
         const dot = document.createElement('button');
         dot.classList.add('dot');
         dot.setAttribute('aria-label', `Ir a imagen ${i + 1}`);
         if (i === 0) dot.classList.add('is-active');
-        dot.addEventListener('click', () => goTo(i));
+        dot.addEventListener('click', () => {
+            slides[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        });
         dotsContainer.appendChild(dot);
     });
 
     const dots = dotsContainer.querySelectorAll('.dot');
 
-    const goTo = (index) => {
-        current = (index + slides.length) % slides.length;
-        track.style.transform = `translateX(-${current * 100}%)`;
-        dots.forEach((d, i) => d.classList.toggle('is-active', i === current));
+    track.addEventListener('scroll', () => {
+        const slideWidth = slides[0].offsetWidth + 12;
+        const index = Math.round(track.scrollLeft / slideWidth);
+        dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
+    });
+
+    // --- Autoplay carrusel ---
+    const DSC_CAROUSEL_DELAY = 4000;
+    let dscCarouselTimer;
+
+    const startDscAutoplay = () => {
+        clearInterval(dscCarouselTimer);
+        dscCarouselTimer = setInterval(() => {
+            const slideWidth = slides[0].offsetWidth + 12;
+            const maxScroll = track.scrollWidth - track.clientWidth;
+            const nextScroll = track.scrollLeft + slideWidth;
+            track.scrollTo({
+                left: nextScroll >= maxScroll ? 0 : nextScroll,
+                behavior: 'smooth'
+            });
+        }, DSC_CAROUSEL_DELAY);
     };
 
-    document.querySelector('.dsc__carousel-btn--prev')?.addEventListener('click', () => goTo(current - 1));
-    document.querySelector('.dsc__carousel-btn--next')?.addEventListener('click', () => goTo(current + 1));
+    const stopDscAutoplay = () => clearInterval(dscCarouselTimer);
 
-    // Autoplay
-    let autoplay = setInterval(() => goTo(current + 1), 4000);
-    track.closest('.dsc__carousel').addEventListener('mouseenter', () => clearInterval(autoplay));
-    track.closest('.dsc__carousel').addEventListener('mouseleave', () => {
-        autoplay = setInterval(() => goTo(current + 1), 4000);
-    });
+    track.addEventListener('pointerdown', stopDscAutoplay);
+    track.addEventListener('pointerup', () => setTimeout(startDscAutoplay, 1000));
 
-    // Swipe táctil
-    let startX = 0;
-    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-    track.addEventListener('touchend', e => {
-        const diff = startX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
-    });
+    startDscAutoplay();
 
-    // Lightbox carrusel DSC — con navegación prev/next
+    // --- Lightbox carrusel DSC — con navegación prev/next (sin cambios) ---
     const dscImgs = Array.from(track.querySelectorAll('.dsc__carousel-slide img'));
     dscImgs.forEach((img, i) => {
         img.style.cursor = 'zoom-in';

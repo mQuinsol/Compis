@@ -1,26 +1,8 @@
 export function initServices() {
     const service = document.querySelector('.services');
     if (!service) return;
-
-    document.querySelectorAll('.service-card__header').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const card = btn.closest('.service-card');
-            const isOpen = card.classList.contains('is-open');
-
-            document.querySelectorAll('.service-card').forEach(c => {
-                c.classList.remove('is-open');
-                c.querySelector('.service-card__header').setAttribute('aria-expanded', 'false');
-            });
-
-            if (!isOpen) {
-                card.classList.add('is-open');
-                btn.setAttribute('aria-expanded', 'true');
-            }
-        });
-    });
 }
 
-// --- Carrusel ---
 const track = document.querySelector('.services__track');
 const slides = document.querySelectorAll('.services__slide');
 const dotsContainer = document.querySelector('.services__dots');

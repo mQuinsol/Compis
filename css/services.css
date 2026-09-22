@@ -11,72 +11,106 @@
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
+    font-family: var(--font-base);
 }
 
 .services__title {
     font-family: var(--font-title);
     text-align: center;
     font-size: 1.2rem;
-    font-weight:700;
-    text-align: center;
+    font-weight: 700;
     letter-spacing: .1rem;
     margin: 0 auto 1.5rem;
-    gap: .5rem;
-    display:flex;
+    display: flex;
     width: fit-content;
     justify-content: center;
-    align-items:center;
-    gap:.5rem;
-    padding:.45rem 1.4rem;
-    background:#ffffff90;
-    backdrop-filter:blur(4px);
-    border:1.5px solid #d8d1ff;
-    border-radius:999px;
-    color:var(--green-dark);
-    font-weight:700;
-    box-shadow:
-        0 4px 10px rgba(109,92,207,.12);
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem 1.4rem;
+    background: #ffffff90;
+    backdrop-filter: blur(4px);
+    border: 1.5px solid #d8d1ff;
+    border-radius: 999px;
+    color: var(--green-dark);
+    box-shadow: 0 4px 10px rgba(109,92,207,.12);
 }
 
 .services__accordion {
     display: flex;
     flex-direction: column;
-    gap: .75rem;
+    gap: 18px;
 }
 
-/* Tarjeta */
+/* Tarjeta base */
 .service-card {
-    background: #fff;
     border-radius: var(--card-radius);
-    box-shadow: var(--shadow-card);
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    transition: transform .25s ease, box-shadow .25s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
     overflow: hidden;
     box-sizing: border-box;
 }
 
-/* Cabecera – siempre visible */
+.service-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+}
+
 .service-card__header {
-    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
     display: flex;
     align-items: center;
-    gap: .75rem;
-    padding: .85rem 1rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    box-sizing: border-box;
+    width: 100%;
 }
 
 .service-card__pill {
-    display: inline-flex;
-    align-items: center;
-    gap: .4rem;
-    padding: .35rem .8rem .35rem .35rem;
-    border-radius: 999px;
-    font-family: var(--font-title);
-    font-size: .9rem;
-    white-space: nowrap;
-    flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .35rem .8rem .35rem .35rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: .95rem;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 4px 0 rgba(0, 0, 0, 0.12),
+    0 5px 10px rgba(0, 0, 0, 0.06),
+    inset 0 2px 2px rgba(255, 255, 255, 1),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, background-color 0.2s ease;
+}
+
+/* --- ESTADO HOVER (Pasar el ratón) --- */
+.service-card__pill:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px); /* Se eleva levemente */
+  box-shadow: 
+    0 6px 0 rgba(0, 0, 0, 0.14),
+    0 8px 14px rgba(0, 0, 0, 0.08),
+    inset 0 2px 2px rgba(255, 255, 255, 1),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* --- ESTADO ACTIVE (Al hacer clic / pulsar) --- */
+.service-card__pill:active {
+  transform: translateY(3px); /* Se hunde físicamente al pulsar */
+  box-shadow: 
+    0 1px 0 rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    inset 0 2px 4px rgba(0, 0, 0, 0.12); /* Sombra interna para efecto presionado */
 }
 
 .service-card__icon {
@@ -86,63 +120,33 @@
     mix-blend-mode: multiply;
 }
 
+/* Ya no se usan, pero se ocultan por si el HTML todavía las incluye */
 .service-card__preview {
-    font-family: var(--font-base);
-    font-size: .8rem;
-    color: var(--text-dark);
-    flex: 1;
-    line-height: 1.4;
-    opacity: .75;
+    display: none;
 }
 
-.service-card__toggle {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #999;
-    flex-shrink: 0;
-    margin-left: auto;
-    transition: transform .25s ease, color .25s ease;
-    line-height: 1;
-    min-width: 20px;
-    text-align: center;
-}
-
-/* Cuerpo – colapsado por defecto */
 .service-card__body {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .3s ease, padding .3s ease;
-    padding: 0 1rem;
+    line-height: 1.5;
+    font-size: .95rem;
+    color: var(--text-dark);
 }
 
 .service-card__text {
-    font-family: var(--font-base);
-    font-size: .88rem;
-    line-height: 1.5;
-    color: var(--text-dark);
-    margin: 0 0 1rem;
+    margin: 0;
 }
 
-/* Estado abierto */
-.service-card.is-open .service-card__body {
-    max-height: 200px;
-    padding: 0 1rem .85rem;
-}
+/* Colores pastel: ahora cubren toda la tarjeta, no solo la píldora */
+.item-jugar       { background-color: #e2f5d8; }
+.item-jugar       .service-card__pill { color: #3D6F37; }
 
-.service-card.is-open .service-card__toggle {
-    transform: rotate(45deg);
-    color: #666;
-}
+.item-campamentos { background-color: #fff1bf; }
+.item-campamentos .service-card__pill { color: #7a5c00; }
 
-.service-card.is-open .service-card__preview {
-    display: none; /* oculta el resumen cuando está expandido */
-}
+.item-cumpleanios { background-color: #ffdbe6; }
+.item-cumpleanios .service-card__pill { color: #9c2a4a; }
 
-/* Colores de píldora */
-.item-jugar       .service-card__pill { background: #e2f5d8; color: #3D6F37; }
-.item-campamentos .service-card__pill { background: #fff1bf; color: #7a5c00; }
-.item-cumpleanios .service-card__pill { background: #ffdbe6; color: #9c2a4a; }
-.item-fiestas     .service-card__pill { background: #eadbff; color: #5b2d8e; }
+.item-fiestas     { background-color: #eadbff; }
+.item-fiestas     .service-card__pill { color: #5b2d8e; }
 
 /* Banda separadora */
 .services__band {

@@ -4,16 +4,17 @@
    ============================================= */
 
 
-/* ----- HERO CAMPAMENTOS ----- */
+/* ----- HERO NOSOTRAS ----- */
 .nos-hero {
     position: relative;
     aspect-ratio: 394 / 330;
     height: auto;
     min-height: 0;
     background-image:
+        linear-gradient(180deg, #ecf7ff 0%, rgba(236, 247, 255, 0) 40%),
         url('../assets/images/nosotras/hero.webp');
-    background-size: cover;
-    background-position: center;
+    background-size: cover, cover;
+    background-position: center, center top 35px;
     padding: 5.75rem 1.4rem 2rem;
     box-sizing: border-box;
     display: flex;
@@ -28,13 +29,13 @@
   font-family: 'Chewy', cursive;
   font-size: 2.8rem;
   font-weight: 700;
-  color: #ff9ec4; /* rosa */
+  color: #ff9ec4;
   text-align: center;
-  margin: 0;
+  margin: 1.5rem 0 0;
   letter-spacing: 0.5px;
 
   -webkit-text-stroke: 6px #ffffff;
-  paint-order: stroke fill; /* el contorno se dibuja detrás del relleno */
+  paint-order: stroke fill;
 
   filter:
     drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))
@@ -44,7 +45,7 @@
 .nos-scallop {
   position: relative;
   height: 30px;
-  margin-top: -30px; /* lo sube para que se solape con el hero */
+  margin-top: -30px;
   background: radial-gradient(circle at 15px 0, transparent 15px, var(--lightblue) 16px) repeat-x;
   background-size: 30px 30px;
   z-index: 2;
@@ -73,7 +74,7 @@
 
 .nos-info__card-image {
   flex-shrink: 0;
-  width: 80px;
+  width: 60px;
   aspect-ratio: 1 / 1;
   margin-left: 0.6rem;
 }
@@ -96,7 +97,7 @@
 .nos-info__card-title {
   font-family: var(--font-title);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #5c4a9e;
   margin: 0 0 0.35rem;
   letter-spacing: 0.3px;

@@ -1,6 +1,6 @@
 .site-header {
     position: fixed;
-    top: 0;
+    top: 10px;
     left: 16px;
     right: 16px;
     max-width: 430px;
@@ -12,13 +12,36 @@
     width: 100%;
     max-width: 430px;
     margin: 0 auto;
-    background: #f5f0e8;
-    color: var(--text-dark);
+    background: var(--green-dark);
+    color: #FFF0D2;
     text-align: center;
     font-weight: 700;
-    font-size: .85rem;
+    font-size: .80rem;
     padding: 2px 16px;
     box-sizing: border-box;
+}
+
+.announcement-bar a {
+    display: inline-block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    color: var(--text-yellow);
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    animation: announcement-pulse 2.5s ease-in-out infinite;
+}
+
+.announcement-bar:has(a:empty) {
+    background: transparent;
+    text-shadow: none;
+}
+
+@keyframes announcement-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
 }
 
 .navbar{
