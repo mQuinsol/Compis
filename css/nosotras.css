@@ -165,8 +165,8 @@
 
 .nos-cards__title {
   font-family: 'Chewy', cursive;
-  font-size: 1rem; /* Subimos un poco el tamaño para que luzca el efecto */
-  text-transform: uppercase; /* Para dejarlo en mayúsculas como la muestra */
+  font-size: 1rem;
+  text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
   margin: 0;
