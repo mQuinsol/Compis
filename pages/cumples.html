@@ -122,9 +122,26 @@
                     rel="noopener">
                     🎂 Reservar
                 </a>
-                <button type="button" class="btn btn--outline" id="cumplesPdfBtn" data-pdf="../assets/docs/cumples-info.pdf">
-                    📄 Info_pdf
+                <button type="button" class="btn btn--outline" id="cumplesPdfBtn">
+                    📄 Ver PDF
                 </button>
+
+                <div class="cumples-pdf" id="cumplesPdfModal" hidden>
+                    <div class="cumples-pdf__top">
+                        <a class="btn btn--primary" href="https://drive.google.com/uc?export=download&id=1UtfROnUgnZu93BRgu_KXmOlRRb36XF74" target="_blank" rel="noopener">
+                            ⬇️ Descargar PDF
+                        </a>
+                        <button type="button" class="cumples-pdf__close" id="cumplesPdfClose" aria-label="Cerrar">✕</button>
+                    </div>
+
+                    <div class="cumples-pdf__pages">
+                        <img src="../assets/images/cumples/PDF/img1.webp" alt="Info cumpleaños, página 1" loading="lazy">
+                        <img src="../assets/images/cumples/PDF/img2.webp" alt="Info cumpleaños, página 2" loading="lazy">
+                        <img src="../assets/images/cumples/PDF/img3.webp" alt="Info cumpleaños, página 3" loading="lazy">
+                        <img src="../assets/images/cumples/PDF/img4.webp" alt="Info cumpleaños, página 4" loading="lazy">
+                        <img src="../assets/images/cumples/PDF/img5.webp" alt="Info cumpleaños, página 5" loading="lazy">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="cumples-hero__img">

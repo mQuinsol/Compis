@@ -57,7 +57,7 @@ body{
   border: 1px solid rgba(255,255,255,0.65);
 }
 
-.app-device > *:not(.whatsapp-float):not(.back-to-top):not(.wa-tooltip) {
+.app-device > *:not(.whatsapp-float):not(.back-to-top):not(.wa-tooltip):not(.cookie-banner):not(.wa-chatbox) {
   width: 100%;
 }
 
@@ -74,8 +74,8 @@ body{
     bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 2rem);
-    max-width: 480px;
+    width: min(calc(100vw - 2rem), 430px);
+    max-width: 100%;
     background: rgba(250,248,255,.96);
     backdrop-filter: blur(12px);
     border-radius: 16px;
@@ -210,7 +210,7 @@ body{
         position: static;
     }
 
-    .app-device > *:not(.whatsapp-float):not(.back-to-top):not(.wa-tooltip) {
+    .app-device > *:not(.whatsapp-float):not(.back-to-top):not(.wa-tooltip):not(.cookie-banner):not(.wa-chatbox) {
         width: 100%;
     }
 

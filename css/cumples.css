@@ -78,61 +78,50 @@
     filter: brightness(0.85);
 }
 
-.cumples-pdf-modal {
-    display: none;
+.cumples-pdf {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
     z-index: 1000;
-    align-items: center;
-    justify-content: center;
-    padding: 1.25rem;
-    box-sizing: border-box;
-}
-
-.cumples-pdf-modal.is-open {
-    display: flex;
-}
-
-.cumples-pdf-modal__box {
-    background: #fff;
-    border-radius: 0.75rem;
-    width: 100%;
-    max-width: 700px;
-    height: 85vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    max-width: 430px;
+    margin: 0 auto;
+    background: var(--background);
 }
 
-.cumples-pdf-modal__bar {
+.cumples-pdf[hidden] {
+    display: none;
+}
+
+.cumples-pdf__top {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid #eee;
-    flex-shrink: 0;
+    justify-content: space-between;
+    padding: 12px 16px;
 }
 
-.cumples-pdf-modal__title {
-    font-family: var(--font-title);
+.cumples-pdf__close {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--lightblue);
     font-size: 1.1rem;
-    color: var(--green-dark);
-}
-
-.cumples-pdf-modal__close {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
     cursor: pointer;
-    color: #666;
-    line-height: 1;
 }
 
-.cumples-pdf-modal__box iframe {
+.cumples-pdf__pages {
     flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 0 12px 12px;
+}
+
+.cumples-pdf__pages img {
+    display: block;
     width: 100%;
-    border: none;
+    height: auto;
+    margin-bottom: 12px;
 }
 
 /* SECCIÓN GENÉRICA */

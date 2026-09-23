@@ -21,33 +21,20 @@ export function initCumples() {
     });
 
     // --- Modal PDF ---
-    const pdfBtn = document.getElementById('cumplesPdfBtn');
-    const pdfModal = document.getElementById('cumplesPdfModal');
-    const pdfFrame = document.getElementById('cumplesPdfFrame');
-    const pdfClose = document.getElementById('cumplesPdfClose');
+        const btn = document.getElementById('cumplesPdfBtn');
+        const modal = document.getElementById('cumplesPdfModal');
+        const closeBtn = document.getElementById('cumplesPdfClose');
+        if (!btn || !modal || !closeBtn) return;
 
-    if (pdfBtn && pdfModal) {
-        const openPdfModal = () => {
-            const pdfSrc = pdfBtn.dataset.pdf;
-            if (!pdfSrc) return;
-            pdfFrame.src = pdfSrc;
-            pdfModal.classList.add('is-open');
-            pdfModal.setAttribute('aria-hidden', 'false');
+        document.body.appendChild(modal);
+
+        btn.addEventListener('click', () => {
+            modal.hidden = false;
             document.body.style.overflow = 'hidden';
-        };
+        });
 
-        const closePdfModal = () => {
-            pdfModal.classList.remove('is-open');
-            pdfModal.setAttribute('aria-hidden', 'true');
+        closeBtn.addEventListener('click', () => {
+            modal.hidden = true;
             document.body.style.overflow = '';
-            pdfFrame.src = '';
-        };
-
-        pdfBtn.addEventListener('click', openPdfModal);
-        pdfClose.addEventListener('click', closePdfModal);
-        pdfModal.addEventListener('click', e => { if (e.target === pdfModal) closePdfModal(); });
-        document.addEventListener('keydown', e => {
-            if (e.key === 'Escape' && pdfModal.classList.contains('is-open')) closePdfModal();
         });
     }   
-}
