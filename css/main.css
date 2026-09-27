@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
-
 @import url('./assistant.css');
 @import url('./variables.css');
 @import url('./reset.css');
@@ -9,24 +6,6 @@
 @import url('./services.css');
 @import url('./reviews.css');
 @import url('./footer.css');
-
-/*html {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100%;
-}
-
-body {
-    height: 100%;
-}
-
-.hero,
-.services,
-.reviews,
-.footer {
-    scroll-snap-align: start;
-    min-height: 100dvh;
-} */
 
 body{
   margin: 0;
@@ -191,8 +170,6 @@ body{
     transform: scale(0.94);
 }
 
-/* En móviles, eliminar el marco centrado y los bordes redondeados
-     — el diseño con device/frame se aplicará solo en tablet/desktop */
 @media (max-width: 767px) {
     .app-shell {
         align-items: stretch;
