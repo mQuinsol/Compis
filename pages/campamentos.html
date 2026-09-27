@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Campamentos - Compis</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/campamentos.css">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="canonical" href="https://www.ludotecacompis.com/pages/campamentos">
+    <link rel="preload" as="image" href="../assets/images/camp/img5_560.webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 
     <title>Campamentos Infantiles en Sanxenxo · Ludoteca Compis</title>
 
@@ -23,7 +20,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ludoteca Compis">
-    <meta property="og:url" content="https://www.ludotecacompis.com/campamentos">
+    <meta property="og:url" content="https://www.ludotecacompis.com/pages/campamentos">
     <meta property="og:title" content="Campamentos Infantiles en Sanxenxo · Ludoteca Compis">
     <meta property="og:description" content="Actividades, juegos y talleres creativos en un entorno seguro y divertido para cada edad.">
     <meta property="og:image" content="https://www.ludotecacompis.com/assets/images/og-compis.jpg">
@@ -35,16 +32,27 @@
     <meta name="twitter:title" content="Campamentos Infantiles en Sanxenxo · Ludoteca Compis">
     <meta name="twitter:description" content="Actividades, juegos y talleres creativos en un entorno seguro y divertido para cada edad.">
     <meta name="twitter:image" content="https://www.ludotecacompis.com/assets/images/og-compis.jpg">
-    </head>
+</head>
 
 <body>
     <div class="app-shell">
         <div class="app-device">
 
+    <div class="cookie-banner hidden" id="cookieBanner">
+        <p class="cookie-banner__text">
+            Usamos cookies para el funcionamiento de la web y, con tu consentimiento, para analizar su uso con Google Analytics.
+            <a href="/legal.html#cookies">Más información</a>
+        </p>
+        <div class="cookie-banner__actions">
+            <button class="cookie-banner__btn cookie-banner__btn--reject" id="cookieReject">Rechazar</button>
+            <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Aceptar</button>
+        </div>
+    </div>
+
     <!-- WhatsApp flotante -->
-    <a class="whatsapp-float" id="waToggle">
+    <button type="button" class="whatsapp-float" id="waToggle" aria-label="Abrir chat de WhatsApp">
         <i class="fab fa-whatsapp"></i>
-    </a>
+    </button>
 
     <div class="wa-chatbox" id="waChat">
         <div class="wa-header">⭐ ¡Hola! ¿En qué podemos ayudarte? ⭐</div>
@@ -65,20 +73,21 @@
         </div>
     </div>
 
+    <!-- Navbar -->
     <div class="site-header">
         <!-- <div class="announcement-bar">
             <a href=""></a>
         </div>  -->
         <nav class="navbar">
             <div class="navbar__actions">
-                <a href="../index.html" class="navbar__brand">
-                    <img src="../assets/images/logo/logo.webp" alt="Compis">
+                <a href="/" class="navbar__brand">
+                    <img src="../assets/images/logo/logo.webp" alt="Compis, ludoteca y eventos infantiles en Sanxenxo">
                 </a>
                 <div class="navbar__socials-wrapper">
-                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
@@ -124,7 +133,6 @@
                             <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
                         </a>
                     </li>
-
                     <li class="item-nosotras">
                         <a href="nosotras.html" class="drawer__card">
                             <span class="drawer__icon"><i class="fa-solid fa-heart"></i></span>
@@ -137,6 +145,8 @@
         </nav>
     </div>
 
+    <main>
+
     <!-- ===== HERO: CAMPAMENTOS ===== -->
     <section class="camp-hero">
 
@@ -145,15 +155,14 @@
 
             <div class="camp-hero__carousel-wrap">
                 <div class="camp-hero__track">
-                    <div class="camp-hero__slide"><img src="../assets/images/camp/img5.webp" alt=""></div>
-                    <div class="camp-hero__slide"><img src="../assets/images/camp/imag1.webp" alt=""></div>
-                    <div class="camp-hero__slide"><img src="../assets/images/camp/imag2.webp" alt=""></div>
-                    <div class="camp-hero__slide"><img src="../assets/images/camp/imag3.webp" alt=""></div>
-                    <div class="camp-hero__slide"><img src="../assets/images/camp/img1.webp" alt=""></div>
-                    <div class="camp-hero__slide"><img src="../assets/images/camp/img2.webp" alt=""></div>
-                    <div class="camp-hero__slide"><img src="../assets/images/camp/img3.webp" alt=""></div>
-                    <div class="camp-hero__slide"><img src="../assets/images/camp/img4.webp" alt=""></div>
-                
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/img5_560.webp" data-full="../assets/images/camp/img5.webp" alt="Campamento infantil en la ludoteca Compis, Sanxenxo"></div>
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/imag1_560.webp" data-full="../assets/images/camp/imag1.webp" alt="Niños en una actividad del campamento de Compis" loading="lazy"></div>
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/imag2_560.webp" data-full="../assets/images/camp/imag2.webp" alt="Taller creativo en el campamento de Compis" loading="lazy"></div>
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/imag3_560.webp" data-full="../assets/images/camp/imag3.webp" alt="Juegos en grupo durante el campamento" loading="lazy"></div>
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/img1_560.webp" data-full="../assets/images/camp/img1.webp" alt="Actividad al aire libre del campamento de Compis" loading="lazy"></div>
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/img2_560.webp" data-full="../assets/images/camp/img2.webp" alt="Niños participando en el campamento de Compis" loading="lazy"></div>
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/img3_560.webp" data-full="../assets/images/camp/img3.webp" alt="Manualidades en el campamento de Compis" loading="lazy"></div>
+                    <div class="camp-hero__slide"><img src="../assets/images/camp/img4_560.webp" data-full="../assets/images/camp/img4.webp" alt="Diversión en el campamento infantil de Compis" loading="lazy"></div>
                 </div>
 
                 <div class="camp-hero__text">
@@ -206,7 +215,7 @@
                 <div class="camp-accordion__body">
                     <div class="camp-accordion__content-row">
                         <div class="camp-accordion__img-wrap">
-                            <img src="../assets/images/camp/accordion/verano.webp" alt="Campamento de Verano" class="camp-accordion__img">
+                            <img src="../assets/images/camp/accordion/verano_320.webp" data-full="../assets/images/camp/accordion/verano.webp" alt="Campamento de verano en Compis, Sanxenxo" class="camp-accordion__img" loading="lazy">
                         </div>
                         <ul class="camp-accordion__list">
                             <li><i class="fa-solid fa-check"></i> Juegos al aire libre</li>
@@ -229,7 +238,7 @@
                 <div class="camp-accordion__body">
                     <div class="camp-accordion__content-row">
                         <div class="camp-accordion__img-wrap">
-                            <img src="../assets/images/camp/accordion/carnaval-min.webp" alt="Campamento de Carnaval" class="camp-accordion__img">
+                            <img src="../assets/images/camp/accordion/carnaval-min.webp" alt="Campamento de carnaval en Compis, Sanxenxo" class="camp-accordion__img" loading="lazy">
                         </div>
                         <ul class="camp-accordion__list">
                             <li><i class="fa-solid fa-check"></i> Manualidades</li>
@@ -252,7 +261,7 @@
                 <div class="camp-accordion__body">
                     <div class="camp-accordion__content-row">
                         <div class="camp-accordion__img-wrap">
-                            <img src="../assets/images/camp/accordion/sesanta.webp" alt="Campamento de Semana Santa" class="camp-accordion__img">
+                            <img src="../assets/images/camp/accordion/sesanta.webp" alt="Campamento de Semana Santa en Compis, Sanxenxo" class="camp-accordion__img" loading="lazy">
                         </div>
                         <ul class="camp-accordion__list">
                             <li><i class="fa-solid fa-check"></i> Talleres y juegos</li>
@@ -275,7 +284,7 @@
                 <div class="camp-accordion__body">
                     <div class="camp-accordion__content-row">
                         <div class="camp-accordion__img-wrap">
-                            <img src="../assets/images/camp/accordion/navidad.webp" alt="Campamento de Navidad" class="camp-accordion__img">
+                            <img src="../assets/images/camp/accordion/navidad.webp" alt="Campamento de Navidad en Compis, Sanxenxo" class="camp-accordion__img" loading="lazy">
                         </div>
                         <ul class="camp-accordion__list">
                             <li><i class="fa-solid fa-check"></i> Talleres temáticos</li>
@@ -289,14 +298,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Lightbox PDF -->
-    <div class="pdf-lightbox" id="pdfLightbox" aria-hidden="true">
-        <button class="pdf-lightbox__close" id="pdfClose" aria-label="Cerrar">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        <img class="pdf-lightbox__img" id="pdfImg" src="" alt="Programa del campamento">
-    </div>
 
     <!-- Separador -->
     <div class="wave-divider wave--camp-to-dsc" aria-hidden="true">
@@ -337,19 +338,20 @@
             <div class="dsc__carousel-track-wrap">
                 <div class="dsc__carousel-track" id="dscTrack">
                     <div class="dsc__carousel-slide">
-                        <img src="../assets/images/camp/carousel/image1.webp" alt="Días sin cole - actividad 1">
+                        <img src="../assets/images/camp/carousel/image1.webp" data-full="../assets/images/camp/carousel/image1_1200.webp" alt="Taller creativo en los días sin cole de Compis" loading="lazy">
                     </div>
                     <div class="dsc__carousel-slide">
-                        <img src="../assets/images/camp/carousel/image2.webp" alt="Días sin cole - actividad 2">
+                        <img src="../assets/images/camp/carousel/image2.webp" data-full="../assets/images/camp/carousel/image2_1200.webp" alt="Juegos cooperativos en los días sin cole de Compis" loading="lazy">
                     </div>
                     <div class="dsc__carousel-slide">
-                        <img src="../assets/images/camp/carousel/image3.webp" alt="Días sin cole - actividad 3">
+                        <img src="../assets/images/camp/carousel/image3.webp" data-full="../assets/images/camp/carousel/image3_1200.webp" alt="Cocina divertida en los días sin cole de Compis" loading="lazy">
                     </div>
                 </div>
             </div>
             <div class="dsc__carousel-dots" id="dscDots"></div>
         </div>
-        
+
+        <!-- Lightbox PDF -->
         <div class="pdf-lightbox" id="pdfLightbox" aria-hidden="true">
             <button class="pdf-lightbox__close" id="pdfClose" aria-label="Cerrar">
                 <i class="fa-solid fa-xmark"></i>
@@ -357,7 +359,7 @@
             <button class="pdf-lightbox__prev" id="pdfPrev" aria-label="Anterior">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
-            <img class="pdf-lightbox__img" id="pdfImg" src="" alt="">
+            <img class="pdf-lightbox__img" id="pdfImg" src="" alt="Programa del campamento">
             <button class="pdf-lightbox__next" id="pdfNext" aria-label="Siguiente">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
@@ -378,6 +380,8 @@
 
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer-compis">
         <div class="footer-compis__container">
@@ -390,9 +394,12 @@
                     </button>
                     <div class="footer-compis__hours-panel" id="hoursEscolar">
                         <div class="footer-compis__hours-row">
-                            <span>Martes a Domingo</span>
+                            <span>Todos los días</span>
                             <span>16:30 a 20:30h</span>
-                            <span>(A consultar)</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Miércoles</span>
+                            <span>Cerrado</span>
                         </div>
                     </div>
                 </div>
@@ -404,12 +411,12 @@
                     </button>
                     <div class="footer-compis__hours-panel" id="hoursVacacional">
                         <div class="footer-compis__hours-row">
-                            <span>Lunes</span>
-                            <span>9:00 a 14:00h</span>
+                            <span>Lunes a Viernes</span>
+                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
                         </div>
                         <div class="footer-compis__hours-row">
-                            <span>Martes a Viernes</span>
-                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
+                            <span>Miércoles por la tarde</span>
+                            <span>Cerrado</span>
                         </div>
                         <div class="footer-compis__hours-row">
                             <span>Sábados</span>
@@ -426,9 +433,9 @@
             <div class="footer-compis__bottom-grid">
 
                 <div class="footer-compis__location">
-                    <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link" title="Ver en Google Maps">
+                    <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link">
                         <div class="footer-compis__map-avatar">
-                            <img src="../assets/images/footer/image.webp" alt="Mapa Compis Sanxenxo">
+                            <img src="../assets/images/footer/map_150.webp" alt="Ver ubicación de Compis en Google Maps">
                         </div>
                     </a>
                     <div class="footer-compis__address">
@@ -442,7 +449,7 @@
                     <div class="footer-compis__group">
                         <span class="footer-compis__group-label">Contacto</span>
                         <div class="footer-compis__group-icons">
-                            <a href="tel:986066863" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+                            <a href="tel:+34986066863" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
                             <span class="footer-compis__group-sep">·</span>
                             <a href="https://wa.me/34613293273" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                         </div>
@@ -474,9 +481,11 @@
         </div>
     </footer>
 
-    <script type="module" src="../js/campamentos-main.js"></script>
     <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
+    <script type="module" src="../js/campamentos-main.js"></script>
+        </div>
+    </div>
 </body>
 </html>

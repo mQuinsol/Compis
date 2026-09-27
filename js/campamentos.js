@@ -2,9 +2,6 @@ export function initCampamentos() {
     const campamento = document.querySelector('.camp-hero');
     if (!campamento) return;
 
-    // =============================================
-    // VARIABLES COMPARTIDAS
-    // =============================================
     const lightbox  = document.getElementById('pdfLightbox');
     const pdfImg    = document.getElementById('pdfImg');
     const pdfClose  = document.getElementById('pdfClose');
@@ -13,12 +10,17 @@ export function initCampamentos() {
     let currentLightboxIndex = 0;
     let lightboxImages = [];
 
-    // =============================================
-    // LIGHTBOX — abrir / cerrar
-    // =============================================
+    // fullSrc: usa la versión grande (data-full) si existe; si no, el src normal
+    const fullSrc = img => img.dataset.full || img.src;
+
     const openLightbox = (src, alt) => {
         pdfImg.src = src;
         pdfImg.alt = alt;
+
+        const hasNav = lightboxImages.length > 1;
+        if (pdfPrev) pdfPrev.style.display = hasNav ? '' : 'none';
+        if (pdfNext) pdfNext.style.display = hasNav ? '' : 'none';
+
         lightbox.classList.add('is-open');
         lightbox.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -37,22 +39,18 @@ export function initCampamentos() {
     lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
-    // Navegación prev / next (solo activa cuando hay lightboxImages)
     pdfPrev?.addEventListener('click', () => {
         if (!lightboxImages.length) return;
         currentLightboxIndex = (currentLightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
-        pdfImg.src = lightboxImages[currentLightboxIndex].src;
+        pdfImg.src = fullSrc(lightboxImages[currentLightboxIndex]); // fullSrc
     });
 
     pdfNext?.addEventListener('click', () => {
         if (!lightboxImages.length) return;
         currentLightboxIndex = (currentLightboxIndex + 1) % lightboxImages.length;
-        pdfImg.src = lightboxImages[currentLightboxIndex].src;
+        pdfImg.src = fullSrc(lightboxImages[currentLightboxIndex]); // fullSrc
     });
 
-    // =============================================
-    // ACORDEÓN — abrir / cerrar tarjetas
-    // =============================================
     const triggers = document.querySelectorAll('.camp-accordion__trigger');
 
     triggers.forEach(trigger => {
@@ -69,14 +67,12 @@ export function initCampamentos() {
         });
     });
 
-    // Verano abierto por defecto
     const verano = document.querySelector('.camp-accordion__item[data-camp="verano"]');
     if (verano) {
         verano.querySelector('.camp-accordion__trigger').setAttribute('aria-expanded', 'true');
         verano.querySelector('.camp-accordion__body').classList.add('is-open');
     }
 
-    // Botones "Descuentos" — abren bono en lightbox (sin navegación prev/next)
     document.querySelectorAll('.camp-accordion__cta').forEach(btn => {
         btn.addEventListener('click', () => {
             const imgSrc = btn.dataset.img;
@@ -88,17 +84,14 @@ export function initCampamentos() {
         });
     });
 
-    // Imágenes del acordeón — abren en lightbox (sin navegación prev/next)
     document.querySelectorAll('.camp-accordion__img').forEach(img => {
         img.style.cursor = 'zoom-in';
         img.addEventListener('click', () => {
             lightboxImages = [];
-            openLightbox(img.src, img.alt);
+            openLightbox(fullSrc(img), img.alt); // fullSrc
         });
     });
-    // =============================================
-    // GALERÍA HERO — carrusel scroll-snap
-    // =============================================
+
     const heroTrack = document.querySelector('.camp-hero__track');
     const heroDotsContainer = document.querySelector('.camp-hero__dots');
 
@@ -123,7 +116,6 @@ export function initCampamentos() {
             heroDots.forEach((d, i) => d.classList.toggle('is-active', i === index));
         });
 
-        // Autoplay
         const HERO_CAROUSEL_DELAY = 3000;
         let heroCarouselTimer;
 
@@ -140,6 +132,7 @@ export function initCampamentos() {
             }, HERO_CAROUSEL_DELAY);
         };
 
+        enableMouseDrag(heroTrack);
         const stopHeroAutoplay = () => clearInterval(heroCarouselTimer);
 
         heroTrack.addEventListener('pointerdown', stopHeroAutoplay);
@@ -147,14 +140,13 @@ export function initCampamentos() {
 
         startHeroAutoplay();
 
-        // Lightbox — con navegación prev/next (reutiliza pdfLightbox)
         const heroImgs = Array.from(heroTrack.querySelectorAll('.camp-hero__slide img'));
         heroImgs.forEach((img, i) => {
             img.style.cursor = 'zoom-in';
             img.addEventListener('click', () => {
                 lightboxImages = heroImgs;
                 currentLightboxIndex = i;
-                openLightbox(img.src, img.alt);
+                openLightbox(fullSrc(img), img.alt); // fullSrc
             });
         });
     }
@@ -170,7 +162,6 @@ export function initCampamentos() {
     const slides = track.querySelectorAll('.dsc__carousel-slide');
     if (slides.length <= 1) return;
 
-    // --- Dots ---
     slides.forEach((_, i) => {
         const dot = document.createElement('button');
         dot.classList.add('dot');
@@ -190,7 +181,6 @@ export function initCampamentos() {
         dots.forEach((d, i) => d.classList.toggle('is-active', i === index));
     });
 
-    // --- Autoplay carrusel ---
     const DSC_CAROUSEL_DELAY = 4000;
     let dscCarouselTimer;
 
@@ -207,6 +197,7 @@ export function initCampamentos() {
         }, DSC_CAROUSEL_DELAY);
     };
 
+    enableMouseDrag(track);
     const stopDscAutoplay = () => clearInterval(dscCarouselTimer);
 
     track.addEventListener('pointerdown', stopDscAutoplay);
@@ -214,14 +205,56 @@ export function initCampamentos() {
 
     startDscAutoplay();
 
-    // --- Lightbox carrusel DSC — con navegación prev/next (sin cambios) ---
     const dscImgs = Array.from(track.querySelectorAll('.dsc__carousel-slide img'));
     dscImgs.forEach((img, i) => {
         img.style.cursor = 'zoom-in';
         img.addEventListener('click', () => {
             lightboxImages = dscImgs;
             currentLightboxIndex = i;
-            openLightbox(img.src, img.alt);
+            openLightbox(fullSrc(img), img.alt); // fullSrc
         });
     });
+}
+
+function enableMouseDrag(el) {
+    let isDown = false;
+    let moved = false;
+    let startX = 0;
+    let startScroll = 0;
+
+    el.addEventListener('pointerdown', e => {
+        if (e.pointerType !== 'mouse') return;
+        isDown = true;
+        moved = false;
+        startX = e.clientX;
+        startScroll = el.scrollLeft;
+        el.style.scrollSnapType = 'none';
+        el.style.scrollBehavior = 'auto';
+        el.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('pointermove', e => {
+        if (!isDown) return;
+        const dx = e.clientX - startX;
+        if (Math.abs(dx) > 5) moved = true;
+        el.scrollLeft = startScroll - dx;
+    });
+
+    window.addEventListener('pointerup', () => {
+        if (!isDown) return;
+        isDown = false;
+        el.style.scrollSnapType = '';
+        el.style.scrollBehavior = '';
+        el.style.cursor = '';
+    });
+
+    el.addEventListener('click', e => {
+        if (moved) {
+            e.stopPropagation();
+            e.preventDefault();
+            moved = false;
+        }
+    }, true);
+
+    el.addEventListener('dragstart', e => e.preventDefault());
 }

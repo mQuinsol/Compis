@@ -3,28 +3,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Acceso por horas - Compis</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/vaj.css">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="canonical" href="https://www.ludotecacompis.com/pages/acceso-por-horas">
+    <link rel="preload" as="image" href="../assets/images/acceso-por-horas/hero.webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-
-    <title>Acceso por Horas a la Ludoteca · Ludoteca Compis</title>
+    <title>Acceso por Horas a la Ludoteca en Sanxenxo · Ludoteca Compis</title>
 
     <meta name="description" content="Disfruta de la ludoteca por horas en Sanxenxo. Un espacio de juego seguro y divertido para que los peques disfruten mientras tú tienes tiempo para ti.">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ludoteca Compis">
-    <meta property="og:url" content="https://www.ludotecacompis.com/acceso-por-horas">
-    <meta property="og:title" content="Acceso por Horas a la Ludoteca · Ludoteca Compis">
+    <meta property="og:url" content="https://www.ludotecacompis.com/pages/acceso-por-horas">
+    <meta property="og:title" content="Acceso por Horas a la Ludoteca en Sanxenxo · Ludoteca Compis">
     <meta property="og:description" content="Un espacio de juego seguro y divertido en Sanxenxo para disfrutar de la ludoteca por horas.">
     <meta property="og:image" content="https://www.ludotecacompis.com/assets/images/og-compis.jpg">
     <meta property="og:image:width" content="1200">
@@ -32,7 +29,7 @@
     <meta property="og:locale" content="es_ES">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Acceso por Horas a la Ludoteca · Ludoteca Compis">
+    <meta name="twitter:title" content="Acceso por Horas a la Ludoteca en Sanxenxo · Ludoteca Compis">
     <meta name="twitter:description" content="Un espacio de juego seguro y divertido en Sanxenxo para disfrutar de la ludoteca por horas.">
     <meta name="twitter:image" content="https://www.ludotecacompis.com/assets/images/og-compis.jpg">
 </head>
@@ -41,10 +38,21 @@
     <div class="app-shell">
         <div class="app-device">
 
+    <div class="cookie-banner hidden" id="cookieBanner">
+        <p class="cookie-banner__text">
+            Usamos cookies para el funcionamiento de la web y, con tu consentimiento, para analizar su uso con Google Analytics.
+            <a href="/legal.html#cookies">Más información</a>
+        </p>
+        <div class="cookie-banner__actions">
+            <button class="cookie-banner__btn cookie-banner__btn--reject" id="cookieReject">Rechazar</button>
+            <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Aceptar</button>
+        </div>
+    </div>
+
     <!-- WhatsApp flotante -->
-    <a class="whatsapp-float" id="waToggle">
+    <button type="button" class="whatsapp-float" id="waToggle" aria-label="Abrir chat de WhatsApp">
         <i class="fab fa-whatsapp"></i>
-    </a>
+    </button>
 
     <div class="wa-chatbox" id="waChat">
         <div class="wa-header">⭐ ¡Hola! ¿En qué podemos ayudarte? ⭐</div>
@@ -72,14 +80,14 @@
         </div>  -->
         <nav class="navbar">
             <div class="navbar__actions">
-                <a href="../index.html" class="navbar__brand">
-                    <img src="../assets/images/logo/logo.webp" alt="Compis">
+                <a href="/" class="navbar__brand">
+                    <img src="../assets/images/logo/logo.webp" alt="Compis, ludoteca y eventos infantiles en Sanxenxo">
                 </a>
                 <div class="navbar__socials-wrapper">
-                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
@@ -143,7 +151,7 @@
         <!-- HERO -->
         <section class="vaj-hero">
             <div class="vaj-hero__bg">
-                <img src="../assets/images/acceso-por-horas/hero.webp" alt="Niños jugando en Compis" class="vaj-hero__img">
+                <img src="../assets/images/acceso-por-horas/hero.webp" alt="Niños jugando en la ludoteca Compis durante el acceso por horas" class="vaj-hero__img">
                 <div class="vaj-hero__overlay"></div>
             </div>
             <div class="vaj-hero__content">
@@ -185,28 +193,24 @@
             </svg>
         </div>
 
-        <!-- TARIFAS -->
         <section class="vaj-tarifas" id="tarifas">
             <h2 class="vaj-tarifas__title"><i class="fa-solid fa-star"></i> Tarifas</h2>
 
             <div class="vaj-tarifas__grid">
 
-                <!-- Bono  -->
                 <div class="vaj-tarifas__img-wrap">
-                    <img src="../assets/images/acceso-por-horas/tarifas.webp" alt="Bono Tarifas" class="vaj-tarifas__img">
+                    <img src="../assets/images/acceso-por-horas/tarifas_750.webp" alt="Tarifas y bonos del acceso por horas en la ludoteca Compis" class="vaj-tarifas__img" loading="lazy">
                 </div>
 
             </div>
         </section>
 
-        <!-- Separador -->
         <div class="wave-divider wave--hero-to-experiences" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
                 <path d="M0,20 C400,70 1040,0 1440,30 L1440,60 L0,60 Z" fill="#F4FAFD"/>
             </svg>
         </div>
 
-        <!-- CÓMO FUNCIONA -->
         <section class="vaj-como">
             <h2 class="vaj-como__title"><i class="fa-solid fa-star"></i> ¿Cómo funciona?</h2>
             <ol class="vaj-como__steps">
@@ -215,7 +219,7 @@
                     <h3 class="vaj-paso__name">Llega cuando quieras</h3>
                     <p class="vaj-paso__desc">Sin necesidad de reserva previa.</p>
                 </li>
-                <li class="vaj-paso vaj-paso--arrow">
+                <li class="vaj-paso vaj-paso--arrow" aria-hidden="true">
                     <i class="fa-solid fa-arrow-right"></i>
                 </li>
                 <li class="vaj-paso">
@@ -223,7 +227,7 @@
                     <h3 class="vaj-paso__name">Juega el tiempo que necesites</h3>
                     <p class="vaj-paso__desc">Desde media hora hasta bonos de varias horas.</p>
                 </li>
-                <li class="vaj-paso vaj-paso--arrow">
+                <li class="vaj-paso vaj-paso--arrow" aria-hidden="true">
                     <i class="fa-solid fa-arrow-right"></i>
                 </li>
                 <li class="vaj-paso">
@@ -231,8 +235,9 @@
                     <h3 class="vaj-paso__name">Utiliza tus horas cuando quieras</h3>
                     <p class="vaj-paso__desc">Los bonos pueden consumirse en diferentes días y no caducan.</p>
                 </li>
-                <li class="vaj-paso vaj-paso--arrow">
+                <li class="vaj-paso vaj-paso--arrow" aria-hidden="true">
                     <i class="fa-solid fa-arrow-right"></i>
+                </li>
                 <li class="vaj-paso">
                     <span class="vaj-paso__num vaj-paso__num--4">4</span>
                     <h3 class="vaj-paso__name">Comparte con amigos o familiares</h3>
@@ -241,17 +246,16 @@
             </ol>
         </section>
 
-        <!-- GALERÍA -->
         <section class="vaj-galeria">
             <ul class="vaj-galeria__list">
                 <li class="vaj-galeria__item">
-                    <img src="../assets/images/acceso-por-horas/galeria-1.webp" alt="Sala de juegos Compis">
+                    <img src="../assets/images/acceso-por-horas/galeria-1.webp" alt="Sala de juegos de la ludoteca Compis en Sanxenxo" loading="lazy">
                 </li>
                 <li class="vaj-galeria__item">
-                    <img src="../assets/images/acceso-por-horas/galeria-2.webp" alt="Zona de juego con pelotas">
+                    <img src="../assets/images/acceso-por-horas/galeria-2.webp" alt="Zona de juego con pelotas en Compis" loading="lazy">
                 </li>
                 <li class="vaj-galeria__item">
-                    <img src="../assets/images/acceso-por-horas/galeria-3.webp" alt="Niño jugando en Compis">
+                    <img src="../assets/images/acceso-por-horas/galeria-3.webp" alt="Niño jugando en la ludoteca Compis" loading="lazy">
                 </li>
             </ul>
         </section>
@@ -270,9 +274,12 @@
                     </button>
                     <div class="footer-compis__hours-panel" id="hoursEscolar">
                         <div class="footer-compis__hours-row">
-                            <span>Martes a Domingo</span>
+                            <span>Todos los días</span>
                             <span>16:30 a 20:30h</span>
-                            <span>(A consultar)</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Miércoles</span>
+                            <span>Cerrado</span>
                         </div>
                     </div>
                 </div>
@@ -284,12 +291,12 @@
                     </button>
                     <div class="footer-compis__hours-panel" id="hoursVacacional">
                         <div class="footer-compis__hours-row">
-                            <span>Lunes</span>
-                            <span>9:00 a 14:00h</span>
+                            <span>Lunes a Viernes</span>
+                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
                         </div>
                         <div class="footer-compis__hours-row">
-                            <span>Martes a Viernes</span>
-                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
+                            <span>Miércoles por la tarde</span>
+                            <span>Cerrado</span>
                         </div>
                         <div class="footer-compis__hours-row">
                             <span>Sábados</span>
@@ -306,9 +313,9 @@
             <div class="footer-compis__bottom-grid">
 
                 <div class="footer-compis__location">
-                    <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link" title="Ver en Google Maps">
+                    <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link">
                         <div class="footer-compis__map-avatar">
-                            <img src="../assets/images/footer/image.webp" alt="Mapa Compis Sanxenxo">
+                            <img src="../assets/images/footer/map_150.webp" alt="Ver ubicación de Compis en Google Maps">
                         </div>
                     </a>
                     <div class="footer-compis__address">
@@ -322,7 +329,7 @@
                     <div class="footer-compis__group">
                         <span class="footer-compis__group-label">Contacto</span>
                         <div class="footer-compis__group-icons">
-                            <a href="tel:986066863" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+                            <a href="tel:+34986066863" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
                             <span class="footer-compis__group-sep">·</span>
                             <a href="https://wa.me/34613293273" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                         </div>
@@ -354,9 +361,11 @@
         </div>
     </footer>
 
-    <script type="module" src="../js/vaj-main.js"></script>
     <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
+    <script type="module" src="../js/vaj-main.js"></script>
+        </div>
+    </div>
 </body>
 </html>

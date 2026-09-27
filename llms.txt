@@ -5,12 +5,13 @@ Compis es una ludoteca y espacio de eventos infantiles en Sanxenxo, Pontevedra. 
 ## Páginas principales
 
 - [Inicio](https://www.ludotecacompis.com/)
-- [Campamentos](https://www.ludotecacompis.com/pages/campamentos.html)
-- [Cumpleaños](https://www.ludotecacompis.com/pages/cumples.html)
-- [Fiestas y Eventos](https://www.ludotecacompis.com/pages/fiestas-y-eventos.html)
-- [Excursiones](https://www.ludotecacompis.com/pages/excursiones.html)
-- [Acceso por horas](https://www.ludotecacompis.com/pages/acceso-por-horas.html)
+- [Acceso por horas](https://www.ludotecacompis.com/pages/acceso-por-horas)
+- [Campamentos](https://www.ludotecacompis.com/pages/campamentos)
+- [Cumpleaños](https://www.ludotecacompis.com/pages/cumples)
+- [Fiestas y Eventos](https://www.ludotecacompis.com/pages/fiestas-y-eventos)
+- [Excursiones](https://www.ludotecacompis.com/pages/excursiones)
+- [Nosotras](https://www.ludotecacompis.com/pages/nosotras)
 
 ## Contacto
 
-Paseo Playa de Silgar nº66, Bajo, Sanxenxo. Teléfono: 986 06 68 63.
+Paseo Playa de Silgar nº66, Bajo, Sanxenxo. Teléfono: 986 06 68 63. WhatsApp: 613 29 32 73.

@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Compis - Diversión sin límites</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -39,6 +36,30 @@
     <meta name="twitter:title" content="Ludoteca en Sanxenxo · Ludoteca Compis">
     <meta name="twitter:description" content="Diversión sin límites para ellos y tranquilidad total para ti. Juegos, actividades, cumpleaños, campamentos y mucho más.">
     <meta name="twitter:image" content="https://www.ludotecacompis.com/assets/images/og-compis.jpg">
+
+    <script type="application/ld+json">
+{
+        "@context": "https://schema.org",
+        "@type": "ChildCare",
+        "name": "Ludoteca Compis",
+        "url": "https://www.ludotecacompis.com/",
+        "logo": "https://www.ludotecacompis.com/assets/images/logo/logo.webp",
+        "image": "https://www.ludotecacompis.com/assets/images/og-compis.jpg",
+        "telephone": "+34986066863",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Paseo Playa de Silgar, 66, Bajo",
+            "addressLocality": "Sanxenxo",
+            "addressRegion": "Pontevedra",
+            "postalCode": "36960",
+            "addressCountry": "ES"
+        },
+        "sameAs": [
+            "https://www.instagram.com/ludotecacompis/",
+            "https://www.facebook.com/people/Compis-Ludoteca/100081051092342/"
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -95,8 +116,8 @@
             
             <div class="navbar__actions">
 
-                <a href="./index.html" class="navbar__brand">
-                    <img src="./assets/images/logo/logo.webp" alt="Compis">
+                <a href="/" class="navbar__brand">
+                    <img src="./assets/images/logo/logo.webp" alt="Compis, ludoteca y eventos infantiles en Sanxenxo">
                 </a>
 
                 <div class="navbar__socials-wrapper">
@@ -183,10 +204,11 @@
     <header class="hero">
         <div class="hero-content">
             <div class="navbar__brand hidden">
-                <img src="./assets/images/logo/logo_hero.webp" alt="Compis">
+                <img src="./assets/images/logo/logo_hero.webp" alt="Compis, ludoteca y eventos infantiles en Sanxenxo">
             </div>
             <h1 class="capsule-text">
                 Diversión sin límites para ellos.
+                <span class="hero-kicker">Ludoteca infantil en Sanxenxo</span>
             </h1>
             <p class="hero-subtitle">Tranquilidad total para ti.</p>
             <div class="hero-actions">
@@ -204,7 +226,7 @@
     </header>
     
     <section class="hero-brand">
-        <img src="./assets/images/logo/logo_hero.webp" alt="Compis">
+        <img src="./assets/images/logo/logo_hero.webp" alt="Compis, ludoteca y eventos infantiles en Sanxenxo">
     </section>
 
     <div class="wave-divider wave--brand-to-services" aria-hidden="true">
@@ -219,48 +241,48 @@
 
             <div class="services__accordion">
                 <article class="service-card item-jugar is-open">
-                    <button class="service-card__header" aria-expanded="false" onclick="window.location.href='/pages/acceso-por-horas.html'">
+                    <a href="/pages/acceso-por-horas.html" class="service-card__header">
                         <div class="service-card__pill">
-                            <i class="fa-solid fa-puzzle-piece" class="service-card__icon"></i>
+                            <i class="fa-solid fa-puzzle-piece service-card__icon"></i>
                             <span>Acceso por horas</span>
                         </div>
-                    </button>
+                    </a>
                     <div class="service-card__body">
                         <p class="service-card__text">Entrada libre a todas las zonas de juego desde el primer año de edad. <br>A partir de los 3 años, podéis dejarlos bajo nuestro cuidado el tiempo que necesitéis.</p>
                     </div>
                 </article>
 
                 <article class="service-card item-campamentos is-open">
-                    <button class="service-card__header" aria-expanded="false" onclick="window.location.href='/pages/campamentos.html'">
+                    <a href="/pages/campamentos.html" class="service-card__header">
                         <div class="service-card__pill">
-                            <i class="fa-solid fa-sun" class="service-card__icon"></i>
+                            <i class="fa-solid fa-sun service-card__icon"></i>
                             <span>Campamentos</span>
                         </div>
-                    </button>
+                    </a>
                     <div class="service-card__body">
                         <p class="service-card__text">Durante vacaciones y días no lectivos organizamos actividades, talleres y salidas para favorecer la conciliación y mantener a los peques activos.</p>
                     </div>
                 </article>
 
                 <article class="service-card item-cumpleanios is-open">
-                    <button class="service-card__header" aria-expanded="false" onclick="window.location.href='/pages/cumples.html'">
+                    <a href="/pages/cumples.html" class="service-card__header">
                         <div class="service-card__pill">
-                            <i class="fa-solid fa-cake-candles" class="service-card__icon"></i>
+                            <i class="fa-solid fa-cake-candles service-card__icon"></i>
                             <span>Cumpleaños</span>
                         </div>
-                    </button>
+                    </a>
                     <div class="service-card__body">
                         <p class="service-card__text">Organizamos cumpleaños a medida para que vivan un día inolvidable.</p>
                     </div>
                 </article>
 
                 <article class="service-card item-fiestas is-open">
-                    <button class="service-card__header" aria-expanded="false" onclick="window.location.href='/pages/fiestas-y-eventos.html'">
+                    <a href="/pages/fiestas-y-eventos.html" class="service-card__header">
                         <div class="service-card__pill">
-                            <i class="fa-solid fa-wand-magic-sparkles" class="service-card__icon"></i>
+                            <i class="fa-solid fa-wand-magic-sparkles service-card__icon"></i>
                             <span>Eventos</span>
                         </div>
-                    </button>
+                    </a>
                     <div class="service-card__body">
                         <p class="service-card__text">Realizamos fiestas diurnas y nocturnas, con gincanas, caracterización y mucha diversión.</p>
                     </div>
@@ -273,20 +295,35 @@
             <div class="services__gallery">
 
                 <div class="services__track">
-                    <div class="services__slide"><img src="./assets/images/services/ppal1a.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/ppal3.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/ppal4.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/ppal5.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/ppal1.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/ppal2.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/img6.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/img7.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/img8.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/img9.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/img10.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/img11.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/img12.webp" alt=""></div>
-                    <div class="services__slide"><img src="./assets/images/services/img13.webp" alt=""></div>
+                    <div class="services__slide">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./assets/images/services/ppal1a_750.webp">
+                            <img src="./assets/images/services/ppal1a.webp" alt="Ludoteca Compis en Sanxenxo">
+                        </picture>
+                    </div>
+                    <div class="services__slide"><img src="./assets/images/services/ppal3.webp" alt="Niños jugando en la ludoteca Compis" loading="lazy"></div>
+                    <div class="services__slide">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./assets/images/services/ppal4_750.webp">
+                            <img src="./assets/images/services/ppal4.webp" alt="Actividades infantiles en Compis" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="services__slide"><img src="./assets/images/services/ppal5.webp" alt="Espacio de juego de la ludoteca Compis" loading="lazy"></div>
+                    <div class="services__slide"><img src="./assets/images/services/ppal1.webp" alt="Interior de la ludoteca Compis" loading="lazy"></div>
+                    <div class="services__slide">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./assets/images/services/ppal2_750.webp">
+                            <img src="./assets/images/services/ppal2.webp" alt="Fiesta infantil en Compis" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="services__slide"><img src="./assets/images/services/img6.webp" alt="Cumpleaños infantil en Compis" loading="lazy"></div>
+                    <div class="services__slide"><img src="./assets/images/services/img7.webp" alt="Juegos para niños en Compis" loading="lazy"></div>
+                    <div class="services__slide"><img src="./assets/images/services/img8.webp" alt="Taller infantil en Compis" loading="lazy"></div>
+                    <div class="services__slide"><img src="./assets/images/services/img9.webp" alt="Decoración de fiesta infantil en Compis" loading="lazy"></div>
+                    <div class="services__slide"><img src="./assets/images/services/img10.webp" alt="Niños disfrutando en Compis" loading="lazy"></div>
+                    <div class="services__slide"><img src="./assets/images/services/img11.webp" alt="Zona de juegos de Compis" loading="lazy"></div>
+                    <div class="services__slide"><img src="./assets/images/services/img12.webp" alt="Evento infantil organizado por Compis" loading="lazy"></div>
+                    <div class="services__slide"><img src="./assets/images/services/img13.webp" alt="Actividad en grupo en la ludoteca Compis" loading="lazy"></div>
                 </div>
             <div class="services__dots"></div>
         </div>
@@ -416,9 +453,9 @@
             <div class="footer-compis__bottom-grid">
 
                 <div class="footer-compis__location">
-                    <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link" title="Ver en Google Maps">
+                    <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link">
                         <div class="footer-compis__map-avatar">
-                            <img src="../assets/images/footer/image.webp" alt="Mapa Compis Sanxenxo">
+                            <img src="/assets/images/footer/map_150.webp" alt="Ver ubicación de Compis en Google Maps">
                         </div>
                     </a>
                     <div class="footer-compis__address">
@@ -432,7 +469,7 @@
                     <div class="footer-compis__group">
                         <span class="footer-compis__group-label">Contacto</span>
                         <div class="footer-compis__group-icons">
-                            <a href="tel:986066863" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
+                            <a href="tel:+34986066863" aria-label="Teléfono"><i class="fa-solid fa-phone"></i></a>
                             <span class="footer-compis__group-sep">·</span>
                             <a href="https://wa.me/34613293273" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                         </div>
@@ -452,7 +489,6 @@
 
             </div>
 
-            <!-- LEGALES & COPYRIGHT -->
             <div class="footer-compis__bottom">
                 <nav class="footer-compis__legal">
                     <a href="/legal.html#privacidad">Política de privacidad</a> ·

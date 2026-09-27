@@ -339,7 +339,7 @@
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.85);
-    z-index: 1000;
+    z-index: 10000;
     padding: 1rem;
     box-sizing: border-box;
     overflow-y: auto;
@@ -347,6 +347,8 @@
 
 .pdf-lightbox.is-open {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pdf-lightbox__close {
@@ -366,12 +368,15 @@
     color: #333;
 }
 
-.pdf-lightbox__img {
-    max-width: 100%;
-    border-radius: var(--card-radius);
+.pdf-lightbox .pdf-lightbox__img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 85vh;
     object-fit: contain;
     margin: auto;
-    display: block;
+    border-radius: var(--card-radius);
 }
 
 .pdf-lightbox__prev,
