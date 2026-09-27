@@ -34,11 +34,6 @@
     animation: announcement-pulse 2.5s ease-in-out infinite;
 }
 
-.announcement-bar:has(a:empty) {
-    background: transparent;
-    text-shadow: none;
-}
-
 @keyframes announcement-pulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.06); }

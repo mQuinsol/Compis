@@ -1,0 +1,16 @@
+# Compis - Ludoteca y Eventos Infantiles
+
+Compis es una ludoteca y espacio de eventos infantiles en Sanxenxo, Pontevedra. Ofrecemos acceso por horas, campamentos de temporada, fiestas de cumpleaños y excursiones escolares.
+
+## Páginas principales
+
+- [Inicio](https://www.ludotecacompis.com/)
+- [Campamentos](https://www.ludotecacompis.com/pages/campamentos.html)
+- [Cumpleaños](https://www.ludotecacompis.com/pages/cumples.html)
+- [Fiestas y Eventos](https://www.ludotecacompis.com/pages/fiestas-y-eventos.html)
+- [Excursiones](https://www.ludotecacompis.com/pages/excursiones.html)
+- [Acceso por horas](https://www.ludotecacompis.com/pages/acceso-por-horas.html)
+
+## Contacto
+
+Paseo Playa de Silgar nº66, Bajo, Sanxenxo. Teléfono: 986 06 68 63.
