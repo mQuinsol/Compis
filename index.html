@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <!-- LCP: imagen de fondo del hero -->
+    <link rel="preload" as="image" href="./assets/images/hero/index1.webp" fetchpriority="high">
+
+    <!-- CSS propio (mismo orden que los @import) -->
+    <link rel="stylesheet" href="./css/assistant.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/services.css">
+    <link rel="stylesheet" href="./css/reviews.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="canonical" href="https://www.ludotecacompis.com/">
-    <link rel="preload"
-      as="image"
-      href="./assets/images/hero/index1.webp"
-      fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap">
@@ -79,10 +87,10 @@
                     <button class="cookie-banner__btn cookie-banner__btn--reject" id="cookieReject">Rechazar</button>
                     <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Aceptar</button>
                 </div>
-        </div>
-    <a class="whatsapp-float" id="waToggle">
+            </div>
+    <button type="button" class="whatsapp-float" id="waToggle" aria-label="Abrir chat de WhatsApp">
         <i class="fab fa-whatsapp"></i>
-    </a>
+    </button>
 
     <div class="wa-chatbox" id="waChat">
 
@@ -203,9 +211,6 @@
 
     <header class="hero">
         <div class="hero-content">
-            <div class="navbar__brand hidden">
-                <img src="./assets/images/logo/logo_hero.webp" alt="Compis, ludoteca y eventos infantiles en Sanxenxo">
-            </div>
             <h1 class="capsule-text">
                 Diversión sin límites para ellos.
                 <span class="hero-kicker">Ludoteca infantil en Sanxenxo</span>
@@ -226,7 +231,7 @@
     </header>
     
     <section class="hero-brand">
-        <img src="./assets/images/logo/logo_hero.webp" alt="Compis, ludoteca y eventos infantiles en Sanxenxo">
+        <img src="./assets/images/logo/logo_hero.webp" alt="Compis, ludoteca y eventos infantiles en Sanxenxo" width="" height="" loading="lazy">
     </section>
 
     <div class="wave-divider wave--brand-to-services" aria-hidden="true">

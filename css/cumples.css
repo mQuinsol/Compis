@@ -550,7 +550,7 @@ css/* Hero (lightblue) → Tarifas (blanco) */
     padding: 1rem 1.25rem;
 }
 
-.info-card__text h4 {
+.info-card__text h3 {
     font-family: 'Chewy', cursive;
     font-size: 1.1rem;
     color: var(--green-dark);
@@ -561,31 +561,6 @@ css/* Hero (lightblue) → Tarifas (blanco) */
     font-family: 'Nunito', sans-serif;
     font-size: 0.875rem;
     color: #555;
-}
-
-/* RESERVAR */
-.cumples-reservar {
-    padding: 2rem 1.4rem;
-    background: var(--lightblue);
-    text-align: center;
-}
-
-.cumples-reservar .section-title {
-    font-family: var(--font-title);
-    color: var(--green-dark);
-    font-size: 1.6rem;
-    margin: 0 0 .6rem;
-}
-
-.cumples-reservar p {
-    font-family: var(--font-base);
-    color: #4a4a4a;
-    font-size: .92rem;
-    line-height: 1.45;
-    margin: 0 0 1.5rem;
-    max-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* BOTONES */

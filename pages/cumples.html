@@ -3,24 +3,35 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/cumples.css">
-    <link rel="icon" href="/favicon.ico" sizes="32x32">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="canonical" href="https://www.ludotecacompis.com/pages/cumples">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 
     <title>Cumpleaños Infantiles en Sanxenxo · Ludoteca Compis</title>
-
     <meta name="description" content="Celebra tu cumpleaños infantil en Sanxenxo con Ludoteca Compis. Juegos, diversión y actividades para disfrutar de un día muy especial.">
+    <link rel="canonical" href="https://www.ludotecacompis.com/pages/cumples">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <link rel="stylesheet" href="../css/assistant.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/cumples.css">
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap"></noscript>
+
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ludoteca Compis">
-    <meta property="og:url" content="https://www.ludotecacompis.com/cumples">
+    <meta property="og:url" content="https://www.ludotecacompis.com/pages/cumples">
     <meta property="og:title" content="Cumpleaños Infantiles en Sanxenxo · Ludoteca Compis">
     <meta property="og:description" content="Juegos, diversión y actividades para celebrar un cumpleaños infantil muy especial.">
     <meta property="og:image" content="https://www.ludotecacompis.com/assets/images/og-compis.jpg">
@@ -37,10 +48,20 @@
 <body>
     <div class="app-shell">
         <div class="app-device">
+            <div class="cookie-banner hidden" id="cookieBanner">
+                <p class="cookie-banner__text">
+                    Usamos cookies para el funcionamiento de la web y, con tu consentimiento, para analizar su uso con Google Analytics.
+                    <a href="/legal.html#cookies">Más información</a>
+                </p>
+                <div class="cookie-banner__actions">
+                    <button class="cookie-banner__btn cookie-banner__btn--reject" id="cookieReject">Rechazar</button>
+                    <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Aceptar</button>
+                </div>
+            </div>
 
-    <a class="whatsapp-float" id="waToggle">
+    <button type="button" class="whatsapp-float" id="waToggle" aria-label="Abrir chat de WhatsApp">
         <i class="fab fa-whatsapp"></i>
-    </a>
+    </button>
 
     <div class="wa-chatbox" id="waChat">
         <div class="wa-header">⭐ ¡Hola! ¿En qué podemos ayudarte? ⭐</div>
@@ -72,10 +93,10 @@
                     <img src="../assets/images/logo/logo.webp" alt="Compis">
                 </a>
                 <div class="navbar__socials-wrapper">
-                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
@@ -168,7 +189,7 @@
             </div>
         </div>
         <div class="cumples-hero__img">
-            <img src="../assets/images/cumples/cumples-hero.webp" alt="Fiesta de cumpleaños">
+            <img src="../assets/images/cumples/cumples-hero.webp" alt="Fiesta de cumpleaños" width="ANCHO" height="ALTO" fetchpriority="high">
         </div>
     </section>
 
@@ -197,13 +218,13 @@
                 <div class="tarifa-galeria">
                     <ul class="tarifa-galeria__list">
                         <li class="tarifa-galeria__item">
-                            <img src="../assets/images/cumples/day1.webp" alt="Sala de juegos Compis">
+                            <img src="../assets/images/cumples/day1.webp" alt="Sala de juegos Compis" loading="lazy">
                         </li>
                         <li class="tarifa-galeria__item">
-                            <img src="../assets/images/cumples/day2.webp" alt="Zona de juego con pelotas">
+                            <img src="../assets/images/cumples/day2.webp" alt="Zona de juego con pelotas" loading="lazy">
                         </li>
                         <li class="tarifa-galeria__item">
-                            <img src="../assets/images/cumples/day3.webp" alt="Niño jugando en Compis">
+                            <img src="../assets/images/cumples/day3.webp" alt="Niño jugando en Compis" loading="lazy">
                         </li>
                     </ul>
                 </div>
@@ -220,13 +241,13 @@
                     <li><span>Fiesta Pijama (12h a 10h)</span><span>50€ / niño</span></li>
                     <li><span>Alquiler de tipis a domicilio</span><span>70€ / Tipi doble</span></li>
                 </ul>
-                 <div class="tarifa-galeria-night">
+                <div class="tarifa-galeria-night">
                     <ul class="tarifa-galeria-night__list">
                         <li class="tarifa-galeria-night__item">
-                            <img src="../assets/images/cumples/ni1.webp">
+                            <img src="../assets/images/cumples/ni1.webp" alt="Cumpleaños nocturno en Compis" loading="lazy">
                         </li>
                         <li class="tarifa-galeria-night__item">
-                            <img src="../assets/images/cumples/ni2.webp">
+                            <img src="../assets/images/cumples/ni2.webp" alt="Fiesta pijama con tipis en Compis" loading="lazy">
                         </li>
                     </ul>
                 </div>
@@ -246,44 +267,44 @@
         <h2 class="section-title">🎈 Extras</h2>
         <div class="cumples-extras__grid">
             <div class="extra-card">
-                <img src="../assets/images/cumples/image1.webp" alt="Decoración">
+                <img src="../assets/images/cumples/image1.webp" alt="Decoración" loading="lazy">
                 <p class="extra-card__name">Decoración</p>
                 <!-- <p class="extra-card__price">50€</p> -->
             </div>
             <div class="extra-card">
-                <img src="../assets/images/cumples/image2.webp" alt="Oblea">
+                <img src="../assets/images/cumples/image2.webp" alt="Oblea" loading="lazy">
                 <p class="extra-card__name">Oblea</p>
                 <!-- <p class="extra-card__price">10€</p> -->
             </div>
             <div class="extra-card">
-                <img src="../assets/images/cumples/image3.webp" alt="Pinata">
+                <img src="../assets/images/cumples/image3.webp" alt="Piñata" loading="lazy">
                 <p class="extra-card__name">Piñata</p>
                 <!-- <p class="extra-card__price">50€</p> -->
             </div>
             <div class="extra-card">
-                <img src="../assets/images/cumples/animacion.webp" alt="Animación">
+                <img src="../assets/images/cumples/animacion.webp" alt="Animación" loading="lazy">
                 <p class="extra-card__name">Animación</p>
             </div>
             <div class="extra-card">
-                <img src="../assets/images/cumples/image5.webp" alt="Mago / Payaso">
+                <img src="../assets/images/cumples/image5.webp" alt="Mago / Payaso" loading="lazy">
                 <p class="extra-card__name">Mago / Payaso</p>
             </div>
             <div class="extra-card">
-                <img src="../assets/images/cumples/image6.webp" alt="Pintacaras">
+                <img src="../assets/images/cumples/image6.webp" alt="Pintacaras" loading="lazy">
                 <p class="extra-card__name">Pintacaras</p>
             </div>
             <div class="extra-card">
-                <img src="../assets/images/cumples/image7.webp" alt="Chuches">
+                <img src="../assets/images/cumples/image7.webp" alt="Cono de chuches" loading="lazy">
                 <p class="extra-card__name">Cono Chuches</p>
                 <!-- <p class="extra-card__price">2€/unidad</p> -->
             </div>
             <div class="extra-card">
-                <img src="../assets/images/cumples/image8.webp" alt="Caja Sorpresa">
+                <img src="../assets/images/cumples/image8.webp" alt="Caja sorpresa" loading="lazy">
                 <p class="extra-card__name">Caja Sorpresa</p>
                 <!-- <p class="extra-card__price">8€/unidad</p> -->
             </div>
             <div class="extra-card">
-                <img src="../assets/images/cumples/image9.webp" alt="Invitación">
+                <img src="../assets/images/cumples/image9.webp" alt="Invitación" loading="lazy">
                 <p class="extra-card__name">Invitación</p>
                 <!-- <p class="extra-card__price">5€/unidad</p> -->
             </div>
@@ -291,17 +312,17 @@
         <p class="cumples-extras__nota">Contrataciones externas: Precio sujeto a disponibilidad</p>
 
         <h2 class="section-title-vip">⭐ Experiencias VIP</h2>
-            <div class="cumples-extravip__grid">
-                <div class="extravip-card">
-                    <img src="../assets/images/cumples/vip1.webp" alt="Algodón de azúcar">
-                    <p class="extravip-card__name">Algodón de azúcar</p>
-                </div>
-                <div class="extra-card">
-                    <img src="../assets/images/cumples/vip2.webp" alt="Fondue de chocolate">
-                    <p class="extravip-card__name">Fondue de chocolate</p>
+        <div class="cumples-extravip__grid">
+            <div class="extravip-card">
+                <img src="../assets/images/cumples/vip1.webp" alt="Algodón de azúcar" loading="lazy">
+                <p class="extravip-card__name">Algodón de azúcar</p>
             </div>
+            <div class="extravip-card">
+                <img src="../assets/images/cumples/vip2.webp" alt="Fondue de chocolate" loading="lazy">
+                <p class="extravip-card__name">Fondue de chocolate</p>
+            </div>
+        </div>
     </section>
-
 
     <div class="wave-divider wave--cumples-extras" aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
@@ -328,7 +349,7 @@
                                 <span class="menu-title">Menú Básico</span>
                                 <span class="menu-badge free">Incluido</span>
                             </div>
-                                <div class="menu-items">
+                            <div class="menu-items">
                                 <span>🍫 Bocadillo Nocilla</span>
                                 <span>🍿 3 Snacks</span>
                             </div>
@@ -370,15 +391,15 @@
                 </button>
                 <div class="menu-item__body">
                     <div class="menu-card healthy">
-                            <div class="menu-header">
-                                <span class="menu-title">Cumpleaños Nocturno</span>
-                            </div>
-                            <div class="menu-items">
-                                <span>🍕 Pizzas / Minipizzas</span><br>
-                                <span>🌭 Perritos Calientes</span><br>
-                                <span>🍔 Hamburguesas</span><br>
-                                <span>🍗 Nuggets con Patatas o Arroz</span>
-                            </div>
+                        <div class="menu-header">
+                            <span class="menu-title">Cumpleaños Nocturno</span>
+                        </div>
+                        <div class="menu-items">
+                            <span>🍕 Pizzas / Minipizzas</span><br>
+                            <span>🌭 Perritos Calientes</span><br>
+                            <span>🍔 Hamburguesas</span><br>
+                            <span>🍗 Nuggets con Patatas o Arroz</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -410,21 +431,21 @@
         <h2 class="section-title">ℹ️ Información</h2>
         <div class="cumples-info__grid">
             <div class="info-card">
-                <img src="../assets/images/cumples/inst1.webp" alt="Instalaciones">
+                <img src="../assets/images/cumples/inst1.webp" alt="Instalaciones de Compis" loading="lazy">
                 <div class="info-card__text">
-                    <h4>Instalaciones seguras</h4>
+                    <h3>Instalaciones seguras</h3>
                     <p>Espacios amplios, limpios y adaptados para que los niños jueguen con total seguridad y tranquilidad.</p>
                 </div>
             </div>
             <div class="info-card">
                 <div class="info-card__text">
-                    <h4>Comodidad para todas las familias</h4>
+                    <h3>Comodidad para todas las familias</h3>
                     <p>Zona para adultos, podéis traer algo de picoteo si os apetece, además contamos con servicio de bebidas y un ambiente para toda la ocasión para que disfrutes.</p>
                 </div>
             </div>
             <div class="info-card">
                 <div class="info-card__text">
-                    <h4>Puntualidad y organización</h4>
+                    <h3>Puntualidad y organización</h3>
                     <p>Te recomendamos llegar con 15 minutos de antelación para preparar todo y comenzar puntualmente.</p>
                 </div>
             </div>
@@ -487,7 +508,7 @@
                 <div class="footer-compis__location">
                     <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link">
                         <div class="footer-compis__map-avatar">
-                            <img src="../assets/images/footer/map_150.webp" alt="Ver ubicación de Compis en Google Maps">
+                            <img src="../assets/images/footer/map_150.webp" alt="Ver ubicación de Compis en Google Maps" loading="lazy">
                         </div>
                     </a>
                     <div class="footer-compis__address">
@@ -533,9 +554,13 @@
         </div>
     </footer>
 
-    <script type="module" src="../js/cumples-main.js"></script>
     <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
+
+    <script type="module" src="../js/cumples-main.js"></script>
+
+        </div>
+    </div>
 </body>
 </html>
