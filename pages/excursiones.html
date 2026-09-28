@@ -3,24 +3,41 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/excursiones.css">
-    <link rel="icon" href="/favicon.ico" sizes="32x32">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="canonical" href="https://www.ludotecacompis.com/pages/excursiones">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 
     <title>Excursiones Infantiles en Sanxenxo · Ludoteca Compis</title>
-
     <meta name="description" content="Descubre las excursiones infantiles de Ludoteca Compis en Sanxenxo. Actividades y experiencias para que los peques aprendan, disfruten y vivan nuevas aventuras.">
+    <link rel="canonical" href="https://www.ludotecacompis.com/pages/excursiones">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- LCP: imagen de fondo del hero -->
+    <link rel="preload" as="image" href="../assets/images/excursiones/hero.webp" fetchpriority="high">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/assistant.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/excursiones.css">
+
+    <!-- Google Fonts: no bloqueante -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap"></noscript>
+
+    <!-- Font Awesome: no bloqueante -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ludoteca Compis">
-    <meta property="og:url" content="https://www.ludotecacompis.com/excursiones">
+    <meta property="og:url" content="https://www.ludotecacompis.com/pages/excursiones">
     <meta property="og:title" content="Excursiones Infantiles en Sanxenxo · Ludoteca Compis">
     <meta property="og:description" content="Actividades y experiencias para que los peques aprendan, disfruten y vivan nuevas aventuras.">
     <meta property="og:image" content="https://www.ludotecacompis.com/assets/images/og-compis.jpg">
@@ -38,10 +55,20 @@
     <div class="app-shell">
         <div class="app-device">
 
-    <!-- WhatsApp flotante -->
-    <a class="whatsapp-float" id="waToggle">
+            <div class="cookie-banner hidden" id="cookieBanner">
+                <p class="cookie-banner__text">
+                    Usamos cookies para el funcionamiento de la web y, con tu consentimiento, para analizar su uso con Google Analytics.
+                    <a href="/legal.html#cookies">Más información</a>
+                </p>
+                <div class="cookie-banner__actions">
+                    <button class="cookie-banner__btn cookie-banner__btn--reject" id="cookieReject">Rechazar</button>
+                    <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Aceptar</button>
+                </div>
+            </div>
+
+    <button type="button" class="whatsapp-float" id="waToggle" aria-label="Abrir chat de WhatsApp">
         <i class="fab fa-whatsapp"></i>
-    </a>
+    </button>
 
     <div class="wa-chatbox" id="waChat">
         <div class="wa-header">⭐ ¡Hola! ¿En qué podemos ayudarte? ⭐</div>
@@ -73,10 +100,10 @@
                     <img src="../assets/images/logo/logo.webp" alt="Compis">
                 </a>
                 <div class="navbar__socials-wrapper">
-                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
@@ -189,17 +216,17 @@
         </h2>
         <div class="exc-experiences__grid">
             <div class="exc-experiences__card">
-                <img src="../assets/images/excursiones/img1.webp" alt="Instalaciones y juego">
+                <img src="../assets/images/excursiones/img1.webp" alt="Instalaciones y zona de juego de Compis" loading="lazy">
                 <span class="exc-experiences__name">Instalaciones</span>
                 <p class="exc-experiences__desc">Editar</p>
             </div>
             <div class="exc-experiences__card">
-                <img src="../assets/images/excursiones/img2.webp" alt="Actividad dirigida">
+                <img src="../assets/images/excursiones/img2.webp" alt="Actividad dirigida en Compis" loading="lazy">
                 <span class="exc-experiences__name">Actividad dirigida</span>
                 <p class="exc-experiences__desc">Editar</p>
             </div>
             <div class="exc-experiences__card">
-                <img src="../assets/images/excursiones/img3.webp" alt="Opciones y precios">
+                <img src="../assets/images/excursiones/img3.webp" alt="Juegos en Compis" loading="lazy">
                 <span class="exc-experiences__name">Juegos</span>
                 <p class="exc-experiences__desc">Editar</p>
             </div>
@@ -243,7 +270,8 @@
 
     <!-- ===== CTA INFERIOR ===== -->
     <div class="exc-cta">
-        <p>“Después de la excursión, podréis terminar la salida en la <strong>playa de Silgar</strong> (situada justo en frente) o en el <strong>parque Vicaño</strong> (a 400m)".</p>    </div>
+        <p>“Después de la excursión, podréis terminar la salida en la <strong>playa de Silgar</strong> (situada justo en frente) o en el <strong>parque Vicaño</strong> (a 400m).”</p>
+    </div>
 
     <!-- Footer -->
     <footer class="footer-compis">
@@ -257,9 +285,12 @@
                     </button>
                     <div class="footer-compis__hours-panel" id="hoursEscolar">
                         <div class="footer-compis__hours-row">
-                            <span>Martes a Domingo</span>
+                            <span>Todos los días</span>
                             <span>16:30 a 20:30h</span>
-                            <span>(A consultar)</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Miércoles</span>
+                            <span>Cerrado</span>
                         </div>
                     </div>
                 </div>
@@ -271,12 +302,12 @@
                     </button>
                     <div class="footer-compis__hours-panel" id="hoursVacacional">
                         <div class="footer-compis__hours-row">
-                            <span>Lunes</span>
-                            <span>9:00 a 14:00h</span>
+                            <span>Lunes a Viernes</span>
+                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
                         </div>
                         <div class="footer-compis__hours-row">
-                            <span>Martes a Viernes</span>
-                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
+                            <span>Miércoles por la tarde</span>
+                            <span>Cerrado</span>
                         </div>
                         <div class="footer-compis__hours-row">
                             <span>Sábados</span>
@@ -295,7 +326,7 @@
                 <div class="footer-compis__location">
                     <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link">
                         <div class="footer-compis__map-avatar">
-                            <img src="../assets/images/footer/map_150.webp" alt="Ver ubicación de Compis en Google Maps">
+                            <img src="../assets/images/footer/map_150.webp" alt="Ver ubicación de Compis en Google Maps" loading="lazy">
                         </div>
                     </a>
                     <div class="footer-compis__address">
@@ -341,9 +372,13 @@
         </div>
     </footer>
 
-    <script type="module" src="../js/excursiones-main.js"></script>
     <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
+
+    <script type="module" src="../js/excursiones-main.js"></script>
+
+        </div>
+    </div>
 </body>
 </html>

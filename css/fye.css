@@ -139,16 +139,16 @@
 
 /* Colores por tipo, igual que camp-accordion por campamento */
 .fye-accordion__item[data-tipo="tematica"] .fye-accordion__trigger {
-    background: linear-gradient(90deg, #f5f0ff);
+    background: #f5f0ff;
 }
 .fye-accordion__item[data-tipo="nocturna"] .fye-accordion__trigger {
-    background: linear-gradient(90deg, #eef0ff);
+    background: #eef0ff;
 }
 .fye-accordion__item[data-tipo="pijama"] .fye-accordion__trigger {
-    background: linear-gradient(90deg, #fff9e6);
+    background: #fff9e6;
 }
 .fye-accordion__item[data-tipo="monitor"] .fye-accordion__trigger {
-    background: linear-gradient(90deg, #f0fff4);
+    background: #f0fff4;
 }
 
 .fye-accordion__body {
@@ -183,6 +183,7 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    cursor: pointer;
 }
 
 .fye-carousel__track {

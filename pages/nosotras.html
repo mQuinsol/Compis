@@ -3,24 +3,41 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/nosotras.css">
-    <link rel="icon" href="/favicon.ico" sizes="32x32">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="canonical" href="https://www.ludotecacompis.com/nosotras">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 
     <title>Conócenos · Ludoteca Compis Sanxenxo</title>
-
     <meta name="description" content="Conoce a las personas que están detrás de Ludoteca Compis en Sanxenxo y descubre nuestra forma de entender el juego, la diversión y el cuidado infantil.">
+    <link rel="canonical" href="https://www.ludotecacompis.com/pages/nosotras">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- LCP: imagen de fondo del hero -->
+    <link rel="preload" as="image" href="../assets/images/nosotras/hero.webp" fetchpriority="high">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/assistant.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/nosotras.css">
+
+    <!-- Google Fonts: no bloqueante -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap"></noscript>
+
+    <!-- Font Awesome: no bloqueante -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ludoteca Compis">
-    <meta property="og:url" content="https://www.ludotecacompis.com/nosotras">
+    <meta property="og:url" content="https://www.ludotecacompis.com/pages/nosotras">
     <meta property="og:title" content="Conócenos · Ludoteca Compis Sanxenxo">
     <meta property="og:description" content="Conoce a las personas que están detrás de Ludoteca Compis y nuestra forma de entender el juego, la diversión y el cuidado infantil.">
     <meta property="og:image" content="https://www.ludotecacompis.com/assets/images/og-compis.jpg">
@@ -38,10 +55,20 @@
     <div class="app-shell">
         <div class="app-device">
 
-    <!-- WhatsApp flotante -->
-    <a class="whatsapp-float" id="waToggle">
+            <div class="cookie-banner hidden" id="cookieBanner">
+                <p class="cookie-banner__text">
+                    Usamos cookies para el funcionamiento de la web y, con tu consentimiento, para analizar su uso con Google Analytics.
+                    <a href="/legal.html#cookies">Más información</a>
+                </p>
+                <div class="cookie-banner__actions">
+                    <button class="cookie-banner__btn cookie-banner__btn--reject" id="cookieReject">Rechazar</button>
+                    <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Aceptar</button>
+                </div>
+            </div>
+
+    <button type="button" class="whatsapp-float" id="waToggle" aria-label="Abrir chat de WhatsApp">
         <i class="fab fa-whatsapp"></i>
-    </a>
+    </button>
 
     <div class="wa-chatbox" id="waChat">
         <div class="wa-header">⭐ ¡Hola! ¿En qué podemos ayudarte? ⭐</div>
@@ -73,10 +100,10 @@
                     <img src="../assets/images/logo/logo.webp" alt="Compis">
                 </a>
                 <div class="navbar__socials-wrapper">
-                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
@@ -109,7 +136,7 @@
                         </a>
                     </li>
                     <li class="item-fiestas">
-                       <a href="fiestas-y-eventos.html" class="drawer__card">
+                        <a href="fiestas-y-eventos.html" class="drawer__card">
                             <span class="drawer__icon"><i class="fa-solid fa-champagne-glasses"></i></span>
                             <span class="drawer__label">Fiestas y Eventos</span>
                             <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
@@ -147,24 +174,24 @@
         <div class="nos-cards__list">
 
             <article class="nos-cards__item nos-cards__item--yellow">
-            <div class="nos-cards__photo">
-                <img src="../assets/images/nosotras/img1.webp" alt="Confianza" class="nos-cards__img">
-            </div>
-            <h3 class="nos-cards__title nos-cards__title--orange">Confianza</h3>
+                <div class="nos-cards__photo">
+                    <img src="../assets/images/nosotras/img1.webp" alt="Confianza" class="nos-cards__img">
+                </div>
+                <h2 class="nos-cards__title nos-cards__title--orange">Confianza</h2>
             </article>
 
             <article class="nos-cards__item nos-cards__item--green">
-            <div class="nos-cards__photo">
-                <img src="../assets/images/nosotras/img2.webp" alt="Pasión" class="nos-cards__img">
-            </div>
-            <h3 class="nos-cards__title nos-cards__title--green">Pasión</h3>
+                <div class="nos-cards__photo">
+                    <img src="../assets/images/nosotras/img2.webp" alt="Pasión" class="nos-cards__img">
+                </div>
+                <h2 class="nos-cards__title nos-cards__title--green">Pasión</h2>
             </article>
 
             <article class="nos-cards__item nos-cards__item--blue">
-            <div class="nos-cards__photo">
-                <img src="../assets/images/nosotras/img3.webp" alt="¡Y mucho amor!" class="nos-cards__img">
-            </div>
-            <h3 class="nos-cards__title nos-cards__title--blue">amor</h3>
+                <div class="nos-cards__photo">
+                    <img src="../assets/images/nosotras/img3.webp" alt="¡Y mucho amor!" class="nos-cards__img">
+                </div>
+                <h2 class="nos-cards__title nos-cards__title--blue">Amor</h2>
             </article>
 
         </div>
@@ -175,48 +202,49 @@
         <div class="nos-info__list">
 
             <article class="nos-info__card">
-            <div class="nos-info__card-image">
-                <img src="../assets/images/nosotras/icon1.webp" alt="Nuestro origen 2022" class="nos-info__card-img">
-            </div>
-            <div class="nos-info__card-text">
-                <h3 class="nos-info__card-title">Nuestro origen 2022</h3>
-                <p class="nos-info__card-desc">Compis nació en 2022 con mucha ilusión y un objetivo claro: crear un espacio donde los peques puuedan jugar, divertirse y sentirse como en casa.</p>
-            </div>
+                <div class="nos-info__card-image">
+                    <img src="../assets/images/nosotras/icon1.webp" alt="" class="nos-info__card-img" loading="lazy">
+                </div>
+                <div class="nos-info__card-text">
+                    <h2 class="nos-info__card-title">Nuestro origen 2022</h2>
+                    <p class="nos-info__card-desc">Compis nació en 2022 con mucha ilusión y un objetivo claro: crear un espacio donde los peques puedan jugar, divertirse y sentirse como en casa.</p>
+                </div>
             </article>
 
             <article class="nos-info__card">
-            <div class="nos-info__card-image">
-                <img src="../assets/images/nosotras/icon2.webp" alt="Dos hermanas, una misión" class="nos-info__card-img">
-            </div>
-            <div class="nos-info__card-text">
-                <h3 class="nos-info__card-title">Dos hermanas, un mismo sueño</h3>
-                <p class="nos-info__card-desc">Somos dos hermanas detrás de este proyecto, unidas por la misma ilusión: acompañar a los peques con cariño y ofrecer a las familias un lugar cercano y de confianza.</p>
-            </div>
+                <div class="nos-info__card-image">
+                    <img src="../assets/images/nosotras/icon2.webp" alt="" class="nos-info__card-img" loading="lazy">
+                </div>
+                <div class="nos-info__card-text">
+                    <h2 class="nos-info__card-title">Dos hermanas, un mismo sueño</h2>
+                    <p class="nos-info__card-desc">Somos dos hermanas detrás de este proyecto, unidas por la misma ilusión: acompañar a los peques con cariño y ofrecer a las familias un lugar cercano y de confianza.</p>
+                </div>
             </article>
 
             <article class="nos-info__card">
-            <div class="nos-info__card-image">
-                <img src="../assets/images/nosotras/icon3.webp" alt="Más de 4 años de ilusión" class="nos-info__card-img">
-            </div>
-            <div class="nos-info__card-text">
-                <h3 class="nos-info__card-title">Más de 4 años creciendo juntos</h3>
-                <p class="nos-info__card-desc">Desde que abrimos nuestras puertas hemos compartido miles de juegos, cumpleaños, campamentos y momentos especiales. Y seguimos poniendo la misma ilusión en cada día.</p>
-            </div>
+                <div class="nos-info__card-image">
+                    <img src="../assets/images/nosotras/icon3.webp" alt="" class="nos-info__card-img" loading="lazy">
+                </div>
+                <div class="nos-info__card-text">
+                    <h2 class="nos-info__card-title">Más de 4 años creciendo juntos</h2>
+                    <p class="nos-info__card-desc">Desde que abrimos nuestras puertas hemos compartido miles de juegos, cumpleaños, campamentos y momentos especiales. Y seguimos poniendo la misma ilusión en cada día.</p>
+                </div>
             </article>
 
             <article class="nos-info__card">
-            <div class="nos-info__card-image">
-                <img src="../assets/images/nosotras/icon4.webp" alt="Apoyo a las familias" class="nos-info__card-img">
-            </div>
-            <div class="nos-info__card-text">
-                <h3 class="nos-info__card-title">Un apoyo a las familias</h3>
-                <p class="nos-info__card-desc">Queremos ponértelo un porquito más fácil: un espacio seguro y divertido donde tus peques estén felices mientras tú dispones del tiempo que necesitas.</p>
-            </div>
+                <div class="nos-info__card-image">
+                    <img src="../assets/images/nosotras/icon4.webp" alt="" class="nos-info__card-img" loading="lazy">
+                </div>
+                <div class="nos-info__card-text">
+                    <h2 class="nos-info__card-title">Un apoyo a las familias</h2>
+                    <p class="nos-info__card-desc">Queremos ponértelo un poquito más fácil: un espacio seguro y divertido donde tus peques estén felices mientras tú dispones del tiempo que necesitas.</p>
+                </div>
             </article>
 
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer-compis">
         <div class="footer-compis__container">
 
@@ -228,9 +256,12 @@
                     </button>
                     <div class="footer-compis__hours-panel" id="hoursEscolar">
                         <div class="footer-compis__hours-row">
-                            <span>Martes a Domingo</span>
+                            <span>Todos los días</span>
                             <span>16:30 a 20:30h</span>
-                            <span>(A consultar)</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Miércoles</span>
+                            <span>Cerrado</span>
                         </div>
                     </div>
                 </div>
@@ -242,12 +273,12 @@
                     </button>
                     <div class="footer-compis__hours-panel" id="hoursVacacional">
                         <div class="footer-compis__hours-row">
-                            <span>Lunes</span>
-                            <span>9:00 a 14:00h</span>
+                            <span>Lunes a Viernes</span>
+                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
                         </div>
                         <div class="footer-compis__hours-row">
-                            <span>Martes a Viernes</span>
-                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
+                            <span>Miércoles por la tarde</span>
+                            <span>Cerrado</span>
                         </div>
                         <div class="footer-compis__hours-row">
                             <span>Sábados</span>
@@ -266,7 +297,7 @@
                 <div class="footer-compis__location">
                     <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link">
                         <div class="footer-compis__map-avatar">
-                            <img src="../assets/images/footer/map_150.webp" alt="Ver ubicación de Compis en Google Maps">
+                            <img src="../assets/images/footer/map_150.webp" alt="Ver ubicación de Compis en Google Maps" loading="lazy">
                         </div>
                     </a>
                     <div class="footer-compis__address">
@@ -311,9 +342,14 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="../js/nosotras-main.js"></script>
+
     <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
+
+    <script type="module" src="../js/nosotras-main.js"></script>
+
+        </div>
+    </div>
 </body>
 </html>

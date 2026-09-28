@@ -3,24 +3,41 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/fye.css">
-    <link rel="icon" href="/favicon.ico" sizes="32x32">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="canonical" href="https://www.ludotecacompis.com/pages/fiestas-y-eventos">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 
     <title>Fiestas y Eventos Infantiles en Sanxenxo · Ludoteca Compis</title>
-
     <meta name="description" content="Organiza fiestas y eventos infantiles en Sanxenxo con Ludoteca Compis. Un espacio pensado para disfrutar, jugar y crear momentos inolvidables.">
+    <link rel="canonical" href="https://www.ludotecacompis.com/pages/fiestas-y-eventos">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- LCP: poster del vídeo del hero -->
+    <link rel="preload" as="image" href="../assets/images/fiestas-y-eventos/hero-poster.webp" fetchpriority="high">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="../css/assistant.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/fye.css">
+
+    <!-- Google Fonts: no bloqueante -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap"></noscript>
+
+    <!-- Font Awesome: no bloqueante -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ludoteca Compis">
-    <meta property="og:url" content="https://www.ludotecacompis.com/fiestas-y-eventos">
+    <meta property="og:url" content="https://www.ludotecacompis.com/pages/fiestas-y-eventos">
     <meta property="og:title" content="Fiestas y Eventos Infantiles en Sanxenxo · Ludoteca Compis">
     <meta property="og:description" content="Un espacio pensado para disfrutar, jugar y crear momentos inolvidables en tus fiestas y eventos infantiles.">
     <meta property="og:image" content="https://www.ludotecacompis.com/assets/images/og-compis.jpg">
@@ -38,10 +55,20 @@
     <div class="app-shell">
         <div class="app-device">
 
-    <!-- WhatsApp flotante -->
-    <a class="whatsapp-float" id="waToggle">
+            <div class="cookie-banner hidden" id="cookieBanner">
+                <p class="cookie-banner__text">
+                    Usamos cookies para el funcionamiento de la web y, con tu consentimiento, para analizar su uso con Google Analytics.
+                    <a href="/legal.html#cookies">Más información</a>
+                </p>
+                <div class="cookie-banner__actions">
+                    <button class="cookie-banner__btn cookie-banner__btn--reject" id="cookieReject">Rechazar</button>
+                    <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookieAccept">Aceptar</button>
+                </div>
+            </div>
+
+    <button type="button" class="whatsapp-float" id="waToggle" aria-label="Abrir chat de WhatsApp">
         <i class="fab fa-whatsapp"></i>
-    </a>
+    </button>
 
     <div class="wa-chatbox" id="waChat">
         <div class="wa-header">⭐ ¡Hola! ¿En qué podemos ayudarte? ⭐</div>
@@ -73,10 +100,10 @@
                     <img src="../assets/images/logo/logo.webp" alt="Compis">
                 </a>
                 <div class="navbar__socials-wrapper">
-                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/ludotecacompis/?hl=es" class="navbar__socials" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/34613293273" class="navbar__socials" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                         <i class="fa-brands fa-whatsapp"></i>
                     </a>
                 </div>
@@ -104,7 +131,7 @@
                     <li class="item-jugar">
                         <a href="acceso-por-horas.html" class="drawer__card">
                             <span class="drawer__icon"><i class="fa-solid fa-puzzle-piece"></i></span>
-                            <span class="drawer__label">Ven a jugar</span>
+                            <span class="drawer__label">Acceso por Horas</span>
                             <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
                         </a>
                     </li>
@@ -148,10 +175,10 @@
                     loop
                     muted
                     playsinline
-                    aria-label="Fiestas y eventos en Compis"
+                    aria-hidden="true"
                 ></video>
                 <div class="fye-hero__overlay"></div>
-                </div>
+            </div>
             <div class="fye-hero__content">
                 <h1 class="fye-hero__title">Fiestas y Eventos</h1>
                 <p class="fye-hero__subtitle">Momentos únicos, diversión asegurada</p>
@@ -178,18 +205,18 @@
                             <div class="fye-accordion__carousel">
                                 <div class="fye-carousel__track" id="tematicaTrack">
                                     <div class="fye-carousel__slide">
-                                        <img src="../assets/images/fiestas-y-eventos/tematica-1.webp" alt="Fiesta temática en Compis">
+                                        <img src="../assets/images/fiestas-y-eventos/tematica-1.webp" alt="Fiesta temática en Compis" loading="lazy">
                                     </div>
                                     <div class="fye-carousel__slide">
-                                        <img src="../assets/images/fiestas-y-eventos/tematica-2.webp" alt="Fiesta temática en Compis">
+                                        <img src="../assets/images/fiestas-y-eventos/tematica-2.webp" alt="Fiesta temática en Compis" loading="lazy">
                                     </div>
                                     <div class="fye-carousel__slide">
-                                        <img src="../assets/images/fiestas-y-eventos/tematica-3.webp" alt="Fiesta temática en Compis">
+                                        <img src="../assets/images/fiestas-y-eventos/tematica-3.webp" alt="Fiesta temática en Compis" loading="lazy">
                                     </div>
                                 </div>
                                 <div class="fye-carousel__dots" id="tematicaDots"></div>
                             </div>
-                            <p class="fye-accordion__desc">“Halloween, Carnaval y otras fiestas especiales con caracterización, animación y mucha diversión."</p>
+                            <p class="fye-accordion__desc">“Halloween, Carnaval y otras fiestas especiales con caracterización, animación y mucha diversión.”</p>
                         </div>
                     </div>
                 </div>
@@ -210,18 +237,15 @@
                             <div class="fye-accordion__carousel">
                                 <div class="fye-carousel__track" id="nocturnaTrack">
                                     <div class="fye-carousel__slide">
-                                        <img src="../assets/images/fiestas-y-eventos/nocturnas-1.webp" alt="Fiesta nocturna en Compis">
+                                        <img src="../assets/images/fiestas-y-eventos/nocturnas-1.webp" alt="Fiesta nocturna en Compis" loading="lazy">
                                     </div>
                                     <div class="fye-carousel__slide">
-                                        <img src="../assets/images/fiestas-y-eventos/nocturnas-2.webp" alt="Fiesta nocturna en Compis">
-                                    </div>
-                                    <div class="fye-carousel__slide">
-                                        <img src="../assets/images/fiestas-y-eventos/nocturna-3.webp" alt="Fiesta nocturna en Compis">
+                                        <img src="../assets/images/fiestas-y-eventos/nocturnas-2.webp" alt="Fiesta nocturna en Compis" loading="lazy">
                                     </div>
                                 </div>
                                 <div class="fye-carousel__dots" id="nocturnaDots"></div>
                             </div>
-                            <p class="fye-accordion__desc"> “Diversión de noche en la Ludo, con gincanas, actividades como slime o fondue de chocolate, disco-karaoke y cena GRATIS.”</p>
+                            <p class="fye-accordion__desc">“Diversión de noche en la Ludo, con gincanas, actividades como slime o fondue de chocolate, disco-karaoke y cena GRATIS.”</p>
                         </div>
                     </div>
                 </div>
@@ -242,10 +266,10 @@
                             <div class="fye-accordion__carousel">
                                 <div class="fye-carousel__track" id="pijamaTrack">
                                     <div class="fye-carousel__slide">
-                                        <img src="../assets/images/fiestas-y-eventos/pijama-1.webp" alt="Fiesta pijama en Compis">
+                                        <img src="../assets/images/fiestas-y-eventos/pijama-1.webp" alt="Fiesta pijama en Compis" loading="lazy">
                                     </div>
                                     <div class="fye-carousel__slide">
-                                        <img src="../assets/images/fiestas-y-eventos/pijama-2.webp" alt="Fiesta pijama en Compis">
+                                        <img src="../assets/images/fiestas-y-eventos/pijama-2.webp" alt="Fiesta pijama en Compis" loading="lazy">
                                     </div>
                                 </div>
                                 <div class="fye-carousel__dots" id="pijamaDots"></div>
@@ -258,7 +282,7 @@
                 <!-- Monitor / niñera -->
                 <div class="fye-accordion__item" data-tipo="monitor">
                     <button class="fye-accordion__trigger" aria-expanded="false">
-                        <span class="fye-accordion__icon fye-accordion__icon--pijamars">
+                        <span class="fye-accordion__icon fye-accordion__icon--monitor">
                             <i class="fa-solid fa-star"></i>
                         </span>
                         <div class="fye-accordion__headtext">
@@ -272,12 +296,12 @@
                             <div class="fye-accordion__carousel">
                                 <div class="fye-carousel__track" id="monitorTrack">
                                     <div class="fye-carousel__slide">
-                                        <img src="../assets/images/fiestas-y-eventos/monitor-1.webp" alt="Monitor de animación en Compis">
+                                        <img src="../assets/images/fiestas-y-eventos/monitor-1.webp" alt="Monitor de animación en Compis" loading="lazy">
                                     </div>
                                 </div>
                                 <div class="fye-carousel__dots" id="monitorDots"></div>
                             </div>
-                            <p class="fye-accordion__desc">“Contamos con monitoras, niñeras y pintacaras que se encargarán de que tu fiesta sea inolvidable”.</p>
+                            <p class="fye-accordion__desc">“Contamos con monitoras, niñeras y pintacaras que se encargarán de que tu fiesta sea inolvidable.”</p>
                         </div>
                     </div>
                 </div>
@@ -286,14 +310,28 @@
 
         <!-- CTA PRESUPUESTO -->
         <section class="fye-cta">
-            <section class="fye-logo">
-                <img src="../assets/images/logo/logo_hero.webp" alt="Compis">
-            </section>
+            <div class="fye-logo">
+                <img src="../assets/images/logo/logo_hero.webp" alt="Compis" loading="lazy">
+            </div>
             <a href="https://wa.me/34613293273?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto" target="_blank" rel="noopener noreferrer" class="fye-cta__btn">
                 Solicitar presupuesto
             </a>
             <p class="fye-cta__sub">¡PREGUNTA SIN COMPROMISO!</p>
         </section>
+
+        <!-- Lightbox PDF -->
+        <div class="pdf-lightbox" id="pdfLightbox" aria-hidden="true">
+            <button class="pdf-lightbox__close" id="pdfClose" aria-label="Cerrar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <button class="pdf-lightbox__prev" id="pdfPrev" aria-label="Anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <img class="pdf-lightbox__img" id="pdfImg" alt="">
+            <button class="pdf-lightbox__next" id="pdfNext" aria-label="Siguiente">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
 
     </main>
 
@@ -309,9 +347,12 @@
                     </button>
                     <div class="footer-compis__hours-panel" id="hoursEscolar">
                         <div class="footer-compis__hours-row">
-                            <span>Martes a Domingo</span>
+                            <span>Todos los días</span>
                             <span>16:30 a 20:30h</span>
-                            <span>(A consultar)</span>
+                        </div>
+                        <div class="footer-compis__hours-row">
+                            <span>Miércoles</span>
+                            <span>Cerrado</span>
                         </div>
                     </div>
                 </div>
@@ -323,12 +364,12 @@
                     </button>
                     <div class="footer-compis__hours-panel" id="hoursVacacional">
                         <div class="footer-compis__hours-row">
-                            <span>Lunes</span>
-                            <span>9:00 a 14:00h</span>
+                            <span>Lunes a Viernes</span>
+                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
                         </div>
                         <div class="footer-compis__hours-row">
-                            <span>Martes a Viernes</span>
-                            <span>9:00 a 14:00h<br>16:30 a 21:00h</span>
+                            <span>Miércoles por la tarde</span>
+                            <span>Cerrado</span>
                         </div>
                         <div class="footer-compis__hours-row">
                             <span>Sábados</span>
@@ -347,7 +388,7 @@
                 <div class="footer-compis__location">
                     <a href="https://maps.app.goo.gl/NKniTXcV2fpVFYBYA" target="_blank" rel="noopener noreferrer" class="footer-compis__map-link">
                         <div class="footer-compis__map-avatar">
-                            <img src="../assets/images/footer/map_150.webp" alt="Ver ubicación de Compis en Google Maps">
+                            <img src="../assets/images/footer/map_150.webp" alt="Ver ubicación de Compis en Google Maps" loading="lazy">
                         </div>
                     </a>
                     <div class="footer-compis__address">
@@ -393,9 +434,13 @@
         </div>
     </footer>
 
-    <script type="module" src="../js/fye-main.js"></script>
     <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
+
+    <script type="module" src="../js/fye-main.js"></script>
+
+        </div>
+    </div>
 </body>
 </html>

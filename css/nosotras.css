@@ -22,7 +22,7 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    border-radius: 0 0 var(--radius-card) var(--radius-card);
+    border-radius: 0 0 var(--card-radius) var(--card-radius);
 }
 
 .nos-hero__title {

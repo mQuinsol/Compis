@@ -10,11 +10,13 @@ export function initFye() {
     const pdfClose = document.getElementById('pdfClose');
     const pdfPrev  = document.getElementById('pdfPrev');
     const pdfNext  = document.getElementById('pdfNext');
+    const hasLightbox = Boolean(lightbox && pdfImg);
 
     let lightboxImages = [];
     let currentLightboxIndex = 0;
 
     const openLightbox = (src, alt) => {
+        if (!hasLightbox) return;
         pdfImg.src = src;
         pdfImg.alt = alt;
         lightbox.classList.add('is-open');
@@ -23,6 +25,7 @@ export function initFye() {
     };
 
     const closeLightbox = () => {
+        if (!hasLightbox || !lightbox.classList.contains('is-open')) return;
         lightbox.classList.remove('is-open');
         lightbox.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
@@ -31,21 +34,21 @@ export function initFye() {
         lightboxImages = [];
     };
 
-    pdfClose?.addEventListener('click', closeLightbox);
-    lightbox?.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-
-    pdfPrev?.addEventListener('click', () => {
+    const showLightboxImage = (index) => {
         if (!lightboxImages.length) return;
-        currentLightboxIndex = (currentLightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
-        pdfImg.src = lightboxImages[currentLightboxIndex].src;
-    });
+        currentLightboxIndex = (index + lightboxImages.length) % lightboxImages.length;
+        const img = lightboxImages[currentLightboxIndex];
+        pdfImg.src = img.src;
+        pdfImg.alt = img.alt;
+    };
 
-    pdfNext?.addEventListener('click', () => {
-        if (!lightboxImages.length) return;
-        currentLightboxIndex = (currentLightboxIndex + 1) % lightboxImages.length;
-        pdfImg.src = lightboxImages[currentLightboxIndex].src;
-    });
+    if (hasLightbox) {
+        pdfClose?.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+        pdfPrev?.addEventListener('click', () => showLightboxImage(currentLightboxIndex - 1));
+        pdfNext?.addEventListener('click', () => showLightboxImage(currentLightboxIndex + 1));
+    }
 
     // =============================================
     // CARRUSEL — genérico, uno por tipo de fiesta
@@ -55,16 +58,38 @@ export function initFye() {
     function initCarrusel(trackId, dotsId) {
         const track = document.getElementById(trackId);
         const dotsContainer = document.getElementById(dotsId);
-        if (!track) return null;
+        if (!track || !dotsContainer) return null;
 
         const slides = track.querySelectorAll('.fye-carousel__slide');
-        if (slides.length <= 1) return null;
+        const imgs = Array.from(track.querySelectorAll('.fye-carousel__slide img'));
+
+        // Carga todas las imágenes del carrusel al abrir su acordeón
+        const loadImages = () => {
+            imgs.forEach(img => { img.loading = 'eager'; });
+        };
+
+        // Lightbox — con navegación prev/next
+        if (hasLightbox) {
+            imgs.forEach((img, i) => {
+                img.addEventListener('click', () => {
+                    lightboxImages = imgs;
+                    currentLightboxIndex = i;
+                    openLightbox(img.src, img.alt);
+                });
+            });
+        }
+
+        // Una sola imagen: sin dots ni autoplay
+        if (slides.length <= 1) {
+            return { pause: () => {}, resume: loadImages };
+        }
 
         let current = 0;
 
         // Dots
         slides.forEach((_, i) => {
             const dot = document.createElement('button');
+            dot.type = 'button';
             dot.classList.add('dot');
             dot.setAttribute('aria-label', `Ir a imagen ${i + 1}`);
             if (i === 0) dot.classList.add('is-active');
@@ -93,8 +118,8 @@ export function initFye() {
             autoplay = null;
         };
 
-        carouselWrap.addEventListener('mouseenter', stopAutoplay);
-        carouselWrap.addEventListener('mouseleave', startAutoplay);
+        carouselWrap?.addEventListener('mouseenter', stopAutoplay);
+        carouselWrap?.addEventListener('mouseleave', startAutoplay);
 
         // Swipe táctil
         let startX = 0;
@@ -104,18 +129,13 @@ export function initFye() {
             if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
         });
 
-        // Lightbox — con navegación prev/next
-        const imgs = Array.from(track.querySelectorAll('.fye-carousel__slide img'));
-        imgs.forEach((img, i) => {
-            img.style.cursor = 'zoom-in';
-            img.addEventListener('click', () => {
-                lightboxImages = imgs;
-                currentLightboxIndex = i;
-                openLightbox(img.src, img.alt);
-            });
-        });
-
-        return { pause: stopAutoplay, resume: startAutoplay };
+        return {
+            pause: stopAutoplay,
+            resume: () => {
+                loadImages();
+                startAutoplay();
+            }
+        };
     }
 
     ['tematica', 'nocturna', 'pijama', 'monitor'].forEach(tipo => {
