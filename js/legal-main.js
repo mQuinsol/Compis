@@ -1,9 +1,9 @@
-import { initAnalytics } from '../js/analytics.js';
-import { initCookieBanner } from '../js/cookie-banner.js';
-import { initNavbar } from '../js/navbar.js';
-import { initAssistant } from '../js/assistant.js';
-import { initFooterHours } from '../js/footer.js';
-import { initBackToTop } from '../js/back-to-top.js';
+import { initAnalytics } from './analytics.js';
+import { initCookieBanner } from './cookie-banner.js';
+import { initNavbar } from './navbar.js';
+import { initAssistant } from './assistant.js';
+import { initFooterHours } from './footer.js';
+import { initBackToTop } from './back-to-top.js';
 
 initAnalytics();
 initCookieBanner();
