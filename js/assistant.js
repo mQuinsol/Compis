@@ -53,15 +53,6 @@ export function initAssistant() {
         });
     }, { threshold: 0.4 });
 
-    const heroBtnPrimary = document.querySelector('.hero-btn--primary');
-    if (heroBtnPrimary) {
-        heroBtnPrimary.addEventListener('click', (e) => {
-            e.preventDefault();
-            const mensaje = "Hola, me gustaría reservar un evento en Compis 🎉";
-            window.open(`https://wa.me/34613293273?text=${encodeURIComponent(mensaje)}`, '_blank');
-        });
-    }
-
     Object.keys(sectionMessages).forEach(id => {
         const el = document.getElementById(id);
         if (el) observer.observe(el);
