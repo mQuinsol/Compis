@@ -19,7 +19,7 @@
 }
 
 .cumples-hero__text h1 {
-    font-family: var(--font-title);
+    font-family: var(--font-base);
     color: var(--green-dark);
     font-size: 2rem;
     line-height: 1.2;
@@ -126,7 +126,7 @@
 
 /* SECCIÓN GENÉRICA */
 .section-title {
-    font-family: var(--font-title);
+    font-family: var(--font-base);
     text-align: center;
     font-size: 1.2rem;
     font-weight:700;
@@ -331,7 +331,7 @@ css/* Hero (lightblue) → Tarifas (blanco) */
 }
 
 .section-title-vip {
-    font-family: var(--font-title);
+    font-family: var(--font-base);
     text-align: center;
     font-size: 1.2rem;
     font-weight:700;
@@ -504,7 +504,7 @@ css/* Hero (lightblue) → Tarifas (blanco) */
 .alergias-note::before {
     content: "\f06a";
     font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+    font-weight: 700;
     color: var(--green-dark);
     font-size: 1.1rem;
     flex-shrink: 0;
@@ -571,7 +571,7 @@ css/* Hero (lightblue) → Tarifas (blanco) */
     padding: 0.75rem 1.5rem;
     border-radius: 2rem;
     font-family: 'Nunito', sans-serif;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 0.95rem;
     text-decoration: none;
     border: none;

@@ -8,12 +8,15 @@
     <meta name="description" content="Organiza fiestas y eventos infantiles en Sanxenxo con Ludoteca Compis. Un espacio pensado para disfrutar, jugar y crear momentos inolvidables.">
     <link rel="canonical" href="https://www.ludotecacompis.com/pages/fiestas-y-eventos">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
     <!-- LCP: poster del vídeo del hero -->
     <link rel="preload" as="image" href="../assets/images/fiestas-y-eventos/hero-poster.webp" fetchpriority="high">
+
+    <!-- Fuentes propias -->
+    <link rel="preload" href="../assets/fonts/nunito-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/nunito-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/chewy-400.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- CSS propio -->
     <link rel="stylesheet" href="../css/assistant.css">
@@ -23,10 +26,6 @@
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/fye.css">
-
-    <!-- Google Fonts: no bloqueante -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;500;600;700;800&display=swap"></noscript>
 
     <!-- Font Awesome: no bloqueante -->
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -49,7 +48,6 @@
     <meta name="twitter:title" content="Fiestas y Eventos Infantiles en Sanxenxo · Ludoteca Compis">
     <meta name="twitter:description" content="Un espacio pensado para disfrutar, jugar y crear momentos inolvidables en tus fiestas y eventos infantiles.">
     <meta name="twitter:image" content="https://www.ludotecacompis.com/assets/images/og-compis.jpg">
-</head>
 
 <body>
     <div class="app-shell">
@@ -318,20 +316,6 @@
             </a>
             <p class="fye-cta__sub">¡PREGUNTA SIN COMPROMISO!</p>
         </section>
-
-        <!-- Lightbox PDF -->
-        <div class="pdf-lightbox" id="pdfLightbox" aria-hidden="true">
-            <button class="pdf-lightbox__close" id="pdfClose" aria-label="Cerrar">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            <button class="pdf-lightbox__prev" id="pdfPrev" aria-label="Anterior">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <img class="pdf-lightbox__img" id="pdfImg" alt="">
-            <button class="pdf-lightbox__next" id="pdfNext" aria-label="Siguiente">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-        </div>
 
     </main>
 

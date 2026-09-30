@@ -95,7 +95,7 @@
 }
 
 .nos-info__card-title {
-  font-family: var(--font-title);
+  font-family: var(--font-base);
   font-weight: 700;
   font-size: 0.9rem;
   color: #5c4a9e;

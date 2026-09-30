@@ -1,11 +1,4 @@
-/* =============================================
-   VAJ — Ven a jugar
-   Mobile first
-============================================= */
 
-/* =============================================
-   HERO
-============================================= */
 .vaj-hero {
     position: relative;
     aspect-ratio: 394 / 330;
@@ -55,7 +48,7 @@
     font-family: var(--font-accent);
     font-size: 2.4rem;
     font-weight: 700;
-    color: #6FAE7F; /* verde menta claro */
+    color: #6FAE7F;
     line-height: 1.1;
     text-align: center;
     margin: 0;
@@ -69,16 +62,6 @@
         drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
-.vaj-hero__subtitle {
-    font-family: var(--font-base);
-    font-size: 1rem;
-    color: var(--text-light);
-    font-weight: 500;
-    opacity: .92;
-    text-align: center;
-}
-
-/* ----- SEPARADOR WAVE ----- */
 .wave--trust-to-pricing {
     background: #ecf7ff;
 }
@@ -87,7 +70,6 @@
     background: #fdf3da;
 }
 
-/* ----- FEATURES ----- */
 .vaj-features {
     padding: 2.5rem 1.25rem 2rem;
     text-align: center;
@@ -146,16 +128,13 @@
     line-height: 1.4;
 }
 
-/* =============================================
-   TARIFAS
-============================================= */
 .vaj-tarifas {
     background-color: #fdf3da;
     padding: 15px 20px;
 }
 
 .vaj-tarifas__title {
-    font-family: var(--font-title);
+    font-family: var(--font-base);
     text-align: center;
     font-size: 1.4rem;
     font-weight:700;
@@ -205,16 +184,13 @@
     height: auto;
 }
 
-/* =============================================
-   CÓMO FUNCIONA
-============================================= */
 .vaj-como {
     padding: 2.5rem 1.25rem;
     text-align: center;
 }
 
 .vaj-como__title {
-    font-family: var(--font-title);
+    font-family: var(--font-base);
     text-align: center;
     font-size: 1.2rem;
     font-weight: 700;
@@ -302,9 +278,6 @@
     text-align: center;
 }
 
-/* =============================================
-   GALERÍA
-============================================= */
 .vaj-galeria {
     padding: 0 0 2rem;
 }

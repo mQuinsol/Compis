@@ -102,7 +102,7 @@
 
 .footer-compis__street {
     margin: 0;
-    font-weight: 600;
+    font-weight: 400;
     color: #fff;
     white-space: nowrap;
     overflow: hidden;
@@ -120,7 +120,7 @@
 
 .footer-compis__city span {
     color: #E2F0D9;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .footer-compis__hours-item {
@@ -138,7 +138,7 @@
     justify-content: center; /* antes: space-between */
     gap: .5rem;
     color: #fff;
-    font-family: var(--font-title);
+    font-family: var(--font-base);
     font-size: .82rem;
     letter-spacing: .3px;
     cursor: pointer;
@@ -152,7 +152,7 @@
 
 .footer-compis__hours-toggle::before {
     font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+    font-weight: 700;
     /*content: "\f017";*/
     font-size: .85rem;
     opacity: .8;

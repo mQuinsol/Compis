@@ -62,7 +62,7 @@
     font-family: var(--font-base);
     font-size: .95rem;
     color: var(--text-light);
-    font-weight: 500;
+    font-weight: 400;
     opacity: .92;
 }
 
@@ -254,6 +254,6 @@
     font-family: var(--font-base);
     font-size: .68rem;
     color: #888;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: .5rem;
 }
