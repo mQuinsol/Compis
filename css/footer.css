@@ -46,6 +46,11 @@
     max-height: 300px;
 }
 
+.horario__variable {
+    font-weight: bold;
+    color: #FFB347;
+}
+
 /* Fila 2: ubicación | contacto */
 .footer-compis__bottom-grid {
     display: flex;

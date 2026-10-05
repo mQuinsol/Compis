@@ -48,7 +48,7 @@
     font-family: var(--font-accent);
     font-size: 2.4rem;
     font-weight: 700;
-    color: #6FAE7F;
+    color: #3CC25F;
     line-height: 1.1;
     text-align: center;
     margin: 0;
@@ -81,6 +81,18 @@
     color: var(--green-dark);
     line-height: 1.35;
     margin-bottom: 2rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .vaj-features__list {
@@ -308,4 +320,8 @@
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.vaj-galeria__img--left {
+    object-position: 25% center;
 }

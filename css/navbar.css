@@ -13,12 +13,14 @@
     max-width: 430px;
     margin: 0 auto;
     background: var(--green-dark);
-    color: #FFF0D2;
+    color: #C2410C;
     text-align: center;
     font-weight: 700;
-    font-size: .80rem;
-    padding: 2px 16px;
+    font-size: .55rem;
+    padding: 2px 8px;
     box-sizing: border-box;
+    overflow: hidden;
+    container-type: inline-size;
 }
 
 .announcement-bar a {
@@ -27,16 +29,20 @@
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.3px;
-    color: var(--text-yellow);
-    text-align: center;
+    color: #FFF7E6;
     text-decoration: none;
-    text-shadow: none;
-    animation: announcement-pulse 2.5s ease-in-out infinite;
 }
 
-@keyframes announcement-pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.06); }
+.announcement-bar__icon {
+    display: inline-block;
+    animation: announcement-wiggle 2.5s ease-in-out infinite;
+}
+
+@keyframes announcement-wiggle {
+    0%, 60%, 100% { transform: rotate(0); }
+    70% { transform: rotate(-12deg); }
+    80% { transform: rotate(10deg); }
+    90% { transform: rotate(-6deg); }
 }
 
 .navbar{
@@ -303,9 +309,10 @@ body.menu-open{
     font-size:.75rem;
 }
 
+.item-index .drawer__icon{ background:#CFF3EE; }
 .item-campamentos .drawer__icon{ background:#fff1bf; }
 .item-cumpleanios .drawer__icon{ background:#ffdbe6; }
-.item-fiestas .drawer__icon{ background:#eadbff; }
+.item-fiestas .drawer__icon{ background:#FFD6A5; }
 .item-excursiones .drawer__icon{ background:#dff1ff; }
 .item-jugar .drawer__icon{ background:#e2f5d8; }
 .item-nosotras .drawer__icon{ background:#ffe5d6; }

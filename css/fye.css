@@ -1,14 +1,23 @@
 /* ----- FIESTAS Y EVENTOS ----- */
 .fye-hero {
     position: relative;
-    min-height: 330px;
+    aspect-ratio: 394 / 330;
+    height: auto;
+    min-height: 0;
+    background-image:
+        linear-gradient(180deg, #ecf7ff 0%, rgba(236, 247, 255, 0) 40%),
+        url('../assets/images/fiestas-y-eventos/tematica-2.webp');
+    background-size: cover, cover;
+    background-position: center, center top 35px;
+    padding: 5.75rem 1.4rem 2rem;
+    box-sizing: border-box;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
     overflow: hidden;
-    border-radius: 0 0 var(--radius-card) var(--radius-card);
+    border-radius: 0 0 var(--card-radius) var(--card-radius);
 }
-
 .fye-hero__bg {
     position: absolute;
     inset: 0;
@@ -20,16 +29,6 @@
     object-fit: cover;
     object-position: center;
     display: block;
-}
-
-.fye-hero__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,.10) 0%,
-        rgba(0,0,0,.60) 100%
-    );
 }
 
 .fye-hero__content {
@@ -44,7 +43,7 @@
 .fye-hero__title {
     font-family: var(--font-accent);
     font-size: 2.4rem;
-    color: #B89FE8;
+    color: #F5871F;
     line-height: 1.05;
     text-align: center;
     margin: 0;

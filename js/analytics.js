@@ -1,8 +1,9 @@
 const GTM_ID = 'GTM-NBCR3F98';
 const CONSENT_KEY = 'cookieConsent';
+const IS_LOCAL = ['127.0.0.1', 'localhost'].includes(location.hostname);
 
 function injectGTM() {
-  if (window.gtmLoaded) return;
+  if (IS_LOCAL || window.gtmLoaded) return;
   window.gtmLoaded = true;
 
   window.dataLayer = window.dataLayer || [];

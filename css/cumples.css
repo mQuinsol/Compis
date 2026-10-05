@@ -234,11 +234,32 @@ css/* Hero (lightblue) → Tarifas (blanco) */
 
 .tarifa-card__list {
     list-style: none;
-    padding: 0;
+    padding: 0.6rem 0.35rem;
     margin: 0 0 1.25rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 14px;
+}
+
+.tarifa-card__note {
+    display: block;
+    text-align: center;
+    font-size: 0.78rem;
+    opacity: 0.65;
+    margin-top: 0.15rem;
+}
+
+.tarifa-card__horario {
+    display: inline-block;
+    margin-left: 0.35rem;
+    padding: 0.1rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(120, 140, 255, 0.18);
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
 .tarifa-card__list li {
@@ -252,8 +273,8 @@ css/* Hero (lightblue) → Tarifas (blanco) */
 
 .tarifa-galeria__list, .tarifa-galeria-night__list {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -265,8 +286,8 @@ css/* Hero (lightblue) → Tarifas (blanco) */
 }
 
 .tarifa-galeria__item, .tarifa-galeria-night__item {
-    flex: 0 0 101px;
-    width: 101px;
+    flex: 0 1 101px;
+    min-width: 0;
 }
 
 .tarifa-galeria__item img, .tarifa-galeria-night__item img {
@@ -278,6 +299,12 @@ css/* Hero (lightblue) → Tarifas (blanco) */
     box-shadow: var(--shadow-card);
 }
 
+.tarifa-card__list li span:last-child {
+    font-weight: 700;
+    white-space: nowrap;
+    border-bottom: none;
+    padding-bottom: 0;
+}
 /* EXTRAS */
 .cumples-extras {
     padding: 1rem 1.25rem;

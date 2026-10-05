@@ -91,9 +91,11 @@
 
     <!-- Navbar -->
     <div class="site-header">
-        <!-- <div class="announcement-bar">
-            <a href=""></a>
-        </div>  -->
+        <div class="announcement-bar">
+            <a href=""><span class="announcement-bar__icon">🎃</span> 1 Nov.. <span style="font-weight: 400;">Fiesta de Halloween de 17h a 20h </span><span class="announcement-bar__icon">🎃</span></a>
+        </div>
+        
+        
         <nav class="navbar">
             <div class="navbar__actions">
                 <a href="/" class="navbar__brand">
@@ -114,6 +116,13 @@
             <div class="navbar__overlay"></div>
             <div class="navbar__drawer" id="mobile-drawer">
                 <ul class="drawer__menu">
+                    <li class="item-index">
+                        <a href="/index.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-rainbow"></i></span>
+                            <span class="drawer__label">Inicio</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
                     <li class="item-campamentos">
                         <a href="campamentos.html" class="drawer__card">
                             <span class="drawer__icon"><i class="fa-solid fa-campground"></i></span>
@@ -206,7 +215,7 @@
                     <img src="../assets/images/nosotras/icon1.webp" alt="" class="nos-info__card-img" loading="lazy">
                 </div>
                 <div class="nos-info__card-text">
-                    <h2 class="nos-info__card-title">Nuestro origen 2022</h2>
+                    <h2 class="nos-info__card-title">Nuestro origen</h2>
                     <p class="nos-info__card-desc">Compis nació en 2022 con mucha ilusión y un objetivo claro: crear un espacio donde los peques puedan jugar, divertirse y sentirse como en casa.</p>
                 </div>
             </article>
@@ -261,7 +270,7 @@
                         </div>
                         <div class="footer-compis__hours-row">
                             <span>Miércoles</span>
-                            <span>Cerrado</span>
+                            <span>Cerrado · <small class="horario__variable">Variable</small></span>
                         </div>
                     </div>
                 </div>

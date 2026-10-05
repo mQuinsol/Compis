@@ -84,9 +84,11 @@
 
     <!-- Navbar -->
     <div class="site-header">
-        <!-- <div class="announcement-bar">
-            <a href=""></a>
-        </div>  -->
+        <div class="announcement-bar">
+            <a href=""><span class="announcement-bar__icon">🎃</span> 1 Nov.. <span style="font-weight: 400;">Fiesta de Halloween de 17h a 20h </span><span class="announcement-bar__icon">🎃</span></a>
+        </div>
+        
+        
         <nav class="navbar">
             <div class="navbar__actions">
                 <a href="/" class="navbar__brand">
@@ -107,6 +109,13 @@
             <div class="navbar__overlay"></div>
             <div class="navbar__drawer" id="mobile-drawer">
                 <ul class="drawer__menu">
+                    <li class="item-index">
+                        <a href="/index.html" class="drawer__card">
+                            <span class="drawer__icon"><i class="fa-solid fa-rainbow"></i></span>
+                            <span class="drawer__label">Inicio</span>
+                            <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                        </a>
+                    </li>
                     <li class="item-campamentos">
                         <a href="campamentos.html" class="drawer__card">
                             <span class="drawer__icon"><i class="fa-solid fa-campground"></i></span>
@@ -158,7 +167,7 @@
     <section class="cumples-hero">
         <div class="cumples-hero__text">
             <h1>Celebra un cumpleaños inolvidable</h1>
-            <p>Diversión segura para todas las edades</p>
+            <p>Diversión asegurada para todas las edades</p>
             <div class="cumples-hero__ctas">
                 <a href="https://wa.me/34613293273?text=Hola%2C%20quiero%20reservar%20un%20cumplea%C3%B1os" 
                     class="btn btn--green" 
@@ -237,9 +246,22 @@
                     <p class="tarifa-card__sub">mínimo 6 niños</p>
                 </div>
                 <ul class="tarifa-card__list">
-                    <li><span>3 horas + 1 actividad</span><span>20€ / niño</span></li>
-                    <li><span>Fiesta Pijama (12h a 10h)</span><span>50€ / niño</span></li>
-                    <li><span>Alquiler de tipis a domicilio</span><span>70€ / Tipi doble</span></li>
+                    <li>
+                        <span>
+                            3 horas + 1 actividad
+                            <span class="tarifa-card__horario">21h a 10h</span>
+                            <small class="tarifa-card__note">Cena y desayuno incluidos</small>
+                        </span>
+                        <span>20€ / niño</span>
+                    </li>
+                    <li>
+                        <span>
+                            Fiesta Pijama
+                            <span class="tarifa-card__horario">21h a 00h</span>
+                        </span>
+                        <span>50€ / niño</span>
+                    </li>
+<li><span>Alquiler de tipis a domicilio</span><span>70€ / Tipi doble</span></li>
                 </ul>
                 <div class="tarifa-galeria-night">
                     <ul class="tarifa-galeria-night__list">
@@ -247,7 +269,10 @@
                             <img src="../assets/images/cumples/ni1.webp" alt="Cumpleaños nocturno en Compis" loading="lazy">
                         </li>
                         <li class="tarifa-galeria-night__item">
-                            <img src="../assets/images/cumples/ni2.webp" alt="Fiesta pijama con tipis en Compis" loading="lazy">
+                            <img src="../assets/images/cumples/ni2.webp" alt="Fiesta pijama viendo una película" loading="lazy">
+                        </li>
+                        <li class="tarifa-galeria-night__item">
+                            <img src="../assets/images/cumples/ni3.webp" alt="Fiesta pijama con tipis en Compis" loading="lazy">
                         </li>
                     </ul>
                 </div>
@@ -440,13 +465,13 @@
             <div class="info-card">
                 <div class="info-card__text">
                     <h3>Comodidad para todas las familias</h3>
-                    <p>Zona para adultos, podéis traer algo de picoteo si os apetece, además contamos con servicio de bebidas y un ambiente para toda la ocasión para que disfrutes.</p>
+                    <p>Contamos con una zona para adultos donde podéis relajaros y disfrutar mientras los peques se divierten. Disponemos de servicio de bebidas y un ambiente acogedor para compartir un buen rato.</p>
                 </div>
             </div>
             <div class="info-card">
                 <div class="info-card__text">
                     <h3>Puntualidad y organización</h3>
-                    <p>Te recomendamos llegar con 15 minutos de antelación para preparar todo y comenzar puntualmente.</p>
+                    <p>Podéis llegar hasta 15 minutos antes del evento para preparar todo y comenzar puntualmente.</p>
                 </div>
             </div>
         </div>
@@ -475,7 +500,7 @@
                         </div>
                         <div class="footer-compis__hours-row">
                             <span>Miércoles</span>
-                            <span>Cerrado</span>
+                            <span>Cerrado · <small class="horario__variable">Variable</small></span>
                         </div>
                     </div>
                 </div>

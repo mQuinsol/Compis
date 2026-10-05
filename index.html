@@ -121,10 +121,10 @@
 
     </div>
 
-    <div class="site-header">
-        <!-- <div class="announcement-bar">
-            <a href=""></a>
-        </div> -->
+        <div class="site-header">
+            <div class="announcement-bar">
+                <a href=""><span class="announcement-bar__icon">🎃</span> 1 Nov.. <span style="font-weight: 400;">Fiesta de Halloween de 17h a 20h </span><span class="announcement-bar__icon">🎃</span></a>
+            </div>
         <nav class="navbar">
             
             <div class="navbar__actions">
@@ -153,6 +153,14 @@
             <div class="navbar__overlay"></div>
                 <div class="navbar__drawer" id="mobile-drawer">
                     <ul class="drawer__menu">
+                        <li class="item-index" style="display:none;visibility:hidden">
+                            <a href="/pages/index.html" class="drawer__card">
+                                <span class="drawer__icon"><i class="fa-solid fa-rainbow"></i></span>
+                                <span class="drawer__label">Inicio</span>
+                                <span class="drawer__arrow"><i class="fa-solid fa-angle-right"></i></span>
+                            </a>
+                        </li>
+
                         <li class="item-campamentos">
                             <a href="/pages/campamentos.html" class="drawer__card">
                                 <span class="drawer__icon"><i class="fa-solid fa-campground"></i></span>
@@ -213,7 +221,7 @@
             </h1>
             <p class="hero-subtitle">Tranquilidad total para ti.</p>
             <div class="hero-actions">
-                <a href="https://wa.me/34613293273?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20un%20evento%20en%20Compis%20%F0%9F%8E%89" class="hero-btn hero-btn--primary" target="_blank" rel="noopener noreferrer">Reservar evento</a>
+                <a href="https://wa.me/34613293273?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20una%20informaci%C3%B3n%20en%20Compis" target="_blank" class="hero-btn hero-btn--primary" target="_blank" rel="noopener noreferrer">Solicitar información</a>
                 <a href="#" class="hero-btn hero-btn--outline" id="tourVirtualBtn">Tour virtual</a>
             </div>
             <div class="tour-modal" id="tourModal">
@@ -273,7 +281,7 @@
                         </div>
                     </a>
                     <div class="service-card__body">
-                        <p class="service-card__text">Organizamos cumpleaños a medida para que vivan un día inolvidable.</p>
+                        <p class="service-card__text">Celebramos cumpleaños a medida para que vivan un día inolvidable, lleno de juegos, diversión y momentos especiales.</p>
                     </div>
                 </article>
 
@@ -420,7 +428,7 @@
                         </div>
                         <div class="footer-compis__hours-row">
                             <span>Miércoles</span>
-                            <span>Cerrado</span>
+                            <span>Cerrado · <small class="horario__variable">Variable</small></span>
                         </div>
                     </div>
                 </div>
@@ -462,7 +470,6 @@
                     <div class="footer-compis__address">
                         <p class="footer-compis__street">Paseo Playa de Silgar</p>
                         <p class="footer-compis__street">nº 66, Bajo · Sanxenxo</p>
-                        <p class="footer-compis__city"><span>A pie de playa</span></p>
                     </div>
                 </div>
 
