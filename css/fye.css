@@ -5,10 +5,11 @@
     height: auto;
     min-height: 0;
     background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, .45) 100%),
         linear-gradient(180deg, #ecf7ff 0%, rgba(236, 247, 255, 0) 40%),
         url('../assets/images/fiestas-y-eventos/tematica-2.webp');
-    background-size: cover, cover;
-    background-position: center, center top 35px;
+    background-size: cover, cover, cover;
+    background-position: center, center, center top 35px;
     padding: 5.75rem 1.4rem 2rem;
     box-sizing: border-box;
     display: flex;
@@ -59,10 +60,15 @@
 
 .fye-hero__subtitle {
     font-family: var(--font-base);
+    color: #fff;
     font-size: .95rem;
-    color: var(--text-light);
-    font-weight: 400;
-    opacity: .92;
+    font-weight: 700;
+    text-align: center;
+    margin: .5rem auto 0;
+    max-width: 280px;
+    text-shadow:
+        0 1px 2px rgba(0, 0, 0, .7),
+        0 2px 12px rgba(0, 0, 0, .55);
 }
 
 /* ----- ACORDEÓN FYE ----- */
