@@ -93,6 +93,10 @@
   transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, background-color 0.2s ease;
 }
 
+.service-card__pill span {
+    line-height: 28px;
+}
+
 /* --- ESTADO HOVER (Pasar el ratón) --- */
 .service-card__pill:hover {
   background: rgba(255, 255, 255, 0.95);
@@ -113,11 +117,31 @@
     inset 0 2px 4px rgba(0, 0, 0, 0.12); /* Sombra interna para efecto presionado */
 }
 
-.service-card__icon {
+.service-card__pill .service-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 28px;
     height: 28px;
-    object-fit: contain;
-    mix-blend-mode: multiply;
+    flex: 0 0 28px;
+    font-size: 18px;
+    line-height: 1;
+    font-style: normal;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    position: static;
+    transform: none;
+}
+
+.service-card__pill .service-card__icon::before {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    transform: none;
 }
 
 /* Ya no se usan, pero se ocultan por si el HTML todavía las incluye */
